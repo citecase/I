@@ -7,12 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
         
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f9fafb;
+            background-color: #ffffff;
             color: #111827;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
         .splash-overlay {
@@ -30,7 +32,7 @@
         .loader-bar {
             width: 240px;
             height: 6px;
-            background: #e5e7eb;
+            background: #f3f4f6;
             border-radius: 10px;
             overflow: hidden;
             margin-top: 20px;
@@ -39,43 +41,85 @@
         .loader-progress {
             width: 0%;
             height: 100%;
-            background: #2563eb;
+            background: #000000;
             transition: width 0.4s cubic-bezier(0.1, 0.7, 1.0, 0.1);
         }
 
         mark {
             background-color: #fef08a;
             color: #111827;
-            padding: 0 2px;
+            padding: 0 1px;
             border-radius: 2px;
-            font-weight: 500;
+            font-weight: inherit;
         }
 
         .search-result-card {
-            transition: all 0.2s ease;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             border-left: 4px solid transparent;
+            user-select: text !important;
+            -webkit-user-select: text !important;
         }
 
         .search-result-card:hover {
             transform: translateX(4px);
-            border-left-color: #2563eb;
-            background: white;
-            box-shadow: 0 4px 12px -2px rgb(0 0 0 / 0.05);
+            border-left-color: #000000;
+            background: #fafafa;
         }
 
-        .glass-header {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid #e5e7eb;
-            position: sticky;
-            top: 0;
-            z-index: 50;
+        #hero-container {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #hero-container.has-results {
+            min-height: 25vh;
+            padding-bottom: 2rem;
+        }
+
+        .search-wrapper {
+            width: 100%;
+            max-width: 720px;
+            position: relative;
         }
 
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+        ::-webkit-scrollbar-track { background: #ffffff; }
+        ::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d1d5db; }
+
+        .paragraph-content b, .paragraph-content strong { font-weight: 700; color: #000; }
+        .paragraph-content i, .paragraph-content em { font-style: italic; }
+        .paragraph-content code { 
+            background: #f3f4f6; 
+            padding: 2px 4px; 
+            border-radius: 4px; 
+            font-family: monospace; 
+            font-size: 0.9em;
+        }
+
+        #copyToast {
+            position: fixed;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 99px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            z-index: 100;
+        }
 
         #error-ui {
             display: none;
@@ -87,113 +131,149 @@
 </head>
 <body>
 
-    <!-- Splash Screen -->
     <div id="splash" class="splash-overlay">
         <div id="splash-content" class="flex flex-col items-center">
-            <div class="flex items-center gap-3 mb-4">
-                <div class="bg-blue-600 text-white p-3 rounded-xl shadow-lg shadow-blue-200">
-                    <i class="fas fa-balance-scale text-2xl"></i>
-                </div>
-                <h1 class="text-3xl font-black text-gray-900 tracking-tight">CiteCase <span class="text-blue-600">I</span></h1>
+            <div class="flex items-center gap-1 mb-4 select-none">
+                <span class="text-4xl font-black text-black tracking-tighter">Cite</span>
+                <span class="text-4xl font-black bg-black text-white px-2 py-0.5 rounded-lg tracking-tighter">Case</span>
             </div>
-            <div id="status-text" class="text-gray-500 font-medium animate-pulse">Deep-Scanning Archives...</div>
+            <div id="status-text" class="text-gray-400 font-medium text-[10px] tracking-[0.2em] uppercase animate-pulse">Scanning Archives...</div>
             <div id="loader-container" class="loader-bar">
                 <div id="progress" class="loader-progress"></div>
             </div>
             
             <div id="error-ui">
                 <i class="fas fa-exclamation-triangle text-red-500 text-3xl mb-4"></i>
-                <h2 class="text-lg font-bold mb-2">Sync Failed</h2>
-                <p id="error-message" class="text-sm text-gray-500 mb-6"></p>
-                <button onclick="location.reload()" class="bg-blue-600 text-white px-6 py-2 rounded-xl font-bold shadow-md hover:bg-blue-700 transition-all">
+                <h2 class="text-lg font-bold mb-2 text-black text-center">Sync Failed</h2>
+                <p id="error-message" class="text-sm text-gray-500 mb-6 text-center"></p>
+                <button onclick="location.reload()" class="bg-black text-white px-8 py-2.5 rounded-xl font-bold shadow-sm hover:bg-gray-800 transition-all">
                     Retry Sync
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Main Interface -->
-    <div class="min-h-screen pb-20">
-        <header class="glass-header py-4 px-6">
-            <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="flex items-center gap-3 cursor-pointer" onclick="location.reload()">
-                    <div class="bg-blue-600 text-white p-2 rounded-lg">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <div>
-                        <h1 class="font-bold text-xl leading-none">CiteCase I</h1>
-                        <span class="text-[10px] text-gray-400 font-bold tracking-widest uppercase">Live Wiki Index</span>
-                    </div>
-                </div>
+    <div id="copyToast">Copied to Clipboard</div>
 
-                <div class="relative w-full md:w-full max-w-xl">
+    <div class="min-h-screen flex flex-col bg-white">
+        <div id="hero-container">
+            <div class="flex flex-col items-center mb-12">
+                <div class="flex items-center gap-1 cursor-pointer select-none" onclick="location.reload()">
+                    <span class="text-5xl md:text-6xl font-black text-black tracking-tighter">Cite</span>
+                    <span class="text-5xl md:text-6xl font-black bg-black text-white px-3 py-1 rounded-2xl tracking-tighter">Case</span>
+                </div>
+            </div>
+
+            <div class="search-wrapper">
+                <div class="relative group">
                     <input type="text" id="searchInput" 
-                        placeholder="Search cases, laws, or paragraphs..." 
-                        class="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:bg-white outline-none transition-all text-lg shadow-sm">
-                    <i class="fas fa-search absolute left-4 top-4 text-gray-400"></i>
+                        placeholder="Search Case Names, Neutral Citation Or Keywords" 
+                        class="w-full pl-14 pr-6 py-5 bg-white border-2 border-gray-100 rounded-2xl focus:ring-8 focus:ring-gray-50 focus:border-black outline-none transition-all text-lg shadow-sm hover:border-gray-200">
+                    <i class="fas fa-search absolute left-5 top-6 text-gray-300 text-xl group-focus-within:text-black transition-colors"></i>
+                </div>
+
+                <div class="mt-8 flex flex-wrap gap-8 items-center justify-center text-sm">
+                    <span class="font-bold uppercase tracking-widest text-[10px] text-gray-300">Search Logic</span>
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-black transition-colors">
+                        <input type="radio" name="logic" value="and" checked class="w-4 h-4 accent-black">
+                        <span class="font-semibold text-gray-500">All Words</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-black transition-colors">
+                        <input type="radio" name="logic" value="exact" class="w-4 h-4 accent-black">
+                        <span class="font-semibold text-gray-500">Exact Match</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-black transition-colors">
+                        <input type="radio" name="logic" value="or" class="w-4 h-4 accent-black">
+                        <span class="font-semibold text-gray-500">Any Word</span>
+                    </label>
                 </div>
             </div>
 
-            <div class="max-w-5xl mx-auto mt-4 flex flex-wrap gap-6 items-center justify-center md:justify-end text-sm">
-                <div class="flex items-center gap-4 text-gray-600">
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-blue-600 transition-colors">
-                        <input type="radio" name="logic" value="and" checked class="w-4 h-4 text-blue-600 focus:ring-blue-500">
-                        <span class="font-medium">All Words</span>
-                    </label>
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-blue-600 transition-colors">
-                        <input type="radio" name="logic" value="exact" class="w-4 h-4 text-blue-600 focus:ring-blue-500">
-                        <span class="font-medium">Exact Match</span>
-                    </label>
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-blue-600 transition-colors">
-                        <input type="radio" name="logic" value="or" class="w-4 h-4 text-blue-600 focus:ring-blue-500">
-                        <span class="font-medium">Any Word</span>
-                    </label>
-                </div>
+            <div id="initialStats" class="mt-10 text-gray-400 text-[11px] font-bold uppercase tracking-[0.25em]">
+                Initializing archive...
             </div>
-        </header>
-
-        <div class="max-w-5xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-2">
-            <div id="statsCount" class="text-gray-500 font-medium">Initializing search...</div>
-            <div id="searchSpeed" class="text-xs text-blue-500 font-mono opacity-0 transition-opacity duration-300 uppercase tracking-tighter"></div>
         </div>
 
-        <main id="resultsList" class="max-w-5xl mx-auto px-6 space-y-4">
-            <div class="py-20 text-center opacity-50">
-                <i class="fas fa-spinner fa-spin text-4xl mb-4"></i>
-                <p>Loading database...</p>
+        <div id="results-wrapper" class="hidden">
+            <div class="max-w-4xl mx-auto px-6 mb-8 flex justify-between items-center text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em] border-b border-gray-50 pb-4">
+                <div class="flex items-center gap-4">
+                    <div id="statsCount">Found 0 matches</div>
+                    <button id="copyAllBtn" onclick="copyAllResults()" class="flex items-center gap-2 hover:text-black transition-colors border-l pl-4 border-gray-100">
+                        <i class="fas fa-copy"></i> Copy Full Results
+                    </button>
+                </div>
+                <div id="searchSpeed" class="text-gray-300 font-mono"></div>
             </div>
-        </main>
+
+            <main id="resultsList" class="max-w-4xl mx-auto px-6 space-y-6 pb-24">
+                <!-- Results injected here -->
+            </main>
+        </div>
     </div>
 
-    <footer class="fixed bottom-0 w-full bg-white/80 backdrop-blur-sm border-t border-gray-100 py-3 px-6 flex justify-between items-center text-[10px] text-gray-400 font-bold uppercase tracking-widest z-50">
+    <footer class="fixed bottom-0 w-full bg-white/95 backdrop-blur-md border-t border-gray-50 py-3 px-6 flex justify-between items-center text-[9px] text-gray-300 font-bold uppercase tracking-[0.2em] z-50">
         <div>CiteCase Archives &copy; 2026</div>
-        <div>Source: GitHub Wiki API (Live)</div>
+        <div>GitHub Wiki Live Index</div>
     </footer>
 
     <script>
         const WIKI_BASE = "https://raw.githubusercontent.com/wiki/citecase/I";
         let judgmentData = [];
+        let currentResults = [];
 
-        const splash = document.getElementById('splash');
-        const progress = document.getElementById('progress');
-        const statusText = document.getElementById('status-text');
-        const loaderContainer = document.getElementById('loader-container');
-        const errorUI = document.getElementById('error-ui');
-        const searchInput = document.getElementById('searchInput');
-        const resultsList = document.getElementById('resultsList');
-        const statsCount = document.getElementById('statsCount');
-        const searchSpeed = document.getElementById('searchSpeed');
+        // Global DOM references initialized on demand
+        const getEl = (id) => document.getElementById(id);
 
-        /**
-         * Enhanced Stateful Parser
-         * Scans line by line and groups all text following a link into that link's entry.
-         */
+        function copyToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showToast("Copied to Clipboard");
+            } catch (err) {
+                console.error('Copy failed', err);
+            }
+            document.body.removeChild(textarea);
+        }
+
+        function copyAllResults() {
+            if (!currentResults || currentResults.length === 0) return;
+            
+            const compiledText = currentResults.map(doc => {
+                const header = `${doc.title} ${doc.citation}`.trim();
+                const notes = doc.paragraphs.join('\n\n');
+                return `${header}\n${notes}`;
+            }).join('\n\n' + '='.repeat(20) + '\n\n');
+            
+            copyToClipboard(compiledText);
+            showToast(`Copied ${currentResults.length} Results`);
+        }
+
+        function showToast(msg) {
+            const toast = getEl('copyToast');
+            if (!toast) return;
+            toast.innerText = msg;
+            toast.style.opacity = '1';
+            setTimeout(() => {
+                toast.style.opacity = '0';
+            }, 2000);
+        }
+
+        function parseMarkdown(text) {
+            return text
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/_(.*?)_/g, '<em>$1</em>')
+                .replace(/`(.*?)`/g, '<code>$1</code>');
+        }
+
         function parseWikiMarkdown(markdown) {
             const lines = markdown.split('\n');
             const entries = [];
             let currentEntry = null;
-
-            // Regex for any Markdown link: [Title](URL)
             const linkRegex = /\[(.*?)\]\((https?:\/\/.*?)\)/;
 
             lines.forEach(line => {
@@ -203,25 +283,17 @@
                 const match = trimmedLine.match(linkRegex);
                 
                 if (match) {
-                    // Start a new judgment entry
                     if (currentEntry) entries.push(currentEntry);
-                    
                     const label = match[1].replace(/\*\*/g, '').replace(/#/g, '').trim();
                     const url = match[2];
-
-                    // Smart split for Category vs Case Name
-                    // Handles "Case Name 2026 INSC 69 - Category"
                     const parts = label.split(' - ');
                     const mainTitle = parts[0].trim();
-                    const category = parts.length > 1 ? parts.slice(1).join(' - ').trim() : 'Uncategorized';
-
-                    // Try to isolate the citation from the end of the title
+                    const category = parts.length > 1 ? parts.slice(1).join(' - ').trim() : 'General';
                     const words = mainTitle.split(/\s+/);
-                    let citation = "Citation N/A";
+                    let citation = "";
                     let title = mainTitle;
 
                     if (words.length >= 3) {
-                        // Check if the last part looks like a citation (has numbers)
                         const lastThree = words.slice(-3).join(' ');
                         if (/\d/.test(lastThree)) {
                             citation = lastThree;
@@ -238,20 +310,11 @@
                         paragraphs: []
                     };
 
-                    // If the line had text BEFORE the link, add it as the first paragraph
                     const beforeLink = trimmedLine.split(match[0])[0].replace(/#/g, '').trim();
-                    if (beforeLink.length > 3) {
-                        currentEntry.paragraphs.push(beforeLink);
-                    }
-                    
-                    // If the line had text AFTER the link, add it as a paragraph
+                    if (beforeLink.length > 3) currentEntry.paragraphs.push(beforeLink);
                     const afterLink = trimmedLine.split(match[0])[1].trim();
-                    if (afterLink.length > 0) {
-                        currentEntry.paragraphs.push(afterLink);
-                    }
+                    if (afterLink.length > 0) currentEntry.paragraphs.push(afterLink);
                 } else if (currentEntry) {
-                    // Append text to the current judgment
-                    // Filter out purely decorative lines like horizontal rules
                     if (!/^[-*_=]{3,}$/.test(trimmedLine)) {
                         currentEntry.paragraphs.push(trimmedLine);
                     }
@@ -264,167 +327,147 @@
 
         async function initializeApp() {
             try {
-                updateProgress(20, "Establishing Connection...");
-                
+                updateProgress(20, "Connecting...");
                 const cacheBuster = `?t=${Date.now()}`;
-                const urlsToTry = [
-                    `${WIKI_BASE}/Home.md${cacheBuster}`,
-                    `${WIKI_BASE}/Home${cacheBuster}`
-                ];
-
-                let markdown = "";
-                let successfulFetch = false;
-
-                for (let url of urlsToTry) {
-                    try {
-                        const response = await fetch(url, { cache: "no-store" });
-                        if (response.ok) {
-                            markdown = await response.text();
-                            // Validate it's not a GitHub HTML error page
-                            if (markdown.trim().startsWith('<')) continue;
-                            successfulFetch = true;
-                            break;
-                        }
-                    } catch (e) { }
-                }
-
-                if (!successfulFetch || !markdown) {
-                    throw new Error("Unable to locate Wiki content. Verify that the Wiki is public.");
-                }
-
-                updateProgress(60, "Processing Index...");
-                judgmentData = parseWikiMarkdown(markdown);
+                const response = await fetch(`${WIKI_BASE}/Home.md${cacheBuster}`, { cache: "no-store" });
                 
-                if (judgmentData.length === 0) {
-                    throw new Error("Found data but no judgments could be indexed. Check if your Wiki uses the [Title](Link) format.");
-                }
-
-                updateProgress(100, "Done");
+                if (!response.ok) throw new Error("Wiki content unavailable.");
+                
+                const markdown = await response.text();
+                judgmentData = parseWikiMarkdown(markdown);
+                updateProgress(100, "Ready");
                 
                 setTimeout(() => {
-                    splash.style.opacity = '0';
+                    const splash = getEl('splash');
+                    const stats = getEl('initialStats');
+                    if (splash) splash.style.opacity = '0';
                     setTimeout(() => {
-                        splash.style.display = 'none';
-                        renderResults(judgmentData.slice(0, 15), false);
-                        statsCount.innerText = `Searchable Database: ${judgmentData.length} judgments indexed.`;
+                        if (splash) splash.style.display = 'none';
+                        if (stats) stats.innerText = `${judgmentData.length} Supreme Court Judgments Indexed`;
                     }, 500);
                 }, 400);
-
             } catch (error) {
-                console.error("Index Error:", error);
                 showError(error.message);
             }
         }
 
         function updateProgress(val, text) {
-            progress.style.width = val + '%';
-            statusText.innerText = text;
+            const progress = getEl('progress');
+            const status = getEl('status-text');
+            if (progress) progress.style.width = val + '%';
+            if (status) status.innerText = text;
         }
 
         function showError(msg) {
-            statusText.style.display = 'none';
-            loaderContainer.style.display = 'none';
-            errorUI.style.display = 'block';
-            document.getElementById('error-message').innerText = msg;
+            const status = getEl('status-text');
+            const loader = getEl('loader-container');
+            const error = getEl('error-ui');
+            const errorMsg = getEl('error-message');
+            
+            if (status) status.style.display = 'none';
+            if (loader) loader.style.display = 'none';
+            if (error) error.style.display = 'block';
+            if (errorMsg) errorMsg.innerText = msg;
         }
 
         function performSearch() {
-            const query = searchInput.value.toLowerCase().trim();
+            const input = getEl('searchInput');
+            if (!input) return;
+            const query = input.value.toLowerCase().trim();
             const logic = document.querySelector('input[name="logic"]:checked').value;
             const startTime = performance.now();
 
-            if (!query) {
-                renderResults(judgmentData.slice(0, 15), false);
-                statsCount.innerText = `Latest entries displayed. Total: ${judgmentData.length}`;
-                searchSpeed.style.opacity = '0';
+            const hero = getEl('hero-container');
+            const resultsWrapper = getEl('results-wrapper');
+            const initialStats = getEl('initialStats');
+
+            if (query.length < 4) {
+                if (hero) hero.classList.remove('has-results');
+                if (resultsWrapper) resultsWrapper.classList.add('hidden');
+                if (initialStats) initialStats.classList.remove('hidden');
+                currentResults = [];
                 return;
             }
 
+            if (hero) hero.classList.add('has-results');
+            if (resultsWrapper) resultsWrapper.classList.remove('hidden');
+            if (initialStats) initialStats.classList.add('hidden');
+
             const terms = query.split(/\s+/).filter(t => t.length > 0);
             
-            const results = judgmentData.filter(doc => {
+            currentResults = judgmentData.filter(doc => {
                 const searchString = `${doc.title} ${doc.citation} ${doc.category} ${doc.paragraphs.join(' ')}`.toLowerCase();
-                
-                if (logic === 'exact') {
-                    return searchString.includes(query);
-                } else if (logic === 'and') {
-                    return terms.every(term => searchString.includes(term));
-                } else {
-                    return terms.some(term => searchString.includes(term));
-                }
+                if (logic === 'exact') return searchString.includes(query);
+                if (logic === 'and') return terms.every(term => searchString.includes(term));
+                return terms.some(term => searchString.includes(term));
             });
 
             const endTime = performance.now();
             const duration = (endTime - startTime).toFixed(2);
 
-            renderResults(results, true, query);
-            
-            statsCount.innerText = `Found ${results.length} matches.`;
-            searchSpeed.innerText = `Processed in ${duration}ms`;
-            searchSpeed.style.opacity = '1';
+            renderResults(currentResults, true, query);
+            const stats = getEl('statsCount');
+            const speed = getEl('searchSpeed');
+            if (stats) stats.innerText = `Found ${currentResults.length} matches`;
+            if (speed) speed.innerText = `${duration}ms`;
         }
 
-        function highlightText(text, query) {
-            if (!query) return text;
-            const logic = document.querySelector('input[name="logic"]:checked').value;
-            
-            if (logic === 'exact') {
-                const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-                return text.replace(regex, '<mark>$1</mark>');
+        function highlightAndFormat(text, query) {
+            if (!text) return "";
+            let processed = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            processed = parseMarkdown(processed);
+            if (query) {
+                const logic = document.querySelector('input[name="logic"]:checked').value;
+                const regex = logic === 'exact' 
+                    ? new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')
+                    : new RegExp(`(${query.split(/\s+/).filter(t => t.length > 1).sort((a,b)=>b.length-a.length).join('|').replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+                processed = processed.replace(regex, '<mark>$1</mark>');
             }
-
-            const terms = query.split(/\s+/).filter(t => t.length > 1);
-            if (terms.length === 0) return text;
-
-            let highlighted = text;
-            terms.sort((a, b) => b.length - a.length).forEach(term => {
-                const regex = new RegExp(`(${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-                highlighted = highlighted.replace(regex, '<mark>$1</mark>');
-            });
-            return highlighted;
+            return processed;
         }
 
         function renderResults(data, isSearch, query = "") {
+            const list = getEl('resultsList');
+            if (!list) return;
+
             if (data.length === 0) {
-                resultsList.innerHTML = `
-                    <div class="py-20 text-center text-gray-400">
-                        <i class="fas fa-search-minus text-4xl mb-4"></i>
-                        <p class="text-lg font-medium">No matches found in the index.</p>
-                    </div>
-                `;
+                list.innerHTML = `<div class="py-24 text-center text-gray-400"><p class="text-[10px] font-bold uppercase tracking-[0.2em]">No matches found</p></div>`;
                 return;
             }
 
-            resultsList.innerHTML = data.map(doc => `
-                <div class="search-result-card bg-white p-5 rounded-2xl border border-gray-100 shadow-sm relative overflow-hidden mb-4">
-                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-3">
+            list.innerHTML = data.map(doc => `
+                <div class="search-result-card bg-white p-7 rounded-2xl border border-gray-100 shadow-sm relative overflow-hidden mb-6">
+                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-4">
                         <div class="flex-1">
-                            <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-1 flex items-center gap-2">
-                                <i class="fas fa-folder-open"></i> ${highlightText(doc.category, query)}
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-900 leading-tight mb-1">
-                                ${highlightText(doc.title, query)}
+                            <h3 class="text-xl font-bold text-black leading-tight mb-2 tracking-tight">
+                                ${highlightAndFormat(doc.title, query)}
                             </h3>
-                            <div class="text-sm font-mono text-gray-500 font-bold">
-                                ${highlightText(doc.citation, query)}
+                            <!-- Citation Tag Restored -->
+                            <div class="text-xs font-mono text-gray-400 font-bold tracking-tight">
+                                ${highlightAndFormat(doc.citation, query)}
                             </div>
                         </div>
-                        <a href="${doc.link}" target="_blank" class="flex items-center justify-center gap-2 bg-blue-50 hover:bg-blue-600 hover:text-white text-blue-700 px-4 py-2 rounded-xl text-sm font-bold transition-all shrink-0">
-                            <i class="fas fa-file-pdf"></i> View PDF
-                        </a>
+                        <div class="flex items-center gap-2 shrink-0 select-none">
+                            <button onclick="copyToClipboard('${(`${doc.title} ${doc.citation}`).replace(/'/g, "\\'")}')" 
+                                    class="flex items-center justify-center bg-gray-50 hover:bg-gray-100 text-gray-400 hover:text-black w-10 h-10 rounded-xl transition-all border border-gray-100">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <a href="${doc.link}" target="_blank" class="flex items-center justify-center gap-2 bg-black hover:bg-gray-800 text-white px-5 py-2.5 rounded-xl text-[10px] font-bold tracking-wider transition-all">
+                                <i class="fas fa-file-pdf"></i> VIEW PDF
+                            </a>
+                        </div>
                     </div>
-                    <div class="space-y-3 pt-3 border-t border-gray-50">
-                        ${doc.paragraphs.map(p => `
-                            <p class="text-sm text-gray-600 leading-relaxed">
-                                ${highlightText(p, query)}
-                            </p>
-                        `).join('')}
+                    <div class="space-y-4 pt-5 border-t border-gray-50">
+                        ${doc.paragraphs.map(p => `<p class="paragraph-content text-[15px] text-gray-600 leading-relaxed font-[450]">${highlightAndFormat(p, query)}</p>`).join('')}
                     </div>
                 </div>
             `).join('');
         }
 
-        searchInput.addEventListener('input', performSearch);
+        // Initialize event listeners
+        const input = getEl('searchInput');
+        if (input) input.addEventListener('input', performSearch);
+        
         document.querySelectorAll('input[name="logic"]').forEach(el => {
             el.addEventListener('change', performSearch);
         });
