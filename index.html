@@ -27,7 +27,7 @@
 
         .loading-overlay {
             background: rgba(255, 255, 255, 0.95);
-            z-index: 50;
+            z-index: 100;
         }
 
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
@@ -35,34 +35,35 @@
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
         
         select {
-            @apply appearance-none bg-slate-100 border border-slate-200 font-bold uppercase tracking-widest text-[10px] py-1.5 px-3 rounded-lg cursor-pointer hover:bg-slate-200 transition-colors focus:ring-2 focus:ring-blue-500 focus:outline-none;
+            @apply appearance-none bg-slate-100 border border-slate-200 font-bold uppercase tracking-widest text-[9px] py-1.5 px-3 rounded-lg cursor-pointer hover:bg-slate-200 transition-colors focus:ring-2 focus:ring-blue-500 focus:outline-none;
         }
 
         @media (max-width: 768px) {
             #search-sidebar {
-                position: absolute;
+                position: fixed;
                 left: 0;
-                top: 0;
+                top: 5rem; 
                 bottom: 0;
-                width: 85%;
-                z-index: 40;
-                box-shadow: 20px 0 50px rgba(0,0,0,0.2);
+                width: 100%;
+                z-index: 60;
+                background: white;
             }
+            .header-title { display: none; }
         }
     </style>
 </head>
 <body class="h-screen flex flex-col overflow-hidden">
 
     <!-- Header -->
-    <header class="h-20 bg-white border-b border-slate-200 px-4 md:px-6 flex items-center justify-between shadow-sm z-30">
+    <header class="h-20 bg-white border-b border-slate-200 px-4 md:px-6 flex items-center justify-between shadow-sm z-50">
         <div class="flex items-center gap-2 md:gap-4 shrink-0">
             <div class="bg-blue-600 p-2 rounded-lg text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
             </div>
             <div>
-                <h1 class="font-bold text-base md:text-lg text-slate-800 leading-tight">CiteCase Archives</h1>
+                <h1 class="font-bold text-base md:text-lg text-slate-800 leading-tight header-title">CiteCase Archives</h1>
                 <select id="doc-selector" title="Select Document" class="mt-1">
-                    <option value="2026-01"selected >Monthly Digest - Jan 2026</option>
+                    <option value="2026-01" selected>Monthly Digest - Jan 2026</option>
                     <option value="2025">Yearly Digest - 2025</option>
                     <option value="2024">Yearly Digest - 2024</option>
                 </select>
@@ -70,18 +71,21 @@
         </div>
 
         <!-- Search Container -->
-        <div class="flex-1 max-w-xl mx-2 md:mx-8 relative">
+        <form id="search-form" class="flex-1 max-w-xl mx-2 md:mx-8 relative" onsubmit="event.preventDefault(); handleSearch(); return false;">
             <input 
-                type="text" 
+                type="search" 
                 id="search-input" 
                 placeholder="Search keywords..." 
-                class="w-full pl-10 md:pl-12 pr-4 py-2.5 md:py-3 bg-slate-100 border-none rounded-2xl text-sm focus:ring-2 focus:ring-blue-500 transition-all"
+                class="w-full pl-10 md:pl-12 pr-10 md:pr-4 py-2.5 md:py-3 bg-slate-100 border-none rounded-2xl text-sm focus:ring-2 focus:ring-blue-500 transition-all"
+                autocomplete="off"
             >
             <div class="absolute left-3 md:left-4 top-2.5 md:top-3.5 text-slate-400">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             </div>
-            <div id="results-count" class="absolute right-4 top-2.5 md:top-4 text-[9px] font-bold text-slate-400 uppercase hidden md:block"></div>
-        </div>
+            <button type="button" onclick="clearSearch()" class="absolute right-3 top-2.5 md:top-3.5 text-slate-400 hover:text-slate-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </form>
 
         <!-- Controls -->
         <div class="flex items-center gap-1 md:gap-3 shrink-0">
@@ -106,23 +110,33 @@
         <!-- Sidebar: Search Results -->
         <aside id="search-sidebar" class="hidden w-full md:w-80 bg-white border-r border-slate-200 flex flex-col shadow-inner animate-in slide-in-from-left duration-200">
             <div class="p-4 bg-slate-50 border-b border-slate-200">
-                <div class="flex justify-between items-center mb-4">
+                <div class="flex justify-between items-center mb-3">
                     <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider">Search Results</h3>
                     <button onclick="closeSidebar()" class="text-slate-400 hover:text-slate-800 font-bold text-2xl leading-none">&times;</button>
                 </div>
                 
-                <div class="space-y-1">
-                    <label class="text-[9px] font-bold text-slate-400 uppercase tracking-tighter block">Preview Context Depth</label>
-                    <select id="context-selector" class="w-full !py-2">
-                        <option value="75">Compact Snippets</option>
-                        <option value="150" selected>Standard View</option>
-                        <option value="300">Detailed Context</option>
-                        <option value="600">Deep Extraction</option>
-                    </select>
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="space-y-1">
+                        <label class="text-[8px] font-bold text-slate-400 uppercase tracking-tighter block">Search Mode</label>
+                        <select id="logic-selector" class="w-full">
+                            <option value="and" selected>All Keywords (AND)</option>
+                            <option value="phrase">Exact Sequence</option>
+                            <option value="or">Any Keyword (OR)</option>
+                        </select>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-[8px] font-bold text-slate-400 uppercase tracking-tighter block">Context Depth</label>
+                        <select id="context-selector" class="w-full">
+                            <option value="75">Compact</option>
+                            <option value="150" selected>Standard</option>
+                            <option value="300">Detailed</option>
+                        </select>
+                    </div>
                 </div>
+                <div id="results-count-sidebar" class="mt-3 text-[9px] font-bold text-blue-500 uppercase text-center border-t border-slate-200 pt-2"></div>
             </div>
             
-            <div id="results-list" class="flex-1 overflow-y-auto custom-scrollbar p-2 space-y-2">
+            <div id="results-list" class="flex-1 overflow-y-auto custom-scrollbar p-2 space-y-2 bg-slate-50">
                 <!-- Result items injected here -->
             </div>
         </aside>
@@ -144,32 +158,35 @@
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
         let pdfDoc = null;
-        let scale = window.innerWidth < 768 ? 1.0 : 1.3;
-        let pagesText = []; 
+        let scale = window.innerWidth < 768 ? 0.85 : 1.3;
+        let pagesData = []; // Stores text and paragraph-wise indexing for each page
         let currentLoadingTask = null;
+        let currentRenderSessionId = 0; 
 
-        async function init(docId = "2025") {
+        async function init(docId = "2026-01") {
+            const thisSessionId = ++currentRenderSessionId;
             const rawUrl = pdfUrls[docId];
             const selector = document.getElementById('doc-selector');
+            if (!selector) return;
+
             const docTitle = selector.options[selector.selectedIndex].text;
+            const loadingOverlay = document.getElementById('loading');
+            const loadingText = document.getElementById('loading-text');
+            const loadingProgress = document.getElementById('loading-progress');
+            const pdfViewer = document.getElementById('pdf-viewer');
+
+            if (currentLoadingTask) { try { await currentLoadingTask.destroy(); } catch(e) {} }
             
-            if (currentLoadingTask) {
-                await currentLoadingTask.destroy();
-            }
-            
-            document.getElementById('pdf-viewer').innerHTML = '';
-            document.getElementById('loading').classList.remove('hidden');
-            document.getElementById('loading-text').textContent = `Indexing ${docTitle}...`;
-            document.getElementById('loading-progress').textContent = 'Connecting...';
-            document.getElementById('search-input').value = '';
-            document.getElementById('search-sidebar').classList.add('hidden');
-            document.getElementById('results-count').textContent = '';
-            pagesText = [];
+            if (pdfViewer) pdfViewer.innerHTML = '';
+            if (loadingOverlay) loadingOverlay.classList.remove('hidden');
+            if (loadingText) loadingText.textContent = `Indexing ${docTitle}...`;
+            pagesData = [];
 
             try {
                 const response = await fetch(rawUrl);
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const data = await response.arrayBuffer();
+                if (thisSessionId !== currentRenderSessionId) return;
 
                 currentLoadingTask = pdfjsLib.getDocument({
                     data: data,
@@ -179,15 +196,36 @@
 
                 pdfDoc = await currentLoadingTask.promise;
                 const totalPages = pdfDoc.numPages;
-                const viewer = document.getElementById('pdf-viewer');
                 
                 for (let i = 1; i <= totalPages; i++) {
+                    if (thisSessionId !== currentRenderSessionId) return;
                     const page = await pdfDoc.getPage(i);
                     const textContent = await page.getTextContent();
-                    const text = textContent.items.map(item => item.str).join(' ');
-                    pagesText.push({ pageNum: i, text: text });
                     
-                    document.getElementById('loading-progress').textContent = `Indexing Page ${i} of ${totalPages}`;
+                    // Full page text for general matching
+                    const fullText = textContent.items.map(item => item.str).join(' ');
+                    
+                    // Paragraph-wise indexing: attempt to identify paras by item grouping or breaks
+                    // Simple logic: group items that are close to each other or handle common legal breaks
+                    let paragraphs = [];
+                    let currentPara = "";
+                    textContent.items.forEach((item, idx) => {
+                        currentPara += item.str + " ";
+                        // Simple heuristic: long gap or explicit punctuation end or item index gap
+                        if (item.str.trim().endsWith('.') || item.str.trim().endsWith(':')) {
+                            paragraphs.push(currentPara.trim());
+                            currentPara = "";
+                        }
+                    });
+                    if (currentPara.trim()) paragraphs.push(currentPara.trim());
+
+                    pagesData.push({ 
+                        pageNum: i, 
+                        text: fullText,
+                        paragraphs: paragraphs 
+                    });
+                    
+                    if (loadingProgress) loadingProgress.textContent = `Reading Page ${i} of ${totalPages}`;
                     
                     const viewport = page.getViewport({ scale });
                     const canvas = document.createElement('canvas');
@@ -195,107 +233,142 @@
                     canvas.id = `page-${i}`;
                     canvas.height = viewport.height;
                     canvas.width = viewport.width;
-                    viewer.appendChild(canvas);
+                    if (pdfViewer) pdfViewer.appendChild(canvas);
                     
-                    const renderContext = {
-                        canvasContext: canvas.getContext('2d'),
-                        viewport: viewport
-                    };
-                    
-                    await page.render(renderContext).promise;
+                    try {
+                        await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
+                    } catch (renderError) {
+                        if (renderError.name !== 'RenderingCancelledException') console.error(renderError);
+                    }
                 }
-
-                document.getElementById('loading').classList.add('hidden');
+                if (loadingOverlay) loadingOverlay.classList.add('hidden');
             } catch (error) {
                 console.error('Error loading PDF:', error);
-                document.getElementById('loading').innerHTML = `
-                    <div class="text-center px-10">
-                        <p class="text-red-500 font-bold mb-2">Error Loading Document</p>
-                        <button onclick="location.reload()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-xs font-bold">Retry</button>
-                    </div>
-                `;
+                if (loadingOverlay) loadingOverlay.innerHTML = `<div class="p-10 text-center"><p class="text-red-500 mb-4">Error loading document.</p><button onclick="location.reload()" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-xs font-bold">Retry</button></div>`;
             }
         }
 
-        function downloadPdf() {
-            const docId = document.getElementById('doc-selector').value;
-            const url = pdfUrls[docId];
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = `CiteCase_${docId}.pdf`;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+        function clearSearch() {
+            const input = document.getElementById('search-input');
+            if (input) input.value = '';
+            closeSidebar();
         }
 
         function handleSearch() {
-            const rawQuery = document.getElementById('search-input').value.trim();
+            const input = document.getElementById('search-input');
+            if (!input) return;
+            const rawQuery = input.value.trim();
             const sidebar = document.getElementById('search-sidebar');
             const list = document.getElementById('results-list');
-            const countDisplay = document.getElementById('results-count');
+            const logic = document.getElementById('logic-selector').value;
+            const contextRadius = parseInt(document.getElementById('context-selector').value);
+            const sidebarCount = document.getElementById('results-count-sidebar');
             
             if (!rawQuery || rawQuery.length < 2) {
-                sidebar.classList.add('hidden');
-                countDisplay.textContent = '';
+                if (sidebar) sidebar.classList.add('hidden');
                 return;
             }
 
-            const queryTerms = rawQuery.toLowerCase().split(/\s+/).filter(t => t.length > 0);
+            const normalizedQuery = rawQuery.toLowerCase().replace(/\s+/g, ' ');
+            const queryTerms = normalizedQuery.match(/"[^"]+"|\S+/g)
+                .map(t => t.replace(/"/g, ''));
+            
             const results = [];
-            const contextRadius = parseInt(document.getElementById('context-selector').value); 
 
-            pagesText.forEach(page => {
-                let textLower = page.text.toLowerCase();
-                const allTermsPresent = queryTerms.every(term => textLower.includes(term));
-                
-                if (allTermsPresent) {
-                    let firstMatchPos = -1;
-                    queryTerms.forEach(term => {
-                        const pos = textLower.indexOf(term);
-                        if (firstMatchPos === -1 || (pos !== -1 && pos < firstMatchPos)) {
-                            firstMatchPos = pos;
+            pagesData.forEach(page => {
+                const textLower = page.text.toLowerCase().replace(/\s+/g, ' ');
+                let matchFound = false;
+                let isContinuous = false;
+                let isParaMatch = false;
+                let firstMatchPos = -1;
+                let matchedSnippet = "";
+
+                if (logic === 'phrase') {
+                    if (textLower.includes(normalizedQuery)) {
+                        matchFound = true;
+                        isContinuous = true;
+                        firstMatchPos = textLower.indexOf(normalizedQuery);
+                    }
+                } else if (logic === 'and') {
+                    // Page-level AND
+                    if (queryTerms.every(term => textLower.includes(term))) {
+                        matchFound = true;
+                        isContinuous = textLower.includes(normalizedQuery);
+                        
+                        // Check for PARAGRAPH-WISE INDEXING match
+                        for (const para of page.paragraphs) {
+                            const paraLower = para.toLowerCase();
+                            if (queryTerms.every(term => paraLower.includes(term))) {
+                                isParaMatch = true;
+                                break;
+                            }
                         }
-                    });
 
+                        firstMatchPos = isContinuous ? textLower.indexOf(normalizedQuery) : textLower.indexOf(queryTerms[0]);
+                    }
+                } else if (logic === 'or') {
+                    if (queryTerms.some(term => textLower.includes(term))) {
+                        matchFound = true;
+                        isContinuous = textLower.includes(normalizedQuery);
+                        const matchingTerm = queryTerms.find(t => textLower.includes(t));
+                        firstMatchPos = textLower.indexOf(matchingTerm);
+                    }
+                }
+
+                if (matchFound) {
                     const start = Math.max(0, firstMatchPos - contextRadius);
-                    const end = Math.min(page.text.length, firstMatchPos + queryTerms[0].length + contextRadius);
-                    
+                    const end = Math.min(page.text.length, firstMatchPos + (isContinuous ? normalizedQuery.length : queryTerms[0].length) + contextRadius);
                     let snippet = page.text.substring(start, end);
                     let highlightedSnippet = snippet;
-                    
+
+                    // Highlight all terms
                     queryTerms.forEach(term => {
                         const termRegex = new RegExp(`(${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-                        highlightedSnippet = highlightedSnippet.replace(termRegex, '<span class="bg-yellow-200 font-bold text-slate-900">$1</span>');
+                        highlightedSnippet = highlightedSnippet.replace(termRegex, '<span class="bg-yellow-200 font-bold text-slate-900 px-0.5 rounded">$1</span>');
                     });
-                    
+
                     results.push({ 
                         pageNum: page.pageNum, 
-                        snippet: (start > 0 ? "..." : "") + highlightedSnippet + (end < page.text.length ? "..." : "") 
+                        snippet: (start > 0 ? "..." : "") + highlightedSnippet + (end < page.text.length ? "..." : ""),
+                        isContinuous: isContinuous,
+                        isParaMatch: isParaMatch
                     });
                 }
             });
 
-            countDisplay.textContent = `${results.length} found`;
-            sidebar.classList.remove('hidden');
-            list.innerHTML = '';
-
-            if (results.length === 0) {
-                list.innerHTML = `<div class="p-8 text-center text-slate-400 text-xs">No matches found for "${rawQuery}"</div>`;
-            }
-
-            results.forEach(res => {
-                const div = document.createElement('div');
-                div.className = 'p-4 hover:bg-blue-50 border border-slate-100 rounded-xl cursor-pointer transition-colors group bg-white shadow-sm';
-                div.onclick = () => scrollToPage(res.pageNum);
-                div.innerHTML = `
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-tighter">Page ${res.pageNum}</span>
-                        <svg class="opacity-0 group-hover:opacity-100 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
-                    </div>
-                    <p class="text-[11px] text-slate-600 leading-relaxed whitespace-pre-line">"${res.snippet}"</p>
-                `;
-                list.appendChild(div);
+            // Priority Sorting: Exact phrase first, then Para Match, then others
+            results.sort((a, b) => {
+                if (a.isContinuous !== b.isContinuous) return b.isContinuous - a.isContinuous;
+                return b.isParaMatch - a.isParaMatch;
             });
+
+            if (sidebarCount) sidebarCount.textContent = `${results.length} results found`;
+            if (sidebar) sidebar.classList.remove('hidden');
+            if (list) {
+                list.innerHTML = '';
+                if (results.length === 0) {
+                    list.innerHTML = `<div class="p-8 text-center text-slate-400 text-xs">No matches found.</div>`;
+                }
+
+                results.forEach(res => {
+                    const div = document.createElement('div');
+                    const borderColor = res.isContinuous ? 'border-blue-400 bg-blue-50/20' : (res.isParaMatch ? 'border-green-300' : 'border-slate-200');
+                    
+                    div.className = `p-4 border ${borderColor} rounded-xl cursor-pointer transition-all shadow-sm mb-2 active:bg-blue-100`;
+                    div.onclick = () => scrollToPage(res.pageNum);
+                    div.innerHTML = `
+                        <div class="flex justify-between items-center mb-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-bold text-blue-600 bg-blue-100 px-2 py-0.5 rounded tracking-tighter">Page ${res.pageNum}</span>
+                                ${res.isContinuous ? '<span class="text-[9px] font-bold text-blue-700 uppercase tracking-tighter">Exact Match</span>' : (res.isParaMatch ? '<span class="text-[9px] font-bold text-green-700 uppercase tracking-tighter">Para Match</span>' : '')}
+                            </div>
+                            <svg class="text-blue-400" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+                        </div>
+                        <p class="text-[11px] text-slate-600 leading-relaxed whitespace-pre-line">"${res.snippet}"</p>
+                    `;
+                    list.appendChild(div);
+                });
+            }
         }
 
         function scrollToPage(num) {
@@ -309,21 +382,37 @@
         }
 
         function closeSidebar() {
-            document.getElementById('search-sidebar').classList.add('hidden');
-            document.getElementById('search-input').value = '';
+            const sidebar = document.getElementById('search-sidebar');
+            if (sidebar) sidebar.classList.add('hidden');
+            const input = document.getElementById('search-input');
+            if (input) input.blur();
         }
 
-        document.getElementById('zoom-in').onclick = () => { scale += 0.2; updateZoom(); };
-        document.getElementById('zoom-out').onclick = () => { if (scale > 0.5) scale -= 0.2; updateZoom(); };
+        function downloadPdf() {
+            const selector = document.getElementById('doc-selector');
+            if (!selector) return;
+            const docId = selector.value;
+            window.open(pdfUrls[docId], '_blank');
+        }
+
+        const zoomInBtn = document.getElementById('zoom-in');
+        const zoomOutBtn = document.getElementById('zoom-out');
+        if (zoomInBtn) zoomInBtn.onclick = () => { scale += 0.2; updateZoom(); };
+        if (zoomOutBtn) zoomOutBtn.onclick = () => { if (scale > 0.5) scale -= 0.2; updateZoom(); };
 
         async function updateZoom() {
             if (!pdfDoc) return;
+            const thisSessionId = ++currentRenderSessionId;
             const viewer = document.getElementById('pdf-viewer');
-            viewer.innerHTML = '';
-            document.getElementById('loading').classList.remove('hidden');
-            document.getElementById('loading-progress').textContent = 'Adjusting view...';
+            const loadingOverlay = document.getElementById('loading');
+            const loadingProgress = document.getElementById('loading-progress');
+
+            if (viewer) viewer.innerHTML = '';
+            if (loadingOverlay) loadingOverlay.classList.remove('hidden');
+            if (loadingProgress) loadingProgress.textContent = 'Re-rendering view...';
             
             for (let i = 1; i <= pdfDoc.numPages; i++) {
+                if (thisSessionId !== currentRenderSessionId) return;
                 const page = await pdfDoc.getPage(i);
                 const viewport = page.getViewport({ scale });
                 const canvas = document.createElement('canvas');
@@ -331,25 +420,38 @@
                 canvas.id = `page-${i}`;
                 canvas.height = viewport.height;
                 canvas.width = viewport.width;
-                viewer.appendChild(canvas);
-                await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
+                if (viewer) viewer.appendChild(canvas);
+                try { await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise; } catch(e) {}
             }
-            document.getElementById('loading').classList.add('hidden');
+            if (loadingOverlay) loadingOverlay.classList.add('hidden');
         }
 
-        document.getElementById('search-input').addEventListener('input', debounce(handleSearch, 400));
-        document.getElementById('doc-selector').addEventListener('change', (e) => init(e.target.value));
-        document.getElementById('context-selector').addEventListener('change', () => handleSearch());
-
-        function debounce(func, timeout = 300){
+        function debounce(func, timeout = 300) {
             let timer;
-            return (...args) => {
-                clearTimeout(timer);
-                timer = setTimeout(() => { func.apply(this, args); }, timeout);
-            };
+            return (...args) => { clearTimeout(timer); timer = setTimeout(() => { func.apply(this, args); }, timeout); };
         }
 
-        window.onload = () => init("2026-01");
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('search-input');
+            const searchForm = document.getElementById('search-form');
+            const docSelector = document.getElementById('doc-selector');
+            const logicSelector = document.getElementById('logic-selector');
+            const contextSelector = document.getElementById('context-selector');
+
+            if (searchInput) searchInput.addEventListener('input', debounce(handleSearch, 450));
+            if (searchForm) {
+                searchForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    handleSearch();
+                    searchInput.blur();
+                });
+            }
+            if (docSelector) docSelector.addEventListener('change', (e) => init(e.target.value));
+            if (logicSelector) logicSelector.addEventListener('change', () => handleSearch());
+            if (contextSelector) contextSelector.addEventListener('change', () => handleSearch());
+
+            init("2026-01");
+        });
     </script>
 </body>
 </html>
