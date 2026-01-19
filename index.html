@@ -6,27 +6,38 @@
     <title>CiteCase Archives | Deep PDF Search</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #ffffff; 
+        }
         
-        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; }
-        
-        #viewer-container {
-            height: calc(100vh - 9rem);
-            overflow-y: auto;
-            background-color: #525659;
+        .logo-font {
+            font-family: 'Lora', serif;
         }
 
-        /* Page Container */
+        .legal-text {
+            font-family: 'Lora', serif;
+        }
+        
+        #viewer-container {
+            height: calc(100vh - 16rem);
+            overflow-y: auto;
+            background-color: #ffffff;
+            display: none;
+        }
+
         .pdf-page-container {
             margin: 20px auto;
             background: white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             max-width: 95%;
+            border: 1px solid #f1f5f9;
         }
 
         .pdf-page-canvas {
@@ -34,11 +45,10 @@
             max-width: 100%;
         }
 
-        /* Loading Skeleton for pages */
         .page-skeleton {
             position: absolute;
             inset: 0;
-            background: #f8fafc;
+            background: #ffffff;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -47,33 +57,49 @@
         }
 
         .loading-overlay {
-            background: rgba(255, 255, 255, 0.95);
+            background: #ffffff;
             z-index: 100;
+        }
+
+        /* Portal Animation States */
+        #portal-container {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .portal-landing {
+            padding-top: 25vh;
+        }
+
+        .portal-active {
+            padding-top: 2rem;
+        }
+
+        /* Full Page Results Overlay */
+        #search-results-overlay {
+            display: none;
+            z-index: 60;
+            height: calc(100vh - 18rem);
+            margin-top: 1.5rem;
         }
 
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
         
         select {
-            @apply appearance-none bg-slate-50 border border-slate-200 font-bold uppercase tracking-widest text-[9px] py-1.5 px-3 rounded-lg cursor-pointer hover:bg-slate-100 transition-colors focus:ring-2 focus:ring-blue-500 focus:outline-none;
-        }
-
-        #search-results-overlay {
-            max-height: 75vh;
-            display: none;
-            z-index: 60;
+            @apply appearance-none bg-white border border-slate-200 font-bold uppercase tracking-widest text-[10px] py-2.5 px-4 rounded-xl cursor-pointer hover:bg-slate-50 transition-colors focus:ring-2 focus:ring-slate-900 focus:outline-none shadow-sm;
         }
 
         @media (max-width: 768px) {
-            #viewer-container { height: calc(100vh - 10rem); }
+            .portal-landing { padding-top: 15vh; }
             #search-results-overlay {
                 position: fixed;
                 left: 0;
                 right: 0;
-                top: 10rem;
+                top: 15rem;
                 width: 100%;
-                max-height: calc(100vh - 10rem);
+                height: calc(100vh - 15rem);
+                margin-top: 0;
                 border-radius: 0;
             }
         }
@@ -81,94 +107,111 @@
 </head>
 <body class="h-screen flex flex-col overflow-hidden">
 
-    <!-- Centralized Header Section -->
-    <header class="bg-white border-b border-slate-200 px-4 py-4 flex flex-col items-center shadow-sm z-50">
-        
-        <!-- Top Row -->
-        <div class="w-full max-w-5xl flex items-center justify-between mb-4">
-            <div class="flex items-center gap-2 shrink-0">
-                <select id="doc-selector" title="Select Document">
-                    <option value="2026-01" selected>Monthly Digest - Jan 2026</option>
-                    <option value="2025">Yearly Digest - 2025</option>
-                    <option value="2024">Yearly Digest - 2024</option>
-                </select>
+    <!-- Help Modal (Pop-up) -->
+    <div id="help-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/20 backdrop-blur-sm" onclick="hideHelp()">
+        <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-2xl max-w-lg mx-4 border border-slate-100 animate-in fade-in zoom-in duration-300" onclick="event.stopPropagation()">
+            <h3 class="text-2xl font-black mb-4 logo-font tracking-tight">Guide to CiteCase</h3>
+            <div class="text-slate-600 leading-relaxed legal-text italic mb-8 space-y-4">
+                <p>This is a web-app (beta mode) which will help our subscribers to search through our Supreme Court Digests since 2024.</p>
+                <p>You can do case name search, neutral citation search and keyword, law name and provision wise search using this. It should lead you to the page in our Digest which discusses something about what you searched.</p>
             </div>
+            <button onclick="hideHelp()" class="w-full py-4 bg-black text-white rounded-2xl font-bold uppercase tracking-[0.2em] text-[10px] hover:bg-slate-800 transition-colors shadow-lg shadow-black/10">Got it</button>
+        </div>
+    </div>
 
-            <div class="absolute left-1/2 -translate-x-1/2 pointer-events-none">
-                <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2 pointer-events-auto cursor-default">
-                    <span class="text-blue-600">CiteCase</span>
+    <!-- Indexing Overlay -->
+    <div id="loading" class="loading-overlay absolute inset-0 flex flex-col items-center justify-center">
+        <div class="w-12 h-12 border-4 border-slate-900 border-t-transparent rounded-full animate-spin mb-6"></div>
+        <p class="text-slate-900 font-extrabold text-xl logo-font" id="loading-text">Indexing CiteCase Archives...</p>
+        <p id="loading-progress" class="text-[11px] text-slate-400 mt-2 font-mono uppercase tracking-widest font-bold">Synchronizing Text Layer...</p>
+    </div>
+
+    <!-- Centered Header & Search Portal Wrapper -->
+    <div id="portal-container" class="portal-landing w-full flex flex-col items-center bg-white z-50 transition-all duration-500">
+        
+        <!-- Centralized Branding & Navigation -->
+        <div class="w-full max-w-5xl px-4 flex flex-col items-center mb-6 relative">
+            
+            <!-- Logo Section (Joined CiteCase) -->
+            <div class="mb-6">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter flex items-center cursor-default logo-font overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+                    <span class="text-black bg-white px-4 md:px-6 py-2">Cite</span><span class="text-white bg-black px-4 md:px-6 py-2">Case</span>
                 </h1>
             </div>
 
-            <div class="flex items-center gap-1 md:gap-2 shrink-0">
-                <button onclick="downloadPdf()" class="p-2 hover:bg-slate-100 rounded-lg text-slate-600" title="Download PDF">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                </button>
-                <div class="hidden sm:flex items-center gap-1 border-l border-slate-200 ml-1 pl-1">
-                    <button id="zoom-out" class="p-2 hover:bg-slate-100 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-                    <button id="zoom-in" class="p-2 hover:bg-slate-100 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-                </div>
+            <!-- Digest Selector -->
+            <div class="mb-6 z-10">
+                <select id="doc-selector" title="Select Archive">
+                    <option value="2026-01" selected>Supreme Court Monthly Digest - January 2026</option>
+                    <option value="2025">Supreme Court Yearly Digest 2025</option>
+                    <option value="2024">Supreme Court Yearly Digest 2024</option>
+                </select>
+            </div>
+
+            <!-- Zoom Controls (Visible when viewer is active) -->
+            <div id="zoom-controls" class="hidden absolute right-4 top-0 items-center gap-1">
+                <button id="zoom-out" class="p-2.5 hover:bg-slate-50 rounded-xl text-slate-600 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+                <button id="zoom-in" class="p-2.5 hover:bg-slate-50 rounded-xl text-slate-600 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
             </div>
         </div>
 
-        <!-- Search Bar Row -->
-        <div class="w-full max-w-3xl relative">
-            <form id="search-form" onsubmit="event.preventDefault(); handleSearch(); return false;">
+        <!-- Search Box Container -->
+        <div class="w-full max-w-4xl relative px-4 pb-4 flex flex-col items-center">
+            <form id="search-form" onsubmit="event.preventDefault(); handleSearch(); return false;" class="w-full relative">
                 <input 
                     type="search" 
                     id="search-input" 
                     placeholder="Search Through Our Supreme Court Digests" 
-                    class="w-full pl-12 pr-12 py-3.5 bg-slate-100 border border-transparent rounded-2xl text-base font-medium focus:ring-2 focus:ring-blue-500 focus:bg-white focus:border-transparent transition-all shadow-inner"
+                    class="w-full pl-16 pr-16 py-6 bg-slate-50 border border-slate-200 rounded-[3rem] text-xl font-medium focus:ring-8 focus:ring-slate-900/5 focus:bg-white focus:border-slate-900 transition-all shadow-inner text-center"
                     autocomplete="off"
                 >
-                <div class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <div class="absolute left-10 top-1/2 -translate-y-1/2 text-slate-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 </div>
-                <button type="button" onclick="clearSearch()" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <button type="button" onclick="clearSearch()" class="absolute right-10 top-1/2 -translate-y-1/2 text-slate-300 hover:text-slate-900 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                 </button>
             </form>
 
-            <div id="search-results-overlay" class="absolute left-0 right-0 top-full mt-3 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col">
-                <div class="p-3 bg-slate-50 border-b border-slate-200 flex flex-wrap gap-2 items-center justify-between">
-                    <div class="flex gap-2">
-                        <div class="flex flex-col">
-                            <label class="text-[8px] font-bold text-slate-400 uppercase tracking-tighter mb-1">Search Mode</label>
-                            <select id="logic-selector">
-                                <option value="and" selected>All Words (AND)</option>
-                                <option value="phrase">Exact Sequence</option>
+            <!-- How to Use? button -->
+            <button onclick="showHelp()" class="mt-4 text-[10px] font-bold text-slate-400 hover:text-slate-900 transition-colors uppercase tracking-[0.2em] border-b border-transparent hover:border-slate-900 pb-0.5">How to Use?</button>
+
+            <!-- Full Page Results Overlay -->
+            <div id="search-results-overlay" class="w-full bg-white rounded-[2.5rem] shadow-2xl border border-slate-200 overflow-hidden flex flex-col">
+                <div class="p-5 bg-white border-b border-slate-100 flex flex-wrap gap-6 items-center justify-center">
+                    <div class="flex gap-6">
+                        <div class="flex flex-col items-center">
+                            <label class="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1.5">Search Mode</label>
+                            <select id="logic-selector" class="text-center bg-transparent border-none shadow-none py-0 px-2 font-black text-slate-900">
+                                <option value="phrase" selected>Exact Sequence</option>
+                                <option value="and">All Words (AND)</option>
                                 <option value="or">Any Word (OR)</option>
                             </select>
                         </div>
-                        <div class="flex flex-col">
-                            <label class="text-[8px] font-bold text-slate-400 uppercase tracking-tighter mb-1">Context Depth</label>
-                            <select id="context-selector">
-                                <option value="150" selected>Standard</option>
-                                <option value="400">Detailed</option>
+                        <div class="flex flex-col items-center">
+                            <label class="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1.5">Context Depth</label>
+                            <select id="context-selector" class="text-center bg-transparent border-none shadow-none py-0 px-2 font-black text-slate-900">
+                                <option value="-2" selected>Full Page</option>
                                 <option value="-1">Full Paragraph</option>
-                                <option value="-2">Full Page</option>
+                                <option value="400">Detailed</option>
+                                <option value="150">Standard</option>
                             </select>
                         </div>
                     </div>
-                    <div id="results-count-badge" class="text-[9px] font-bold text-blue-600 uppercase px-2 py-1 bg-blue-50 rounded-lg"></div>
+                    <div id="results-count-badge" class="text-[11px] font-bold text-slate-900 uppercase px-4 py-2 bg-slate-50 rounded-full border border-slate-200"></div>
                 </div>
-                <div id="results-list" class="flex-1 overflow-y-auto custom-scrollbar p-2 bg-slate-50 space-y-2"></div>
-                <div class="p-2 border-t border-slate-100 flex justify-center bg-white">
-                    <button onclick="hideResults()" class="text-[10px] font-bold text-slate-400 uppercase hover:text-slate-600 transition-colors py-1">Close Results</button>
+                <div id="results-list" class="flex-1 overflow-y-auto custom-scrollbar p-6 bg-white space-y-8"></div>
+                <div class="p-4 border-t border-slate-50 flex justify-center bg-white">
+                    <button onclick="hideResults()" class="text-[11px] font-bold text-slate-400 uppercase tracking-widest hover:text-slate-900 transition-colors py-2">Return to Search</button>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
 
-    <main class="flex-1 flex overflow-hidden relative">
-        <div id="loading" class="loading-overlay absolute inset-0 flex flex-col items-center justify-center">
-            <div class="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
-            <p class="text-slate-600 font-bold text-lg" id="loading-text">Loading CiteCase Archives...</p>
-            <p id="loading-progress" class="text-[11px] text-slate-400 mt-2 font-mono uppercase tracking-widest">Starting Indexer...</p>
-        </div>
-
-        <div id="viewer-container" class="flex-1 custom-scrollbar scroll-smooth">
-            <div id="pdf-viewer" class="py-4 md:py-8"></div>
+    <!-- Content Area -->
+    <main class="flex-1 flex flex-col overflow-hidden relative bg-white">
+        <div id="viewer-container" class="flex-1 custom-scrollbar scroll-smooth relative z-10">
+            <div id="pdf-viewer" class="py-6 md:py-10 bg-white"></div>
         </div>
     </main>
 
@@ -183,10 +226,13 @@
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
         let pdfDoc = null;
-        let scale = window.innerWidth < 768 ? 0.85 : 1.3;
+        let scale = window.innerWidth < 768 ? 0.85 : 1.35;
         let pagesData = []; 
         let currentRenderSessionId = 0; 
         let pageObserver = null;
+
+        function showHelp() { document.getElementById('help-modal').style.display = 'flex'; }
+        function hideHelp() { document.getElementById('help-modal').style.display = 'none'; }
 
         function setupObserver() {
             if (pageObserver) pageObserver.disconnect();
@@ -197,7 +243,7 @@
                         renderVisiblePage(pageNum, entry.target);
                     }
                 });
-            }, { root: document.getElementById('viewer-container'), rootMargin: '500px', threshold: 0.1 });
+            }, { root: document.getElementById('viewer-container'), rootMargin: '800px', threshold: 0.1 });
         }
 
         async function init(docId = "2026-01") {
@@ -207,10 +253,12 @@
             const docTitle = selector.options[selector.selectedIndex].text;
             
             document.getElementById('pdf-viewer').innerHTML = '';
-            document.getElementById('loading').style.display = 'flex';
-            document.getElementById('loading-text').textContent = `Indexing: ${docTitle}`;
-            document.getElementById('loading-progress').textContent = 'Downloading...';
+            document.getElementById('viewer-container').style.display = 'none';
+            document.getElementById('zoom-controls').classList.replace('flex', 'hidden');
             
+            const loadingOverlay = document.getElementById('loading');
+            loadingOverlay.style.display = 'flex';
+            document.getElementById('loading-text').textContent = `Syncing ${docTitle}`;
             pagesData = [];
 
             try {
@@ -226,7 +274,6 @@
 
                 for (let i = 1; i <= totalPages; i++) {
                     if (thisSessionId !== currentRenderSessionId) return;
-                    
                     const page = await pdfDoc.getPage(i);
                     const textContent = await page.getTextContent();
                     const fullText = textContent.items.map(item => item.str).join(' ');
@@ -251,25 +298,18 @@
                     container.style.height = `${viewport.height}px`;
                     container.dataset.pageNum = i;
                     container.id = `page-container-${i}`;
-                    
-                    container.innerHTML = `
-                        <div class="page-skeleton">
-                            <svg class="animate-pulse" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
-                            <span class="text-[9px] font-bold mt-2 uppercase tracking-widest">Page ${i}</span>
-                        </div>
-                    `;
+                    container.innerHTML = `<div class="page-skeleton font-mono text-[10px] font-bold tracking-tighter opacity-50 uppercase">Rendering Page ${i}</div>`;
                     
                     viewer.appendChild(container);
                     pageObserver.observe(container);
 
-                    if (i % 30 === 0) {
-                        document.getElementById('loading-progress').textContent = `Indexed ${i} / ${totalPages} pages`;
+                    if (i % 60 === 0) {
+                        document.getElementById('loading-progress').textContent = `Indexed ${i} / ${totalPages}`;
                     }
                 }
-                document.getElementById('loading').style.display = 'none';
+                loadingOverlay.style.display = 'none';
             } catch (error) {
                 console.error('Error:', error);
-                document.getElementById('loading-text').textContent = "Failed to load document.";
             }
         }
 
@@ -294,19 +334,25 @@
             const input = document.getElementById('search-input');
             const rawQuery = input.value.trim();
             const resultsOverlay = document.getElementById('search-results-overlay');
+            const portal = document.getElementById('portal-container');
             const list = document.getElementById('results-list');
             const logic = document.getElementById('logic-selector').value;
             const contextRadius = parseInt(document.getElementById('context-selector').value);
             
             if (!rawQuery || rawQuery.length < 2) {
                 resultsOverlay.style.display = 'none';
+                portal.className = 'portal-landing w-full flex flex-col items-center bg-white transition-all';
                 return;
             }
 
+            portal.className = 'portal-active w-full flex flex-col items-center bg-white z-50 transition-all';
+
             const normalizedQuery = rawQuery.toLowerCase().replace(/\s+/g, ' ');
             const queryTerms = normalizedQuery.match(/"[^"]+"|\S+/g).map(t => t.replace(/"/g, ''));
-            
+            const escapeRegExp = (string) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
             const results = [];
+            const termRegexes = queryTerms.map(term => new RegExp('\\b' + escapeRegExp(term) + '\\b', 'i'));
+            const phraseRegex = new RegExp('\\b' + escapeRegExp(normalizedQuery).replace(/\s+/g, '\\s+') + '\\b', 'i');
 
             pagesData.forEach(page => {
                 const textLower = page.text.toLowerCase().replace(/\s+/g, ' ');
@@ -314,102 +360,96 @@
                 let matchingParagraphs = [];
 
                 if (logic === 'phrase') {
-                    if (textLower.includes(normalizedQuery)) {
-                        matchFound = true; isContinuous = true;
-                        firstMatchPos = textLower.indexOf(normalizedQuery);
-                    }
+                    const match = textLower.match(phraseRegex);
+                    if (match) { matchFound = true; isContinuous = true; firstMatchPos = match.index; }
                 } else if (logic === 'and') {
-                    if (queryTerms.every(term => textLower.includes(term))) {
+                    if (termRegexes.every(re => re.test(textLower))) {
                         matchFound = true;
-                        isContinuous = textLower.includes(normalizedQuery);
+                        const phraseMatch = textLower.match(phraseRegex);
+                        isContinuous = !!phraseMatch;
                         for (const para of page.paragraphs) {
-                            if (queryTerms.every(term => para.toLowerCase().includes(term))) {
+                            if (termRegexes.every(re => re.test(para.toLowerCase()))) {
                                 isParaMatch = true;
                                 matchingParagraphs.push(para);
                             }
                         }
-                        firstMatchPos = isContinuous ? textLower.indexOf(normalizedQuery) : textLower.indexOf(queryTerms[0]);
+                        firstMatchPos = isContinuous ? phraseMatch.index : textLower.indexOf(queryTerms[0]);
                     }
                 } else if (logic === 'or') {
-                    if (queryTerms.some(term => textLower.includes(term))) {
-                        matchFound = true;
-                        isContinuous = textLower.includes(normalizedQuery);
-                        const matchingTerm = queryTerms.find(t => textLower.includes(t));
-                        firstMatchPos = textLower.indexOf(matchingTerm);
+                    const matches = termRegexes.map(re => textLower.match(re)).filter(m => m !== null);
+                    if (matches.length > 0) {
+                        matchFound = true; isContinuous = !!textLower.match(phraseRegex);
+                        firstMatchPos = matches[0].index;
                     }
                 }
 
-                if (matchFound) {
-                    let snippet = "";
-                    if (contextRadius === -2) {
-                        // "Full Page" mode
-                        snippet = page.text;
-                    } else if (contextRadius === -1) {
-                        // "Full Paragraph" mode
-                        if (matchingParagraphs.length > 0) {
-                            snippet = matchingParagraphs.join("\n\n");
-                        } else {
-                            const start = Math.max(0, firstMatchPos - 200);
-                            const end = Math.min(page.text.length, firstMatchPos + 200);
-                            snippet = page.text.substring(start, end);
-                        }
-                    } else {
-                        // Radius-based mode
-                        const start = Math.max(0, firstMatchPos - contextRadius);
-                        const end = Math.min(page.text.length, firstMatchPos + contextRadius);
-                        snippet = page.text.substring(start, end);
-                    }
+                if (matchFound && firstMatchPos !== -1) {
+                    let snippet = (contextRadius === -2) ? page.text : 
+                                 (contextRadius === -1 && matchingParagraphs.length > 0) ? matchingParagraphs.join("\n\n") :
+                                 page.text.substring(Math.max(0, firstMatchPos - (contextRadius < 0 ? 250 : contextRadius)), 
+                                                   firstMatchPos + (contextRadius < 0 ? 250 : contextRadius));
 
-                    // Highlight terms
                     let highlightedSnippet = snippet;
-                    queryTerms.forEach(term => {
-                        const termRegex = new RegExp(`(${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-                        highlightedSnippet = highlightedSnippet.replace(termRegex, '<span class="bg-yellow-200 font-bold text-slate-900 px-0.5 rounded">$1</span>');
+                    termRegexes.forEach(re => {
+                        const globalRe = new RegExp('\\b(' + re.source.slice(2, -2) + ')\\b', 'gi');
+                        highlightedSnippet = highlightedSnippet.replace(globalRe, '<span class="bg-yellow-200 font-bold text-slate-900 px-0.5 rounded">$1</span>');
                     });
 
-                    results.push({ 
-                        pageNum: page.pageNum, 
-                        snippet: (contextRadius < 0 ? "" : "...") + highlightedSnippet + (contextRadius < 0 ? "" : "..."), 
-                        isContinuous, 
-                        isParaMatch 
-                    });
+                    results.push({ pageNum: page.pageNum, snippet: highlightedSnippet, isContinuous, isParaMatch });
                 }
             });
 
             results.sort((a, b) => (b.isContinuous - a.isContinuous) || (b.isParaMatch - a.isParaMatch));
-
-            document.getElementById('results-count-badge').textContent = `${results.length} results`;
+            document.getElementById('results-count-badge').textContent = `${results.length} found`;
             resultsOverlay.style.display = 'flex';
-            list.innerHTML = results.length ? '' : `<div class="p-8 text-center text-slate-400 text-xs">No matches found.</div>`;
+            list.innerHTML = results.length ? '' : `<div class="p-12 text-center text-slate-400 text-sm italic legal-text">No matching entries found.</div>`;
 
             results.forEach(res => {
                 const div = document.createElement('div');
-                div.className = `p-4 border ${res.isContinuous ? 'border-blue-400 bg-blue-50/20' : (res.isParaMatch ? 'border-green-200 bg-green-50/10' : 'border-slate-200')} rounded-xl cursor-pointer bg-white shadow-sm mb-2 active:bg-blue-100 transition-colors`;
+                div.className = `p-8 border-b border-slate-100 cursor-pointer bg-white transition-all active:bg-slate-50`;
                 div.onclick = () => scrollToPage(res.pageNum);
                 div.innerHTML = `
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="text-[10px] font-bold text-blue-600 bg-blue-100 px-2 py-0.5 rounded uppercase tracking-wider">Page ${res.pageNum} ${res.isContinuous ? '• EXACT' : (res.isParaMatch ? '• PARA' : '')}</span>
-                        <svg class="text-blue-400" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="flex items-center gap-4">
+                            <span class="text-[12px] font-black text-slate-900 border border-slate-900 px-3 py-1 rounded-lg tracking-widest uppercase">Page ${res.pageNum}</span>
+                            ${res.isContinuous ? '<span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Exact Match</span>' : ''}
+                        </div>
+                        <svg class="text-slate-300" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
                     </div>
-                    <p class="text-[11px] text-slate-600 leading-relaxed whitespace-pre-line">${res.snippet}</p>
+                    <p class="text-[14px] text-slate-700 leading-relaxed whitespace-pre-line legal-text italic">"${res.snippet}"</p>
                 `;
                 list.appendChild(div);
             });
         }
 
         function scrollToPage(num) {
+            const viewer = document.getElementById('viewer-container');
+            viewer.style.display = 'block';
+            document.getElementById('zoom-controls').classList.replace('hidden', 'flex');
+            
             const el = document.getElementById(`page-container-${num}`);
             if (el) {
                 el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                el.classList.add('ring-4', 'ring-blue-500', 'ring-opacity-40');
-                setTimeout(() => el.classList.remove('ring-4', 'ring-blue-500', 'ring-opacity-40'), 2500);
-                if (window.innerWidth < 768) hideResults();
+                el.classList.add('ring-8', 'ring-slate-900', 'ring-opacity-5');
+                setTimeout(() => el.classList.remove('ring-8', 'ring-slate-900', 'ring-opacity-5'), 2500);
+                hideResults();
             }
         }
 
-        function clearSearch() { document.getElementById('search-input').value = ''; hideResults(); }
-        function hideResults() { document.getElementById('search-results-overlay').style.display = 'none'; }
-        function downloadPdf() { window.open(pdfUrls[document.getElementById('doc-selector').value], '_blank'); }
+        function clearSearch() { 
+            document.getElementById('search-input').value = ''; 
+            document.getElementById('search-results-overlay').style.display = 'none'; 
+            document.getElementById('viewer-container').style.display = 'none';
+            document.getElementById('zoom-controls').classList.replace('flex', 'hidden');
+            document.getElementById('portal-container').className = 'portal-landing w-full flex flex-col items-center bg-white transition-all';
+        }
+
+        function hideResults() { 
+            document.getElementById('search-results-overlay').style.display = 'none'; 
+            if (document.getElementById('search-input').value === "") {
+                document.getElementById('portal-container').className = 'portal-landing w-full flex flex-col items-center bg-white transition-all';
+            }
+        }
 
         const zoomInBtn = document.getElementById('zoom-in');
         const zoomOutBtn = document.getElementById('zoom-out');
@@ -418,8 +458,6 @@
 
         async function updateZoom() {
             if (!pdfDoc) return;
-            const viewer = document.getElementById('pdf-viewer');
-            viewer.innerHTML = '';
             init(document.getElementById('doc-selector').value);
         }
 
@@ -429,10 +467,9 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            const searchInput = document.getElementById('search-input');
-            const docSelector = document.getElementById('doc-selector');
-            searchInput.addEventListener('input', debounce(handleSearch, 450));
-            docSelector.addEventListener('change', (e) => init(e.target.value));
+            const input = document.getElementById('search-input');
+            input.addEventListener('input', debounce(handleSearch, 450));
+            document.getElementById('doc-selector').addEventListener('change', (e) => init(e.target.value));
             document.getElementById('logic-selector').addEventListener('change', () => handleSearch());
             document.getElementById('context-selector').addEventListener('change', () => handleSearch());
             init("2026-01");
