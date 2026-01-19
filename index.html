@@ -123,7 +123,7 @@
     <div id="loading" class="loading-overlay absolute inset-0 flex flex-col items-center justify-center">
         <div class="w-12 h-12 border-4 border-slate-900 border-t-transparent rounded-full animate-spin mb-6"></div>
         <p class="text-slate-900 font-extrabold text-xl logo-font" id="loading-text">Indexing CiteCase Archives...</p>
-        <p id="loading-progress" class="text-[11px] text-slate-400 mt-2 font-mono uppercase tracking-widest font-bold">Synchronizing Text Layer...</p>
+        <p id="loading-progress" class="text-[11px] text-slate-400 mt-2 font-mono uppercase tracking-widest font-bold">Building Paragraph Index...</p>
     </div>
 
     <!-- Centered Header & Search Portal Wrapper -->
@@ -132,7 +132,7 @@
         <!-- Centralized Branding & Navigation -->
         <div class="w-full max-w-5xl px-4 flex flex-col items-center mb-6 relative">
             
-            <!-- Logo Section (Joined CiteCase) -->
+            <!-- Logo Section (Joined CiteCase - No Space) -->
             <div class="mb-6">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter flex items-center cursor-default logo-font overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
                     <span class="text-black bg-white px-4 md:px-6 py-2">Cite</span><span class="text-white bg-black px-4 md:px-6 py-2">Case</span>
@@ -191,10 +191,10 @@
                         <div class="flex flex-col items-center">
                             <label class="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1.5">Context Depth</label>
                             <select id="context-selector" class="text-center bg-transparent border-none shadow-none py-0 px-2 font-black text-slate-900">
-                                <option value="-2" selected>Full Page</option>
-                                <option value="-1">Full Paragraph</option>
-                                <option value="400">Detailed</option>
-                                <option value="150">Standard</option>
+                                <option value="-1" selected>Para Match (Focused)</option>
+                                <option value="-2">Full Page</option>
+                                <option value="400">Detailed Buffer</option>
+                                <option value="150">Standard Buffer</option>
                             </select>
                         </div>
                     </div>
@@ -280,16 +280,22 @@
                     
                     let paragraphs = [];
                     let currentPara = "";
+                    
                     textContent.items.forEach(item => {
+                        const text = item.str.trim();
                         currentPara += item.str + " ";
-                        if (item.str.trim().endsWith('.') || item.str.trim().endsWith(':')) {
+                        if ((text.endsWith('.') || text.endsWith(':')) && currentPara.length > 20) {
                             paragraphs.push(currentPara.trim());
                             currentPara = "";
                         }
                     });
                     if (currentPara.trim()) paragraphs.push(currentPara.trim());
 
-                    pagesData.push({ pageNum: i, text: fullText, paragraphs: paragraphs });
+                    pagesData.push({ 
+                        pageNum: i, 
+                        text: fullText, 
+                        paragraphs: paragraphs 
+                    });
                     
                     const viewport = page.getViewport({ scale });
                     const container = document.createElement('div');
@@ -350,59 +356,79 @@
             const normalizedQuery = rawQuery.toLowerCase().replace(/\s+/g, ' ');
             const queryTerms = normalizedQuery.match(/"[^"]+"|\S+/g).map(t => t.replace(/"/g, ''));
             const escapeRegExp = (string) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            const results = [];
+            
             const termRegexes = queryTerms.map(term => new RegExp('\\b' + escapeRegExp(term) + '\\b', 'i'));
             const phraseRegex = new RegExp('\\b' + escapeRegExp(normalizedQuery).replace(/\s+/g, '\\s+') + '\\b', 'i');
 
+            const results = [];
+
             pagesData.forEach(page => {
-                const textLower = page.text.toLowerCase().replace(/\s+/g, ' ');
-                let matchFound = false, isContinuous = false, isParaMatch = false, firstMatchPos = -1;
-                let matchingParagraphs = [];
+                page.paragraphs.forEach((para, paraIdx) => {
+                    const paraLower = para.toLowerCase().replace(/\s+/g, ' ');
+                    let matchFound = false;
+                    let isContinuous = false;
+                    let firstMatchPos = -1;
 
-                if (logic === 'phrase') {
-                    const match = textLower.match(phraseRegex);
-                    if (match) { matchFound = true; isContinuous = true; firstMatchPos = match.index; }
-                } else if (logic === 'and') {
-                    if (termRegexes.every(re => re.test(textLower))) {
-                        matchFound = true;
-                        const phraseMatch = textLower.match(phraseRegex);
-                        isContinuous = !!phraseMatch;
-                        for (const para of page.paragraphs) {
-                            if (termRegexes.every(re => re.test(para.toLowerCase()))) {
-                                isParaMatch = true;
-                                matchingParagraphs.push(para);
-                            }
+                    if (logic === 'phrase') {
+                        const match = paraLower.match(phraseRegex);
+                        if (match) { 
+                            matchFound = true; 
+                            isContinuous = true; 
+                            firstMatchPos = match.index; 
                         }
-                        firstMatchPos = isContinuous ? phraseMatch.index : textLower.indexOf(queryTerms[0]);
+                    } else if (logic === 'and') {
+                        if (termRegexes.every(re => re.test(paraLower))) {
+                            matchFound = true;
+                            const phraseMatch = paraLower.match(phraseRegex);
+                            isContinuous = !!phraseMatch;
+                            const firstTermMatch = paraLower.match(termRegexes[0]);
+                            firstMatchPos = firstTermMatch ? firstTermMatch.index : 0;
+                        }
+                    } else if (logic === 'or') {
+                        const matches = termRegexes.map(re => paraLower.match(re)).filter(m => m !== null);
+                        if (matches.length > 0) {
+                            matchFound = true;
+                            isContinuous = !!paraLower.match(phraseRegex);
+                            firstMatchPos = matches[0].index;
+                        }
                     }
-                } else if (logic === 'or') {
-                    const matches = termRegexes.map(re => textLower.match(re)).filter(m => m !== null);
-                    if (matches.length > 0) {
-                        matchFound = true; isContinuous = !!textLower.match(phraseRegex);
-                        firstMatchPos = matches[0].index;
+
+                    if (matchFound) {
+                        let snippet = "";
+                        if (contextRadius === -2) {
+                            // Full page context
+                            snippet = page.text;
+                        } else if (contextRadius === -1) {
+                            // Focused Paragraph: Starts from the "line" (offset slightly before match)
+                            const startIdx = Math.max(0, firstMatchPos - 40); // 40 chars leading context
+                            snippet = (startIdx > 0 ? "... " : "") + para.substring(startIdx);
+                        } else {
+                            // Buffer based context
+                            const startIdx = Math.max(0, firstMatchPos - contextRadius);
+                            const endIdx = Math.min(para.length, firstMatchPos + contextRadius);
+                            snippet = (startIdx > 0 ? "... " : "") + para.substring(startIdx, endIdx) + (endIdx < para.length ? " ..." : "");
+                        }
+
+                        let highlightedSnippet = snippet;
+                        termRegexes.forEach(re => {
+                            const globalRe = new RegExp('\\b(' + re.source.slice(2, -2) + ')\\b', 'gi');
+                            highlightedSnippet = highlightedSnippet.replace(globalRe, '<span class="bg-yellow-200 font-bold text-slate-900 px-0.5 rounded">$1</span>');
+                        });
+
+                        results.push({ 
+                            pageNum: page.pageNum, 
+                            snippet: highlightedSnippet, 
+                            isContinuous, 
+                            paraIdx 
+                        });
                     }
-                }
-
-                if (matchFound && firstMatchPos !== -1) {
-                    let snippet = (contextRadius === -2) ? page.text : 
-                                 (contextRadius === -1 && matchingParagraphs.length > 0) ? matchingParagraphs.join("\n\n") :
-                                 page.text.substring(Math.max(0, firstMatchPos - (contextRadius < 0 ? 250 : contextRadius)), 
-                                                   firstMatchPos + (contextRadius < 0 ? 250 : contextRadius));
-
-                    let highlightedSnippet = snippet;
-                    termRegexes.forEach(re => {
-                        const globalRe = new RegExp('\\b(' + re.source.slice(2, -2) + ')\\b', 'gi');
-                        highlightedSnippet = highlightedSnippet.replace(globalRe, '<span class="bg-yellow-200 font-bold text-slate-900 px-0.5 rounded">$1</span>');
-                    });
-
-                    results.push({ pageNum: page.pageNum, snippet: highlightedSnippet, isContinuous, isParaMatch });
-                }
+                });
             });
 
-            results.sort((a, b) => (b.isContinuous - a.isContinuous) || (b.isParaMatch - a.isParaMatch));
-            document.getElementById('results-count-badge').textContent = `${results.length} found`;
+            results.sort((a, b) => b.isContinuous - a.isContinuous);
+            document.getElementById('results-count-badge').textContent = `${results.length} results found`;
             resultsOverlay.style.display = 'flex';
-            list.innerHTML = results.length ? '' : `<div class="p-12 text-center text-slate-400 text-sm italic legal-text">No matching entries found.</div>`;
+            list.innerHTML = results.length ? '' : `<div class="p-12 text-center text-slate-400 text-sm italic legal-text">No matches found.</div>`;
 
             results.forEach(res => {
                 const div = document.createElement('div');
@@ -440,7 +466,7 @@
             document.getElementById('search-input').value = ''; 
             document.getElementById('search-results-overlay').style.display = 'none'; 
             document.getElementById('viewer-container').style.display = 'none';
-            document.getElementById('zoom-controls').classList.replace('flex', 'hidden');
+            document.getElementById('zoom-controls').classList.replace('hidden', 'flex');
             document.getElementById('portal-container').className = 'portal-landing w-full flex flex-col items-center bg-white transition-all';
         }
 
