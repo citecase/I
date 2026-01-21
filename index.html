@@ -17,7 +17,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        .splash-overlay {
+        .splash-overlay, .lock-overlay {
             position: fixed;
             inset: 0;
             background: white;
@@ -27,6 +27,11 @@
             align-items: center;
             justify-content: center;
             transition: opacity 0.5s ease-out;
+        }
+
+        .lock-overlay {
+            z-index: 9998;
+            display: none;
         }
 
         .loader-bar {
@@ -139,10 +144,23 @@
             color: #fff;
             border-color: #000;
         }
+
+        .passcode-input {
+            letter-spacing: 0.5em;
+            text-align: center;
+            font-weight: 900;
+            border-bottom: 2px solid #f3f4f6;
+            transition: border-color 0.3s;
+        }
+        .passcode-input:focus {
+            border-color: #000;
+            outline: none;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Sync Splash -->
     <div id="splash" class="splash-overlay">
         <div id="splash-content" class="flex flex-col items-center">
             <div class="flex items-center gap-1 mb-4 select-none">
@@ -165,9 +183,21 @@
         </div>
     </div>
 
+    <!-- Passcode Screen -->
+    <div id="lock-screen" class="lock-overlay">
+        <div class="flex flex-col items-center w-full max-w-xs">
+            <div class="flex items-center gap-1 mb-12 select-none opacity-20">
+                <span class="text-2xl font-black text-black tracking-tighter">Cite</span>
+                <span class="text-2xl font-black bg-black text-white px-1.5 py-0.5 rounded-md tracking-tighter">Case</span>
+            </div>
+            <input type="password" id="passcodeField" maxlength="8" class="passcode-input w-full py-4 text-2xl" autocomplete="off" autofocus>
+            <div id="lockError" class="mt-4 text-red-500 text-[10px] font-bold uppercase tracking-widest opacity-0 transition-opacity">Access Denied</div>
+        </div>
+    </div>
+
     <div id="copyToast">Copied to Clipboard</div>
 
-    <div class="min-h-screen flex flex-col bg-white">
+    <div id="app-content" class="min-h-screen flex flex-col bg-white opacity-0 pointer-events-none transition-opacity duration-700">
         <div id="hero-container">
             <div class="flex flex-col items-center mb-12">
                 <div class="flex items-center gap-1 cursor-pointer select-none" onclick="location.reload()">
@@ -205,26 +235,34 @@
 
                     <div class="flex items-center gap-2">
                         <span class="font-bold uppercase tracking-widest text-[10px] text-gray-300">Quick Cite</span>
+                        <button onclick="quickSearch('2024 INSC ')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">2024 INSC</button>
                         <button onclick="quickSearch('2025 INSC ')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">2025 INSC</button>
                         <button onclick="quickSearch('2026 INSC ')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">2026 INSC</button>
                     </div>
                 </div>
             </div>
 
-            <div id="initialStats" class="mt-10 text-gray-400 text-[11px] font-bold uppercase tracking-[0.25em]">
-                Initializing archives...
+            <div id="statsWrapper" class="flex flex-col items-center mt-10">
+                <div id="initialStats" class="text-gray-400 text-[11px] font-bold uppercase tracking-[0.25em]">
+                    Initializing archives...
+                </div>
+                <div id="heroNotebookLink" class="mt-6 hidden opacity-0 transition-opacity duration-500">
+                    <a href="https://notebooklm.google.com/notebook/b451a149-6b7c-44da-96f0-bd946ea69b31" target="_blank" class="flex items-center gap-2 bg-gray-50 hover:bg-black hover:text-white text-gray-400 px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all border border-gray-100">
+                        <i class="fas fa-robot"></i> Chat with NotebookLM AI
+                    </a>
+                </div>
             </div>
         </div>
 
         <div id="results-wrapper" class="hidden">
             <div class="max-w-4xl mx-auto px-6 mb-8 flex justify-between items-center text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em] border-b border-gray-50 pb-4">
-                <div class="flex items-center gap-4">
+                <div class="flex flex-wrap items-center gap-4">
                     <div id="statsCount">Found 0 matches</div>
                     <button id="copyAllBtn" onclick="copyAllResults()" class="flex items-center gap-2 hover:text-black transition-colors border-l pl-4 border-gray-100">
                         <i class="fas fa-copy"></i> Copy Full Results
                     </button>
                 </div>
-                <div id="searchSpeed" class="text-gray-300 font-mono"></div>
+                <div id="searchSpeed" class="text-gray-300 font-mono hidden sm:block"></div>
             </div>
 
             <main id="resultsList" class="max-w-4xl mx-auto px-6 space-y-6 pb-24">
@@ -234,25 +272,65 @@
     </div>
 
     <footer class="fixed bottom-0 w-full bg-white/95 backdrop-blur-md border-t border-gray-50 py-3 px-6 flex justify-between items-center text-[9px] text-gray-300 font-bold uppercase tracking-[0.2em] z-50">
-        <div>CiteCase Archives &copy; 2026</div>
-        <div>GitHub Repository Index</div>
+        <div class="flex items-center gap-6">
+            <span>CiteCase Archives &copy; 2026</span>
+            <a href="https://notebooklm.google.com/notebook/b451a149-6b7c-44da-96f0-bd946ea69b31" target="_blank" class="hover:text-black transition-colors flex items-center gap-1">
+                <i class="fas fa-external-link-alt"></i> NotebookLM AI
+            </a>
+        </div>
     </footer>
 
     <script>
-        /**
-         * SOURCE CONFIGURATION
-         * Updated to use the new 2025INSC file and removed the old Supreme Court 2025-2 file.
-         */
         const SOURCES = [
             "https://raw.githubusercontent.com/citecase/I/refs/heads/main/2025INSC",
-            "https://raw.githubusercontent.com/citecase/I/refs/heads/main/jan2026.md"
+            "https://raw.githubusercontent.com/citecase/I/refs/heads/main/jan2026.md",
+            "https://raw.githubusercontent.com/citecase/I/refs/heads/main/2024.md"
         ]; 
         
         let judgmentData = [];
         let currentResults = [];
 
-        // Global DOM references initialized on demand
         const getEl = (id) => document.getElementById(id);
+
+        // Security Logic
+        function getPasscode() {
+            const now = new Date();
+            const d = String(now.getDate()).padStart(2, '0');
+            const m = String(now.getMonth() + 1).padStart(2, '0');
+            const y = String(now.getFullYear());
+            return `${d}${m}${y}`;
+        }
+
+        function setupPasscode() {
+            const field = getEl('passcodeField');
+            const error = getEl('lockError');
+            const target = getPasscode();
+
+            field.addEventListener('input', (e) => {
+                error.style.opacity = '0';
+                if (e.target.value.length === 8) {
+                    if (e.target.value === target) {
+                        unlockApp();
+                    } else {
+                        error.style.opacity = '1';
+                        field.value = '';
+                    }
+                }
+            });
+        }
+
+        function unlockApp() {
+            const lock = getEl('lock-screen');
+            const content = getEl('app-content');
+            
+            lock.style.opacity = '0';
+            setTimeout(() => {
+                lock.style.display = 'none';
+                content.classList.remove('pointer-events-none');
+                content.style.opacity = '1';
+                getEl('searchInput').focus();
+            }, 500);
+        }
 
         function copyToClipboard(text) {
             const textarea = document.createElement('textarea');
@@ -320,19 +398,30 @@
                 const match = trimmedLine.match(linkRegex);
                 if (match) {
                     if (currentEntry) entries.push(currentEntry);
+                    
                     const label = match[1].replace(/\*\*/g, '').replace(/#/g, '').trim();
                     const url = match[2];
-                    const parts = label.split(' - ');
-                    const mainTitle = parts[0].trim();
-                    const words = mainTitle.split(/\s+/);
-                    let citation = "";
-                    let title = mainTitle;
-
-                    if (words.length >= 3) {
-                        const lastThree = words.slice(-3).join(' ');
-                        if (/\d/.test(lastThree)) {
-                            citation = lastThree;
-                            title = words.slice(0, -3).join(' ');
+                    
+                    const citeRegex = /(202[4-6]\s+INSC\s+\d+)/i;
+                    const citeMatch = label.match(citeRegex);
+                    
+                    let citation = "Citation N/A";
+                    let title = label;
+                    
+                    if (citeMatch) {
+                        citation = citeMatch[1];
+                        title = label.replace(citation, '').replace(/^\s*-\s*/, '').replace(/\s*-\s*$/, '').trim();
+                    } else {
+                        const parts = label.split(' - ');
+                        if (parts.length > 1) {
+                            title = parts[0].trim();
+                            citation = parts.slice(1).join(' - ').trim();
+                        } else {
+                            const words = label.split(/\s+/);
+                            if (words.length >= 3 && /\d/.test(words.slice(-1))) {
+                                citation = words.slice(-3).join(' ');
+                                title = words.slice(0, -3).join(' ');
+                            }
                         }
                     }
 
@@ -340,15 +429,13 @@
                         id: Date.now() + Math.random(),
                         title: title,
                         citation: citation,
-                        category: parts.length > 1 ? parts.slice(1).join(' - ').trim() : 'General',
+                        category: 'General',
                         link: url,
                         paragraphs: []
                     };
 
                     const beforeLink = trimmedLine.split(match[0])[0].replace(/#/g, '').trim();
                     if (beforeLink.length > 3) currentEntry.paragraphs.push(beforeLink);
-                    const afterLink = trimmedLine.split(match[0])[1].trim();
-                    if (afterLink.length > 0) currentEntry.paragraphs.push(afterLink);
                 } else if (currentEntry) {
                     if (!/^[-*_=]{3,}$/.test(trimmedLine)) {
                         currentEntry.paragraphs.push(trimmedLine);
@@ -397,10 +484,21 @@
                 setTimeout(() => {
                     const splash = getEl('splash');
                     const stats = getEl('initialStats');
-                    if (splash) splash.style.opacity = '0';
+                    const notebookBtn = getEl('heroNotebookLink');
+                    const lock = getEl('lock-screen');
+                    
+                    splash.style.opacity = '0';
                     setTimeout(() => {
-                        if (splash) splash.style.display = 'none';
+                        splash.style.display = 'none';
                         if (stats) stats.innerText = `${judgmentData.length} Supreme Court Judgments Indexed`;
+                        if (notebookBtn) {
+                            notebookBtn.classList.remove('hidden');
+                            setTimeout(() => notebookBtn.style.opacity = '1', 50);
+                        }
+                        // Show lock screen after splash
+                        lock.style.display = 'flex';
+                        setupPasscode();
+                        getEl('passcodeField').focus();
                     }, 500);
                 }, 400);
             } catch (error) {
@@ -435,29 +533,28 @@
             const startTime = performance.now();
             const hero = getEl('hero-container');
             const resultsWrapper = getEl('results-wrapper');
-            const initialStats = getEl('initialStats');
+            const statsWrapper = getEl('statsWrapper');
 
             if (queryTrimmed.length < 4) {
                 if (hero) hero.classList.remove('has-results');
                 if (resultsWrapper) resultsWrapper.classList.add('hidden');
-                if (initialStats) initialStats.classList.remove('hidden');
+                if (statsWrapper) statsWrapper.classList.remove('hidden');
                 currentResults = [];
                 return;
             }
 
             if (hero) hero.classList.add('has-results');
             if (resultsWrapper) resultsWrapper.classList.remove('hidden');
-            if (initialStats) initialStats.classList.add('hidden');
+            if (statsWrapper) statsWrapper.classList.add('hidden');
 
             const terms = queryTrimmed.split(/\s+/).filter(t => t.length > 0);
             
             currentResults = judgmentData.filter(doc => {
-                const searchString = `${doc.title} ${doc.citation} ${doc.category} ${doc.paragraphs.join(' ')}`.toLowerCase();
+                const searchString = `${doc.title} ${doc.citation} ${doc.paragraphs.join(' ')}`.toLowerCase();
                 const titleCitationString = `${doc.title} ${doc.citation}`.toLowerCase();
                 
                 if (logic === 'exact') {
                     const escapedQuery = queryTrimmed.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                    // Strictly match whole words/phrases in title/citation only
                     const regex = new RegExp(`\\b${escapedQuery}\\b`, 'i');
                     return regex.test(titleCitationString);
                 } else if (logic === 'and') {
@@ -465,6 +562,23 @@
                 } else {
                     return terms.some(term => searchString.includes(term));
                 }
+            });
+
+            currentResults.sort((a, b) => {
+                const extractYear = (cite) => {
+                    const match = cite.match(/\b202[4-6]\b/);
+                    return match ? parseInt(match[0]) : 0;
+                };
+                const extractNum = (cite) => {
+                    const match = cite.match(/INSC\s+(\d+)/i);
+                    return match ? parseInt(match[1]) : 0;
+                };
+                const yearA = extractYear(a.citation);
+                const yearB = extractYear(b.citation);
+                if (yearA !== yearB) return yearB - yearA;
+                const numA = extractNum(a.citation);
+                const numB = extractNum(b.citation);
+                return numB - numA;
             });
 
             renderResults(currentResults, true, queryTrimmed);
@@ -500,7 +614,7 @@
             const list = getEl('resultsList');
             if (!list) return;
             if (data.length === 0) {
-                list.innerHTML = `<div class="py-24 text-center text-gray-400"><p class="text-[10px] font-bold uppercase tracking-[0.2em]">No matches found in headers</p></div>`;
+                list.innerHTML = `<div class="py-24 text-center text-gray-400"><p class="text-[10px] font-bold uppercase tracking-[0.2em]">No matches found in archives</p></div>`;
                 return;
             }
             list.innerHTML = data.map(doc => `
