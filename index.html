@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CiteCase Search & Law Library</title>
+    <title>CiteCase - Judgments & Library</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -67,7 +67,7 @@
 
         .search-result-card:hover {
             transform: translateX(4px);
-            border-left-color: #000000;
+            border-left-color: #000;
             background: #fafafa;
         }
 
@@ -88,7 +88,7 @@
 
         .search-wrapper {
             width: 100%;
-            max-width: 720px;
+            max-width: 850px;
             position: relative;
         }
 
@@ -99,13 +99,6 @@
 
         .paragraph-content b, .paragraph-content strong { font-weight: 700; color: #000; }
         .paragraph-content i, .paragraph-content em { font-style: italic; }
-        .paragraph-content code { 
-            background: #f3f4f6; 
-            padding: 2px 4px; 
-            border-radius: 4px; 
-            font-family: monospace; 
-            font-size: 0.9em;
-        }
 
         #copyToast {
             position: fixed;
@@ -124,25 +117,6 @@
             transition: opacity 0.3s;
             pointer-events: none;
             z-index: 100;
-        }
-
-        #error-ui {
-            display: none;
-            text-align: center;
-            padding: 2rem;
-            max-width: 400px;
-        }
-
-        .quick-cite-badge {
-            cursor: pointer;
-            transition: all 0.2s;
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-        }
-        .quick-cite-badge:hover {
-            background: #000;
-            color: #fff;
-            border-color: #000;
         }
 
         .passcode-input {
@@ -191,12 +165,12 @@
                 <span class="text-4xl font-black text-black tracking-tighter">Cite</span>
                 <span class="text-4xl font-black bg-black text-white px-2 py-0.5 rounded-lg tracking-tighter">Case</span>
             </div>
-            <div id="status-text" class="text-gray-400 font-medium text-[10px] tracking-[0.2em] uppercase animate-pulse">Syncing Archives...</div>
+            <div id="status-text" class="text-gray-400 font-medium text-[10px] tracking-[0.2em] uppercase animate-pulse">Syncing All Archives...</div>
             <div id="loader-container" class="loader-bar">
                 <div id="progress" class="loader-progress"></div>
             </div>
             
-            <div id="error-ui">
+            <div id="error-ui" class="hidden">
                 <i class="fas fa-exclamation-triangle text-red-500 text-3xl mb-4"></i>
                 <h2 class="text-lg font-bold mb-2 text-black text-center">Sync Failed</h2>
                 <p id="error-message" class="text-sm text-gray-500 mb-6 text-center"></p>
@@ -222,7 +196,7 @@
     <div id="copyToast">Copied to Clipboard</div>
 
     <div id="app-content" class="min-h-screen flex flex-col bg-white opacity-0 pointer-events-none transition-opacity duration-700">
-        <!-- Navigation Header -->
+        <!-- Navigation -->
         <nav class="flex justify-center gap-8 py-6 border-b border-gray-50 bg-white/80 backdrop-blur-md sticky top-0 z-40">
             <button onclick="setView('judgments')" id="tab-judgments" class="nav-tab active">Supreme Court Judgments</button>
             <button onclick="setView('ebooks')" id="tab-ebooks" class="nav-tab">Law Library</button>
@@ -255,6 +229,7 @@
                             <input type="radio" name="logic" value="exact" class="w-4 h-4 accent-black">
                             <span class="font-semibold text-gray-500">Exact Match</span>
                         </label>
+                        <!-- Restored Any Word Logic -->
                         <label class="flex items-center gap-2 cursor-pointer hover:text-black transition-colors">
                             <input type="radio" name="logic" value="or" class="w-4 h-4 accent-black">
                             <span class="font-semibold text-gray-500">Any Word</span>
@@ -271,9 +246,14 @@
                         <button onclick="topicSearch('Family')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">Family</button>
                     </div>
 
-                    <div id="libraryQuickGroup" class="hidden items-center gap-2 border-l pl-4 border-gray-100">
-                        <span class="font-bold uppercase tracking-widest text-[10px] text-gray-300">Fast Filter</span>
-                        <button onclick="librarySearch('Criminal')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">Criminal Law</button>
+                    <div id="libraryQuickGroup" class="hidden flex-wrap items-center justify-center gap-2 border-l pl-4 border-gray-100">
+                        <button onclick="topicSearch('Constitution')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">Constitution</button>
+                        <button onclick="topicSearch('civil procedure')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">CPC</button>
+                        <button onclick="topicSearch('Arbitration')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">Arbitration</button>
+                        <button onclick="topicSearch('IBC')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">IBC</button>
+                        <button onclick="topicSearch('criminal procedure')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">CrPC</button>
+                        <button onclick="topicSearch('Family')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">Family</button>
+                        <button onclick="topicSearch('Criminal')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold bg-blue-50 text-blue-600 border-blue-100">Criminal Law</button>
                     </div>
                 </div>
             </div>
@@ -293,7 +273,7 @@
         <div id="results-wrapper" class="hidden">
             <div class="max-w-4xl mx-auto px-6 mb-8 flex justify-between items-center text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em] border-b border-gray-50 pb-4">
                 <div class="flex flex-wrap items-center gap-4">
-                    <div id="statsCount">Found 0 matches</div>
+                    <div id="statsCount">Found 0 items</div>
                     <button id="copyAllBtn" onclick="copyAllResults()" class="flex items-center gap-2 hover:text-black transition-colors border-l pl-4 border-gray-100">
                         <i class="fas fa-copy"></i> Copy Full Results
                     </button>
@@ -302,7 +282,7 @@
             </div>
 
             <main id="resultsList" class="max-w-4xl mx-auto px-6 space-y-6 pb-24">
-                <!-- Results injected here -->
+                <!-- Data injected here -->
             </main>
         </div>
     </div>
@@ -360,7 +340,6 @@
         function unlockApp() {
             const lock = getEl('lock-screen');
             const content = getEl('app-content');
-            
             lock.style.opacity = '0';
             setTimeout(() => {
                 lock.style.display = 'none';
@@ -374,7 +353,7 @@
             currentView = view;
             const input = getEl('searchInput');
             const citeGroup = getEl('quickCiteGroup');
-            const libraryGroup = getEl('libraryQuickGroup');
+            const libGroup = getEl('libraryQuickGroup');
             const copyBtn = getEl('copyAllBtn');
 
             document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
@@ -383,10 +362,10 @@
             input.value = '';
             input.placeholder = view === 'judgments' 
                 ? "Search Case Names, Neutral Citation Or Keywords" 
-                : "Search Law Library Titles...";
+                : "Search Law Library Titles Or Keywords...";
             
             citeGroup.style.display = view === 'judgments' ? 'flex' : 'none';
-            libraryGroup.style.display = view === 'judgments' ? 'none' : 'flex';
+            libGroup.style.display = view === 'judgments' ? 'none' : 'flex';
             copyBtn.style.display = view === 'judgments' ? 'block' : 'none';
 
             getEl('hero-container').classList.remove('has-results');
@@ -401,7 +380,7 @@
             if (currentView === 'judgments') {
                 stats.innerText = `${judgmentData.length} Supreme Court Judgments Indexed`;
             } else {
-                stats.innerText = `${ebookData.length} Law Library Items Available`;
+                stats.innerText = `${ebookData.length} Law Library Items Indexed`;
             }
         }
 
@@ -411,10 +390,8 @@
             textarea.style.position = 'fixed';
             document.body.appendChild(textarea);
             textarea.select();
-            try {
-                document.execCommand('copy');
-                showToast("Copied to Clipboard");
-            } catch (err) { console.error('Copy failed', err); }
+            document.execCommand('copy');
+            showToast("Copied to Clipboard");
             document.body.removeChild(textarea);
         }
 
@@ -426,12 +403,10 @@
                 return `${header}\n${notes}`;
             }).join('\n\n' + '='.repeat(20) + '\n\n');
             copyToClipboard(compiledText);
-            showToast(`Copied ${currentResults.length} Results`);
         }
 
         function showToast(msg) {
             const toast = getEl('copyToast');
-            if (!toast) return;
             toast.innerText = msg;
             toast.style.opacity = '1';
             setTimeout(() => { toast.style.opacity = '0'; }, 2000);
@@ -448,9 +423,6 @@
             }
         }
 
-        /**
-         * Topic search helper - uses 'AND' logic to search whole content
-         */
         function topicSearch(val) {
             const input = getEl('searchInput');
             if (input) {
@@ -460,40 +432,6 @@
                 input.focus();
                 performSearch();
             }
-        }
-
-        function librarySearch(val) {
-            const input = getEl('searchInput');
-            if (input) {
-                const andRadio = document.querySelector('input[name="logic"][value="and"]');
-                if (andRadio) andRadio.checked = true;
-                input.value = val;
-                input.focus();
-                performSearch();
-            }
-        }
-
-        function parseMarkdown(text) {
-            return text
-                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                .replace(/\*(.*?)\*/g, '<em>$1</em>')
-                .replace(/_(.*?)_/g, '<em>$1</em>')
-                .replace(/`(.*?)`/g, '<code>$1</code>');
-        }
-
-        function parseEbookMarkdown(markdown) {
-            const entries = [];
-            const linkRegex = /\[(.*?)\]\((https?:\/\/.*?)\)/g;
-            let match;
-            
-            while ((match = linkRegex.exec(markdown)) !== null) {
-                const title = match[1].replace(/\*\*/g, '').trim();
-                const link = match[2].trim();
-                if (title && link) {
-                    entries.push({ title, link });
-                }
-            }
-            return entries;
         }
 
         function parseWikiMarkdown(markdown) {
@@ -524,12 +462,6 @@
                         if (parts.length > 1) {
                             title = parts[0].trim();
                             citation = parts.slice(1).join(' - ').trim();
-                        } else {
-                            const words = label.split(/\s+/);
-                            if (words.length >= 3 && /\d/.test(words.slice(-1))) {
-                                citation = words.slice(-3).join(' ');
-                                title = words.slice(0, -3).join(' ');
-                            }
                         }
                     }
 
@@ -550,6 +482,18 @@
             return entries;
         }
 
+        function parseEbookMarkdown(markdown) {
+            const entries = [];
+            const linkRegex = /\[(.*?)\]\((https?:\/\/.*?)\)/g;
+            let match;
+            while ((match = linkRegex.exec(markdown)) !== null) {
+                const title = match[1].replace(/\*\*/g, '').trim();
+                const link = match[2].trim();
+                if (title && link) entries.push({ title, link });
+            }
+            return entries;
+        }
+
         async function initializeApp() {
             try {
                 const cacheBuster = `?t=${Date.now()}`;
@@ -557,40 +501,36 @@
                 // Fetch Judgments
                 let totalJudgments = [];
                 for (let i = 0; i < SOURCES.length; i++) {
-                    const fullUrl = `${SOURCES[i]}${SOURCES[i].includes('?') ? '&' : '?'}${cacheBuster}`;
-                    updateProgress(Math.floor((i / (SOURCES.length + 1)) * 100), `Syncing Archives...`);
                     try {
-                        const response = await fetch(fullUrl, { cache: "no-store" });
+                        const response = await fetch(`${SOURCES[i]}${cacheBuster}`, { cache: "no-store" });
                         if (response.ok) {
                             const markdown = await response.text();
                             totalJudgments = totalJudgments.concat(parseWikiMarkdown(markdown));
                         }
                     } catch (e) { console.error(e); }
+                    updateProgress(Math.floor(((i+1) / (SOURCES.length + 1)) * 100), `Syncing Archives...`);
                 }
                 judgmentData = totalJudgments;
 
                 // Fetch Ebooks
-                updateProgress(90, `Syncing Library...`);
                 try {
                     const ebookResponse = await fetch(`${EBOOK_SOURCE}${cacheBuster}`, { cache: "no-store" });
                     if (ebookResponse.ok) {
                         const ebookMd = await ebookResponse.text();
                         ebookData = parseEbookMarkdown(ebookMd);
                     }
-                } catch (e) { console.error("Library fetch error:", e); }
+                } catch (e) { console.error(e); }
 
                 updateProgress(100, "Ready");
                 
                 setTimeout(() => {
-                    const splash = getEl('splash');
-                    const lock = getEl('lock-screen');
-                    splash.style.opacity = '0';
+                    getEl('splash').style.opacity = '0';
                     setTimeout(() => {
-                        splash.style.display = 'none';
+                        getEl('splash').style.display = 'none';
                         updateStatsCount();
                         getEl('heroNotebookLink').classList.remove('hidden');
                         getEl('heroNotebookLink').style.opacity = '1';
-                        lock.style.display = 'flex';
+                        getEl('lock-screen').style.display = 'flex';
                         setupPasscode();
                         getEl('passcodeField').focus();
                     }, 500);
@@ -606,14 +546,10 @@
         }
 
         function showError(msg) {
-            const status = getEl('status-text');
-            const loader = getEl('loader-container');
-            const error = getEl('error-ui');
-            const errorMsg = getEl('error-message');
-            if (status) status.style.display = 'none';
-            if (loader) loader.style.display = 'none';
-            if (error) error.style.display = 'block';
-            if (errorMsg) errorMsg.innerText = msg;
+            getEl('status-text').style.display = 'none';
+            getEl('loader-container').style.display = 'none';
+            getEl('error-ui').classList.remove('hidden');
+            getEl('error-message').innerText = msg;
         }
 
         function performSearch() {
@@ -624,9 +560,7 @@
             const logic = document.querySelector('input[name="logic"]:checked').value;
             const startTime = performance.now();
 
-            const minChars = currentView === 'ebooks' ? 2 : 4;
-
-            if (queryTrimmed.length < minChars) {
+            if (queryTrimmed.length < (currentView === 'ebooks' ? 2 : 4)) {
                 getEl('hero-container').classList.remove('has-results');
                 getEl('results-wrapper').classList.add('hidden');
                 getEl('statsWrapper').classList.remove('hidden');
@@ -646,18 +580,16 @@
                     ? `${doc.title} ${doc.citation} ${doc.paragraphs.join(' ')}`.toLowerCase()
                     : `${doc.title}`.toLowerCase();
                 
-                const exactPool = currentView === 'judgments' 
-                    ? `${doc.title} ${doc.citation}`.toLowerCase()
-                    : `${doc.title}`.toLowerCase();
-
                 if (logic === 'exact') {
                     const escapedQuery = queryTrimmed.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
                     const regex = new RegExp(`\\b${escapedQuery}\\b`, 'i');
-                    return regex.test(exactPool);
-                } else if (logic === 'and') {
-                    return terms.every(term => searchString.includes(term));
-                } else {
+                    return regex.test(searchString);
+                } else if (logic === 'or') {
+                    // ANY WORD Logic
                     return terms.some(term => searchString.includes(term));
+                } else {
+                    // ALL WORDS Logic
+                    return terms.every(term => searchString.includes(term));
                 }
             });
 
@@ -679,22 +611,22 @@
                 currentResults.sort((a,b) => a.title.localeCompare(b.title));
             }
 
-            renderResults(currentResults, true, queryTrimmed);
-            getEl('statsCount').innerText = `Found ${currentResults.length} ${currentView === 'judgments' ? 'matches' : 'items'}`;
+            renderResults(currentResults, queryTrimmed);
+            getEl('statsCount').innerText = `Found ${currentResults.length} ${currentView === 'judgments' ? 'matches' : 'books'}`;
             getEl('searchSpeed').innerText = `${(performance.now() - startTime).toFixed(1)}ms`;
         }
 
         function highlightAndFormat(text, query) {
             if (!text) return "";
             let processed = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-            processed = parseMarkdown(processed);
             if (query) {
                 const logic = document.querySelector('input[name="logic"]:checked').value;
                 if (logic === 'exact') {
                     const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
                     const regex = new RegExp(`(\\b${escapedQuery}\\b)`, 'gi');
-                    return processed.replace(regex, '<mark>$1</mark>');
+                    processed = processed.replace(regex, '<mark>$1</mark>');
                 } else {
+                    // Handle AND or OR logic highlighting by finding all individual terms
                     const terms = query.split(/\s+/).filter(t => t.length > 1).sort((a,b)=>b.length-a.length);
                     if (terms.length > 0) {
                         const regex = new RegExp(`(${terms.join('|').replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
@@ -705,11 +637,11 @@
             return processed;
         }
 
-        function renderResults(data, isSearch, query = "") {
+        function renderResults(data, query = "") {
             const list = getEl('resultsList');
             if (!list) return;
             if (data.length === 0) {
-                list.innerHTML = `<div class="py-24 text-center text-gray-400"><p class="text-[10px] font-bold uppercase tracking-[0.2em]">No results found</p></div>`;
+                list.innerHTML = `<div class="py-24 text-center text-gray-400"><p class="text-[10px] font-bold uppercase tracking-[0.2em]">No items found</p></div>`;
                 return;
             }
 
@@ -736,10 +668,10 @@
                     <div class="search-result-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm relative mb-4">
                         <div class="flex items-center justify-between gap-6">
                             <div class="flex-1">
-                                <div class="text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-1">Law Library</div>
+                                <div class="text-[9px] font-bold text-blue-500 uppercase tracking-[0.2em] mb-1">Law Library</div>
                                 <h3 class="text-lg font-bold text-black leading-tight tracking-tight">${highlightAndFormat(book.title, query)}</h3>
                             </div>
-                            <a href="${book.link}" target="_blank" class="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-2.5 rounded-xl text-[10px] font-bold tracking-wider transition-all">
+                            <a href="${book.link}" target="_blank" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-xl text-[10px] font-bold tracking-wider transition-all shadow-sm">
                                 <i class="fas fa-book-open"></i> OPEN BOOK
                             </a>
                         </div>
