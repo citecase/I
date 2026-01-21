@@ -1,28 +1,16 @@
-[Supreme Court: DGFT notifications under FTDR Act gain legal force only upon Official Gazette publication](https://www.caseciter.com/tag/daily-digest/)
+ 
+- [Foreign Trade (Development and Regulation) Act, 1992 – Notification under Section 3 attains force of law only upon Official Gazette publication; “date of this Notification” means Gazette date—Directorate General of Foreign Trade Minimum Import Price effective from 11 February 2016, not earlier website upload (Viraj Impex Private Limited v. Union of India; 2026 INSC 80).](https://www.caseciter.com/content/files/2026/01/Viraj-Impex-Pvt.-Ltd.-vs-Union-Of-India.pdf)
 
-[‘Date of Notification’ means Gazette date, not website upload, rules Supreme Court in Viraj Impex](https://www.caseciter.com/tag/daily-digest/)
+- [Delegated Legislation – Publication is indispensable to enforceability of subordinate legislation; where the parent statute prescribes Gazette publication, that mode must be strictly followed; executive cannot substitute alternative promulgation methods (Viraj Impex Private Limited v. Union of India; 2026 INSC 80).](https://www.caseciter.com/content/files/2026/01/Viraj-Impex-Pvt.-Ltd.-vs-Union-Of-India.pdf)
 
-[SC affirms strict publication requirements for delegated legislation: Gazette is indispensable](https://www.caseciter.com/tag/daily-digest/)
+- [Criminal Investigation and Media – States directed to evolve appropriate policy for media briefing, considering the Police Manual for Media Briefing (Peoples Union for Civil Liberties v. State of Maharashtra; 2026 INSC 79).](https://www.caseciter.com/content/files/2026/01/Peoples-Union-for-Civil-Liberties-v.-State-of-Maharashtra--2026-INSC-79---Police-Manual-For-Media-Briefing.pdf)
 
-[Supreme Court: Executive cannot substitute prescribed mode of promulgation for subordinate legislation](https://www.caseciter.com/tag/daily-digest/)
+- [Indian Penal Code, 1860 – Section 302 (Murder) and Section 304 Part II (Culpable Homicide Not Amounting to Murder): Supreme Court acknowledges High Court’s modification and, noting appellant’s age, holds sentence undergone suffices; appeal partly allowed (Sewak Ram v. State of Uttar Pradesh).](https://www.caseciter.com/content/files/2026/01/Sewak-Ram-v.-State-of-Uttar-Pradesh---Murder-Case.pdf)
 
-[DGFT Minimum Import Price notification valid from 11 Feb 2016—website upload insufficient, says SC](https://www.caseciter.com/tag/daily-digest/)
+- [Code of Criminal Procedure, 1973 – Section 482 (Inherent Powers) and Section 41A (Notice of Appearance); Bharatiya Nagarik Suraksha Sanhita, 2023 – Section 528 and Section 35: High Court should not direct Investigating Officer to comply with Section 41A within a petition seeking First Information Report quashing, absent prima facie grounds to quash (Practical Solutions Incorporated v. State of Telangana).](https://www.caseciter.com/content/files/2026/01/Practical-Solutions-Inc.-v.-State-of-Telangana---CrPC-BNSS---Quashing-FIR.pdf)
 
-[Supreme Court directs States to frame media briefing policy aligned with Police Manual](https://www.caseciter.com/tag/daily-digest/)
+- [Indian Penal Code, 1860 – Section 456 (House-Trespass by Night): Long passage of time without repeat offence, especially in short custodial and non-heinous cases, is a valid ground to reduce sentence (Amit Singla v. Union Territory, Chandigarh).](https://www.caseciter.com/content/files/2026/01/Amit-Singla-v.-Union-Territory-Chandigarh---Sentencing-Factor----Long-Passage-Of-Time-Without-Repeat-Offence.pdf)
 
-[SC: States must evolve uniform protocols for police-media briefings](https://www.caseciter.com/tag/daily-digest/)
-
-[84-year-old appellant spared further jail: SC limits sentence to time served after IPC 304 Part II modification](https://www.caseciter.com/tag/daily-digest/)
-
-[Murder conviction scaled down; Supreme Court notes age and unchallenged HC findings to reduce sentence](https://www.caseciter.com/tag/daily-digest/)
-
-[SC: High Courts should not order 41A CrPC compliance in FIR quash petitions absent prima facie case](https://www.caseciter.com/tag/daily-digest/)
-
-[BNS/CrPC: Supreme Court cautions against indirect relief in FIR quashing proceedings](https://www.caseciter.com/tag/daily-digest/)
-
-[Long gap without reoffending can justify sentence reduction in non-heinous cases, rules Supreme Court](https://www.caseciter.com/tag/daily-digest/)
-
-[SC: Passage of time and clean record weigh in favour of leniency under IPC Section 456](https://www.caseciter.com/tag/daily-digest/)
 
 
 - [Due Diligence Test Under Order VI Rule 17 of the Code of Civil Procedure (CPC) Not Of Universal Application After Commencement Of Trial: Karnataka High Court](https://www.verdictum.in/court-updates/high-courts/karnataka-high-court/mohammadrafi-v-bandenawaz-2025khc-d18339-order-vi-rule-17-civil-procedure-1605123)
