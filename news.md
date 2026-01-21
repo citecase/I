@@ -1,3 +1,23 @@
+# Legal News Headlines — Supreme Court Daily Digest (21 January 2026)
+
+- [Supreme Court: Directorate General of Foreign Trade notifications under the Foreign Trade (Development and Regulation) Act gain legal force only upon Official Gazette publication](https://www.caseciter.com/content/files/2026/01/Viraj-Impex-Pvt.-Ltd.-vs-Union-Of-India.pdf)
+- [‘Date of Notification’ means Official Gazette publication date, not website upload, rules Supreme Court in Viraj Impex Private Limited versus Union of India](https://www.caseciter.com/content/files/2026/01/Viraj-Impex-Pvt.-Ltd.-vs-Union-Of-India.pdf)
+- [Supreme Court affirms strict publication requirements for delegated legislation: Official Gazette is indispensable for enforceability](https://www.caseciter.com/content/files/2026/01/Viraj-Impex-Pvt.-Ltd.-vs-Union-Of-India.pdf)
+- [Supreme Court: Executive cannot substitute prescribed mode of promulgation for subordinate legislation under the Foreign Trade (Development and Regulation) Act](https://www.caseciter.com/content/files/2026/01/Viraj-Impex-Pvt.-Ltd.-vs-Union-Of-India.pdf)
+- [Directorate General of Foreign Trade Minimum Import Price notification valid from 11 February 2016—website upload insufficient, holds Supreme Court](https://www.caseciter.com/content/files/2026/01/Viraj-Impex-Pvt.-Ltd.-vs-Union-Of-India.pdf)
+
+- [Supreme Court directs States to frame media briefing policy aligned with Police Manual for Media Briefing](https://www.caseciter.com/content/files/2026/01/Peoples-Union-for-Civil-Liberties-v.-State-of-Maharashtra--2026-INSC-79---Police-Manual-For-Media-Briefing.pdf)
+- [Supreme Court: States must evolve uniform protocols for police–media briefings based on Police Manual](https://www.caseciter.com/content/files/2026/01/Peoples-Union-for-Civil-Liberties-v.-State-of-Maharashtra--2026-INSC-79---Police-Manual-For-Media-Briefing.pdf)
+
+- [Eighty-four-year-old appellant spared further imprisonment: Supreme Court limits sentence to time served after Indian Penal Code Section 304 Part II modification](https://www.caseciter.com/content/files/2026/01/Sewak-Ram-v.-State-of-Uttar-Pradesh---Murder-Case.pdf)
+- [Murder conviction scaled down: Supreme Court notes age and unchallenged High Court findings to reduce sentence from Indian Penal Code Section 302 to Section 304 Part II](https://www.caseciter.com/content/files/2026/01/Sewak-Ram-v.-State-of-Uttar-Pradesh---Murder-Case.pdf)
+
+- [Supreme Court: High Courts should not order compliance with Code of Criminal Procedure Section 41A in First Information Report quashing petitions absent a prima facie case](https://www.caseciter.com/content/files/2026/01/Practical-Solutions-Inc.-v.-State-of-Telangana---CrPC-BNSS---Quashing-FIR.pdf)
+- [Bharatiya Nagarik Suraksha Sanhita and Code of Criminal Procedure: Supreme Court cautions against indirect relief in First Information Report quashing proceedings](https://www.caseciter.com/content/files/2026/01/Practical-Solutions-Inc.-v.-State-of-Telangana---CrPC-BNSS---Quashing-FIR.pdf)
+
+- [Long passage of time without reoffending can justify sentence reduction in non-heinous cases, rules Supreme Court](https://www.caseciter.com/content/files/2026/01/Amit-Singla-v.-Union-Territory-Chandigarh---Sentencing-Factor----Long-Passage-Of-Time-Without-Repeat-Offence.pdf)
+- [Supreme Court: Passage of time and clean record weigh in favour of leniency under Indian Penal Code Section 456](https://www.caseciter.com/content/files/2026/01/Amit-Singla-v.-Union-Territory-Chandigarh---Sentencing-Factor----Long-Passage-Of-Time-Without-Repeat-Offence.pdf)
+
 - [Tamil Nadu Power Distribution Corporation Limited (TNPDCL) Invites Applications For The Posts Of Legal Consultant](https://www.verdictum.in/job-updates/tamil-nadu-power-distribution-corporation-limited-1605113)
 - [Due Diligence Test Under Order VI Rule 17 of the Code of Civil Procedure (CPC) Not Of Universal Application After Commencement Of Trial: Karnataka High Court](https://www.verdictum.in/court-updates/high-courts/karnataka-high-court/mohammadrafi-v-bandenawaz-2025khc-d18339-order-vi-rule-17-civil-procedure-1605123)
 - [Exercise Of Powers Under Section 9 of the Arbitration and Conciliation Act (A&C Act) Against Third Parties Must Be Sparing & Exceptional: Bombay High Court Denies Relief To Messe Frankfurt](https://www.verdictum.in/court-updates/high-courts/bombay-high-court/messe-frankfurt-trade-fairs-india-pvt-ltd-v-netlink-solutions-india-limited-ors-2026bhc-os1561-1605122)
