@@ -1,4 +1,5 @@
- 
+George Dominic  .v. Kanjirapilly Service Cooperative Bank Ltd and others Issue for Consideration  What are the principles for preventing abuse of Judicial process ?  Practise—Constructive res judicata—Henderson Principle—All claims and issues that could and should have been raised in an earlier proceeding are barred from being raised in subsequent litigation, except in exceptional circumstances—Code of Civil Procedure, 1908 (Central Act 5 of 1908)—Section 11\.
+
 - [Foreign Trade (Development and Regulation) Act, 1992 – Notification under Section 3 attains force of law only upon Official Gazette publication; “date of this Notification” means Gazette date—Directorate General of Foreign Trade Minimum Import Price effective from 11 February 2016, not earlier website upload (Viraj Impex Private Limited v. Union of India; 2026 INSC 80).](https://www.caseciter.com/content/files/2026/01/Viraj-Impex-Pvt.-Ltd.-vs-Union-Of-India.pdf)
 
 - [Delegated Legislation – Publication is indispensable to enforceability of subordinate legislation; where the parent statute prescribes Gazette publication, that mode must be strictly followed; executive cannot substitute alternative promulgation methods (Viraj Impex Private Limited v. Union of India; 2026 INSC 80).](https://www.caseciter.com/content/files/2026/01/Viraj-Impex-Pvt.-Ltd.-vs-Union-Of-India.pdf)
