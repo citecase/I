@@ -99,7 +99,7 @@ Judgment Date: 16-12-2025 ILR Kerala
 
 ---
 
-4. [Shereefa Muvara and another v. MUhammed Kabeer](https://ilrkerala.gov.in)
+4. [Shereefa Muvara and another v. MUhammed Kabeer ILR Kerala ](https://ilrkerala.gov.in)
 
 Code of Criminal Procedure, 1973 (Central Act 2 of 1974)—Section 125 —When a Muslim divorced woman files an application under Section 125 of Cr.P.C, even after receiving the amount entitled to her under Section 3 of the Muslim Women Protection Act, 1986 or under customary or personal law, it is the duty of the Family Court to examine whether she was still able to support herself—If she is unable to support herself, she is entitled to receive maintenance from her former husband under Section 125—Bharathiya Nagarik Suraksha Sanhita, 2023 (Central Act 46 of 2023)—Section 144.
 
