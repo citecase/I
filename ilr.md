@@ -67,7 +67,9 @@ Judge: Mr. Justice Anil K. Narendran and Mr. Justice Muralee Krishna S.
 
 Judgment Date: 16-12-2025  
 
-Author of Judgment: Mr. Justice Anil K. Narendran ILR Kerala
+Author of Judgment: Mr. Justice Anil K. Narendran
+
+ILR Kerala
 
 ---
 
