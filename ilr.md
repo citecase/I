@@ -2,7 +2,7 @@
  
 
 * [Motilal Oswal Financial Services Limited v. Santosh Cordeiro and Another](https://scr.sci.gov.in/)  
-  Citation: \[2026\] 1 S.C.R. 1 : 2026 INSC 5  
+  Citation: \[2026\] 1 S.C.R. 1 : 2026 INSC 5   
   Issues: Non-arbitrability under Presidency Small Cause Courts Act s.41; scope of A\&C Act s.11(6A); competence-competence; impact of Central Warehousing FB.  
   Law: A\&C Act, 1996 (ss.11(6A), 16); Presidency Small Cause Courts Act, 1882 (s.41); Contract Act, 1872 (s.28).  
 * [Dharmendra Sharma v. M. Arunmozhi & Anr.](https://scr.sci.gov.in/)  
