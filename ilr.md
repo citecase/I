@@ -67,7 +67,7 @@ Judge: Mr. Justice Anil K. Narendran and Mr. Justice Muralee Krishna S.
 
 Judgment Date: 16-12-2025  
 
-Author of Judgment: Mr. Justice Anil K. Narendran
+Author of Judgment: Mr. Justice Anil K. Narendran ILR Kerala
 
 ---
 
@@ -77,7 +77,7 @@ Labour Law—Regularisation—Unfair labour practice—Continuous engagement of 
 
 Judge: Mr. Justice M. A. Abdul Hakhim  
 
-Judgment Date: 16-12-2025
+Judgment Date: 16-12-2025 ILR Kerala
 
 ---
 
@@ -93,7 +93,7 @@ Industrial Disputes Act, 1947 (Central Act 14 of 1947)—Employer–Employee Rel
 
 Judge: Mr. Justice M. A. Abdul Hakhim  
 
-Judgment Date: 16-12-2025
+Judgment Date: 16-12-2025 ILR Kerala
 
 ---
 
@@ -103,7 +103,7 @@ Code of Criminal Procedure, 1973 (Central Act 2 of 1974)—Section 125 —When a
 
 Judge: Mr. Justice Dr. Kauser Edappagath  
 
-Judgment Date: 27-07-2012
+Judgment Date: 27-07-2012 ILR Kerala
 
 ---
 
@@ -117,7 +117,7 @@ Mohamedan law—Father of a minor Muslim daughter is entitled to enter into a se
 
 Judge: Mr. Justice Dr. Kauser Edappagath  
 
-Judgment Date: 27-07-2012
+Judgment Date: 27-07-2012 ILR Kerala
 
 ---
 
@@ -133,7 +133,7 @@ Judge: Mr. Justice Anil K. Narendran and Mr. Justice G. Girish
 
 Judgment Date: 11-12-2025  
 
-Author of Judgment: Mr. Justice Anil K. Narendran
+Author of Judgment: Mr. Justice Anil K. Narendran ILR Kerala
 
 ---
 
@@ -145,7 +145,7 @@ Whether the Local Level Monitoring Committee (LLMC) under the Kerala Conservatio
 
 Conservation of Paddy Land and Wetland Act, 2008 (Kerala Act 28 of 2008)—Jurisdiction of Local Level Monitoring Committee—Inclusion of land in Data Bank—Land classified as ‘Purayidam’ in the BTR cannot be included in the Data Bank, unless the classification is lawfully revisited or reviewed.
 
-Judge: Mr. Justice A. Muhamed Mustaque and Mr. Justice Harisankar V. Menon  
+Judge: Mr. Justice A. Muhamed Mustaque and Mr. Justice Harisankar V. Menon  ILR Kerala
 
 Judgment Date: 04-12-2025  
 
@@ -163,7 +163,7 @@ Securitisation and Reconstruction of Financial Assets and Enforcement of Securit
 
 Judge: Mr. Justice Basant Balaji  
 
-Judgment Date: 18-11-2025
+Judgment Date: 18-11-2025 ILR Kerala
 
 ---
 
@@ -177,7 +177,7 @@ Industrial Disputes Act, 1947 (Central Act 14 of 1947)—Sections 2(oo), 2(s), 1
 
 Judge: Mr. Justice M. A. Abdul Hakhim  
 
-Judgment Date: 02-12-2025
+Judgment Date: 02-12-2025 ILR Kerala
 
 ---
 
@@ -191,11 +191,4 @@ Constitution of India—Article 226—Court conferred the Banks with the power t
 
 Judge: Mr. Justice M. A. Abdul Hakhim  
 
-Judgment Date: 19-11-2025
-
----
-
-11. [Unknown/Unlisted Entry](https://ilrkerala.gov.in)
-
-Note: The table indicates “Showing 1 to 10 of 11 entries”, but only 10 entries are visible on the current page. The 11th entry may be on the next pagination. If you’d like, I can navigate to “Next” and include the remaining case.
-
+Judgment Date: 19-11-2025 ILR Kerala 
