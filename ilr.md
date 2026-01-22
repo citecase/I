@@ -1,4 +1,59 @@
 # ILR Kerala – Judgment Cases and Head Notes
+ 
+
+* [Motilal Oswal Financial Services Limited v. Santosh Cordeiro and Another](https://scr.sci.gov.in/)  
+  Citation: \[2026\] 1 S.C.R. 1 : 2026 INSC 5  
+  Issues: Non-arbitrability under Presidency Small Cause Courts Act s.41; scope of A\&C Act s.11(6A); competence-competence; impact of Central Warehousing FB.  
+  Law: A\&C Act, 1996 (ss.11(6A), 16); Presidency Small Cause Courts Act, 1882 (s.41); Contract Act, 1872 (s.28).  
+* [Dharmendra Sharma v. M. Arunmozhi & Anr.](https://scr.sci.gov.in/)  
+  Citation: \[2026\] 1 S.C.R. 24 : 2026 INSC 10  
+  Issues: Contempt—non-compliance with SC directions to refund stamp value.  
+  Law: U.P. Stamp Rules, 1942 (r.218).  
+* [Bhadra International (India) Pvt. Ltd. & Ors. v. Airports Authority of India](https://scr.sci.gov.in/)  
+  Citation: \[2026\] 1 S.C.R. 30 : 2026 INSC 6  
+  Issues: s.12(5) ineligibility; unilateral appointment; “express agreement in writing” waiver; de jure inability; objections at s.34 stage; s.14/15 substitution; s.21 notices.  
+  Law: A\&C Act, 1996 (ss.12(5), 14, 15, 21, 29A, 34).  
+* [Nirbhay Singh Suliya v. State of Madhya Pradesh & Anr.](https://scr.sci.gov.in/)  
+  Citation: \[2026\] 1 S.C.R. 91 : 2026 INSC 7  
+  Issues: Departmental action against judicial officer based solely on bail orders; standards; independence; reinstatement/back wages.  
+  Law: M.P. Excise Act, 1915 (s.59-A); service law principles.  
+* [Arvind Dham v. Directorate of Enforcement](https://scr.sci.gov.in/)  
+  Citation: \[2026\] 1 S.C.R. 119 : 2026 INSC 12  
+  Issues: Bail under PMLA; Art.21 speedy trial; long incarceration; documentary evidence; trial delay.  
+  Law: PMLA, 2002 (s.45); Constitution (Art.21); BNSS, 2023 (s.483).  
+* [UV Asset Reconstruction Company Limited v. Electrosteel Castings Limited](https://scr.sci.gov.in/)  
+  Citation: \[2026\] 1 S.C.R. 130 : 2026 INSC 14  
+  Issues: Whether Clause 2.2 undertaking is a “contract of guarantee” (s.126); “see-to-it” guarantees; assignment and security context.  
+  Law: Contract Act, 1872 (s.126); IBC, 2016\.  
+* [Union of India v. G. Kiran & Ors.](https://scr.sci.gov.in/)  
+  Citation: \[2026\] 1 S.C.R. 141 : 2026 INSC 15  
+  Issues: IFS cadre allocation; effect of relaxation at Preliminary stage; proviso to r.14(ii) Exam Rules, 2013; “General Insider” eligibility.  
+  Law: IFS Exam Rules, 2013 (rr.1, 13, 14(ii), 17(1)); Cadre Allocation Policy.  
+* [The State (NCT) of Delhi v. Khimji Bhai Jadeja](https://scr.sci.gov.in/)  
+  Citation: \[2026\] 1 S.C.R. 167 : 2026 INSC 25  
+  Issues: Clubbing/consolidation of FIRs; “same transaction” test; conspiracy; treatment of later FIRs.  
+  Law: CrPC, 1973 (ss.218–223, 161, 31); IPC (s.120B).  
+* [S. Nagesh v. Shobha S. Aradhya](https://scr.sci.gov.in/)  
+  Citation: \[2026\] 1 S.C.R. 183 : 2026 INSC 27  
+  Issues: NI Act—cognizance before condonation of delay; mandatory sequencing under s.142.  
+  Law: NI Act, 1881 (ss.138, 142); CrPC.  
+* [The Karnataka Lokayuktha Bagalkote District, Bagalkot v. Chandrashekar & Anr.](https://scr.sci.gov.in/)  
+  Citation: \[2026\] 1 S.C.R. 191 : 2026 INSC 31  
+  Issues: Criminal prosecution vis-à-vis departmental exoneration; evidentiary thresholds; trap evidence.  
+  Law: Karnataka Lokayukta framework; service law.  
+* [Regenta Hotels Private Limited v. M/s Hotel Grand Centre Point and Others](https://scr.sci.gov.in/)  
+  Citation: \[2026\] 1 S.C.R. 206 : 2026 INSC 32  
+  Issues: A\&C s.9(2) time mandate; s.21 commencement; court rules interplay.  
+  Law: A\&C Act, 1996 (ss.9(2), 11, 21); Karnataka Arbitration Court Rules.  
+* [The Property Company (P) Ltd. v. Rohinten Daddy Mazda](https://scr.sci.gov.in/)  
+  Citation: \[2026\] 1 S.C.R. 227 : 2026 INSC 33  
+  Issues: CLB/NCLT delay condonation under s.58(3); Limitation Act applicability; inherent powers scope.  
+  Law: Companies Act, 2013 (ss.58(3), 433); Limitation Act, 1963 (ss.5, 14, 29(2)); CLB Regulations (r.44).
+
+Generated: Thursday, 22 January 2026 at 10:34 AM (Asia/Kolkata)
+
+
+
 
 1. [George Dominic v. Kanjirapilly Service Cooperative Bank Ltd and others](https://ilrkerala.gov.in)
 
