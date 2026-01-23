@@ -1,0 +1,20 @@
+name: Latest Blog Post Workflow
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch: 
+
+jobs:
+  update-readme-with-blog:
+    name: Update this repo with latest blog posts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Pull in blog posts
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: "https://caseciter.com/rss/"
+          readme_path: "./list.md" # This tells it to use list.md instead of README
+          max_post_count: 5
+          template: "- [$title]($url)"
