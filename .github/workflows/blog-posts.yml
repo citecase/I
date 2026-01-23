@@ -14,7 +14,7 @@ jobs:
       - name: Pull in blog posts
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
-          feed_list: "https://caseciter.com/rss/"
+          feed_list: "https://www.caseciter.com/ba986e100717a7840637c7ac83a772/rss"
           readme_path: "./list.md" # This tells it to use list.md instead of README
           max_post_count: 5
           template: "- [$title]($url)"
