@@ -1,0 +1,21 @@
+name: Latest Blog Post Workflow
+on:
+  schedule:
+    # Runs every hour
+    - cron: '0 * * * *'
+  workflow_dispatch: # Allows you to run it manually for testing
+
+jobs:
+  update-readme-with-blog:
+    name: Update this repo with latest blog posts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Pull in blog posts
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: "https://caseciter.com/rss/"
+          max_post_count: 5
+          template: "- [$title]($url)"
+          
