@@ -1,7 +1,4 @@
 # My Blog Posts
-
-
-
 1.[Asif Ali v. Rajesab - S.20 SRA -Discretion - Specific Performance](https://www.caseciter.com/asif-ali-v-rajesab-s-20-sra-discretion-specific-performance/#gsc.tab=0)
 2. [Rakesh Jain v. State \- S.409 IPC \- Company Director \- Presumption On Culpability](https://www.caseciter.com/rakesh-jain-v-state-s-409-ipc-company-director-presumption-on-culpability/)  
 3. [A. Shankar @ Savukku Shankar v. Secretary to Government \- Writ Jurisdiction \- Direction To File ChargeSheet](https://www.caseciter.com/a-shankar-savukku-shankar-v-secretary-to-government-writ-jurisdiction-direction-to-file-chargesheet/)  
