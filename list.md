@@ -1,4 +1,5 @@
- 
+# My Blog Posts
+
 
 1.[Asif Ali v. Rajesab - S.20 SRA -Discretion - Specific Performance](https://www.caseciter.com/asif-ali-v-rajesab-s-20-sra-discretion-specific-performance/#gsc.tab=0)
 2. [Rakesh Jain v. State \- S.409 IPC \- Company Director \- Presumption On Culpability](https://www.caseciter.com/rakesh-jain-v-state-s-409-ipc-company-director-presumption-on-culpability/)  
