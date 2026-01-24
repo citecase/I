@@ -17,5 +17,5 @@ jobs:
           feed_list: "https://www.caseciter.com/rss"
           readme_path: "./list.md"
           max_post_count: 5
-          # Fixed the variable from $url to $link
-          template: "- [$title]($url)"
+          # Use $url for the link and $title for the post name
+          template: '- [$title]($url)'
