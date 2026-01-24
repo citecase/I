@@ -1,8 +1,9 @@
-name: CaseCiter Daily Sync
+name: CaseCiter 9PM Sync
 on:
   schedule:
-    - cron: '0 18 * * *' # Runs daily at 6 PM UTC (approx 11:30 PM IST)
-  workflow_dispatch:
+    # 15:30 UTC is 21:00 (9PM) IST
+    - cron: '30 15 * * *'
+  workflow_dispatch: # Allows you to click "Run workflow" manually to test now
 
 jobs:
   sync:
@@ -27,4 +28,5 @@ jobs:
           git config --global user.name "CaseCiter Bot"
           git config --global user.email "actions@github.com"
           git add daily.md
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update daily.md with latest judgments" && git push)
+          # Only commit if there are actually changes
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Sync 9PM Digest" && git push)
