@@ -1,0 +1,26 @@
+name: Sync Public Google Doc
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download Doc as Markdown
+        run: |
+          # Replace FILE_ID with your actual Google Doc ID
+          # This uses a public export link
+          curl -L "https://docs.google.com/document/d/YOUR_FILE_ID/export?format=txt" -o docs/updates.md
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add .
+          git commit -m "Auto-sync from Google Doc" || echo "No changes to commit"
+          git push
