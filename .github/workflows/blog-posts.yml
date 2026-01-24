@@ -2,7 +2,7 @@ name: Latest Blog Post Workflow
 on:
   schedule:
     - cron: '0 * * * *' # Runs every hour
-  workflow_dispatch: 
+  workflow_dispatch: # Allows you to run it manually for testing
 
 jobs:
   update-readme-with-blog:
@@ -11,11 +11,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Pull in blog posts
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
+          # Your RSS feed URL
           feed_list: "https://www.caseciter.com/rss"
+          
+          # The specific file you want to update
           readme_path: "./list.md"
+          
+          # Number of posts to pull from the feed each time
           max_post_count: 5
-          # Use $url for the link and $title for the post name
-          template: '- [$title]($url)'
+          
+          # Standard Markdown formatting for the list
+          template: "- [$title]($url)"
+          
+          # Set to false to APPEND new posts and keep existing ones
+          enable_item_deletion: false
+
+          # Optional: ensures the newest posts appear at the top
+          committer_message: "Updated list.md with latest blog posts"
