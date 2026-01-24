@@ -6,22 +6,12 @@ on:
 
 jobs:
   update-readme-with-blog:
-    name: Update this repo with latest blog posts
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        
-      - name: Pull in blog posts
+    - name: Pull in blog posts
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
-          feed_list: "https://www.caseciter.com/tag/daily-digest/rss/"
-          readme_path: "./jan2026.md"
-          max_post_count: 1
-          # | allows for a multi-line string template
-          # $description pulls the post body provided by the RSS feed
-          template: |
-            ## [$title]($url)
-            $description
-            
-            ---
+          feed_list: "https://www.caseciter.com/rss"
+          readme_path: "./list.md"
+          max_post_count: 5
+          template: '- [$title]($url)'
+          # Add this line to keep old posts in the list:
+          enable_item_deletion: false
