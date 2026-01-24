@@ -3,7 +3,7 @@ on:
   schedule:
     # 15:30 UTC is 21:00 (9PM) IST
     - cron: '30 15 * * *'
-  workflow_dispatch: # Allows you to click "Run workflow" manually to test now
+  workflow_dispatch: # Allows you to run it manually right now to test!
 
 jobs:
   sync:
@@ -28,5 +28,4 @@ jobs:
           git config --global user.name "CaseCiter Bot"
           git config --global user.email "actions@github.com"
           git add daily.md
-          # Only commit if there are actually changes
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Sync 9PM Digest" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-sync 9PM Legal Digest" && git push)
