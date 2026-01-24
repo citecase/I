@@ -18,7 +18,7 @@ jobs:
       - name: Download and Convert to gdoc.md
         run: |
           # 1. Download the Doc as HTML
-          curl -L "https://docs.google.com/document/d/1fln6B6AI0iZFZD5Uyw1dnT8g5jsJXZLwRXDXI3ccBMc/export?format=html" -o temp_doc.html
+          curl -L "https://docs.google.com/document/d/194RElGx-t_nw8GmW_P4xxOGYlvSFbUJGHGa4Lg3OQ4Y/export?format=html" -o temp_doc.html
           
           # 2. Convert to Markdown and save as gdoc.md
           pandoc temp_doc.html -f html -t gfm --wrap=none -o gdoc.md
