@@ -15,7 +15,7 @@ jobs:
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
           feed_list: "https://www.verdictum.in/feed"
-          readme_path: "./verdicttum.md"
+          readme_path: "./Verdictum.md"
           max_post_count: 30
           # Fixed the variable from $url to $link
           template: "- [$title]($url)"
