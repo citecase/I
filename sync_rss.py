@@ -5,7 +5,7 @@ FEED_URL = "https://caseciter.com/rss/"
 TARGET_FILE = "daily.md"
 
 def run():
-    # Use 'content:encoded' for full blog/note text
+    # Parsing with namespaces enabled to catch 'content:encoded'
     feed = feedparser.parse(FEED_URL)
     
     if os.path.exists(TARGET_FILE):
@@ -16,28 +16,37 @@ def run():
 
     new_entries_text = ""
 
-    # Reverse to keep chronological order (newest at top)
+    # Sort entries by date (oldest to newest) so we prepend correctly
     for entry in reversed(feed.entries):
         if entry.link not in existing_content:
-            print(f"Adding full notes for: {entry.title}")
+            print(f"Syncing full notes: {entry.title}")
             
-            # GHOST TIP: Full content is usually in 'content_encoded' or 'summary'
-            # We try 'content_encoded' first, then fall back to 'description'
-            full_notes = entry.get('content_encoded', entry.get('description', 'No content found.'))
+            # GHOST SPECIFIC: Get the full blog body
+            # We check 'content' list first (common in Atom/Ghost), 
+            # then 'content_encoded', then finally 'description'
+            full_body = ""
+            if 'content' in entry:
+                full_body = entry.content[0].value
+            elif 'content_encoded' in entry:
+                full_body = entry.content_encoded
+            else:
+                full_body = entry.get('description', 'No content available.')
 
+            # Build the Markdown entry
             entry_md = f"## {entry.title}\n"
             entry_md += f"*Source: {entry.link}*\n\n"
-            entry_md += f"{full_notes}\n"
+            entry_md += f"{full_body}\n"
             entry_md += "\n---\n\n"
             
             new_entries_text = entry_md + new_entries_text
 
     if new_entries_text:
         with open(TARGET_FILE, "w", encoding="utf-8") as f:
+            # Newest posts stay at the top
             f.write(new_entries_text + existing_content)
-        print("Done!")
+        print(f"Successfully updated {TARGET_FILE}")
     else:
-        print("Everything is already up to date.")
+        print("No new notes found on CaseCiter.")
 
 if __name__ == "__main__":
     run()
