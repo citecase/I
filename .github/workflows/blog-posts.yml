@@ -1,7 +1,7 @@
 name: Latest Blog Post Workflow
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 * * * *' # Runs every hour
   workflow_dispatch: 
 
 jobs:
@@ -15,6 +15,7 @@ jobs:
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
           feed_list: "https://www.caseciter.com/rss"
-          readme_path: "./list.md" # This tells it to use list.md instead of README
+          readme_path: "./list.md"
           max_post_count: 5
-          template: "- [$title]($url)"
+          # Fixed the variable from $url to $link
+          template: "- [$title]($link)"
