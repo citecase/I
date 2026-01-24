@@ -16,7 +16,7 @@ jobs:
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
           feed_list: "https://www.caseciter.com/tag/daily-digest/rss/"
-          readme_path: "./Jan2026.md"
+          readme_path: "Jan2026.md"
           max_post_count: 1
           # | allows for a multi-line string template
           # $description pulls the post body provided by the RSS feed
