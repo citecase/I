@@ -1,7 +1,6 @@
 name: Sync Google Doc to gdoc.md
 on:
   schedule:
-    # 16:30 UTC is 10:00 PM IST
     - cron: '30 16 * * *'
   workflow_dispatch:
 
@@ -12,13 +11,16 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # This step installs Pandoc so the runner knows how to use the command
+      - name: Install Pandoc
+        run: sudo apt-get install -y pandoc
+
       - name: Download and Convert to gdoc.md
         run: |
           # 1. Download the Doc as HTML
           curl -L "https://docs.google.com/document/d/1fln6B6AI0iZFZD5Uyw1dnT8g5jsJXZLwRXDXI3ccBMc/export?format=html" -o temp_doc.html
           
           # 2. Convert to Markdown and save as gdoc.md
-          # --wrap=none prevents long lines from breaking mid-sentence
           pandoc temp_doc.html -f html -t gfm --wrap=none -o gdoc.md
           
           # 3. Clean up
