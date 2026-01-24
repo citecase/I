@@ -1,6 +1,8 @@
 # My Legal Research List
 
 Here are the latest updates from CaseCiter:
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
 4. [Rakesh Jain v. State \- S.409 IPC \- Company Director \- Presumption On Culpability](https://www.caseciter.com/rakesh-jain-v-state-s-409-ipc-company-director-presumption-on-culpability/)  
 5. [A. Shankar @ Savukku Shankar v. Secretary to Government \- Writ Jurisdiction \- Direction To File ChargeSheet](https://www.caseciter.com/a-shankar-savukku-shankar-v-secretary-to-government-writ-jurisdiction-direction-to-file-chargesheet/)  
 6. [Hemalatha (D) v. Tukaram (D) 2026 INSC 82 \- Registered Sale Deed \- Declaration As Sham Document \- Presumption About Validity & Genuineness](https://www.caseciter.com/2026insc82/)  
