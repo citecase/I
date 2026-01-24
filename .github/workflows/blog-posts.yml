@@ -18,4 +18,4 @@ jobs:
           readme_path: "./list.md"
           max_post_count: 5
           # Fixed the variable from $url to $link
-          template: "- [$title]($link)"
+          template: "- [$title]($url)"
