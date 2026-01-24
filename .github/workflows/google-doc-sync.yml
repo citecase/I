@@ -1,26 +1,27 @@
-name: Sync Public Google Doc
+name: Sync Google Doc to Markdown
 on:
   schedule:
-    - cron: '0 * * * *'
-  workflow_dispatch:
+    # 16:30 UTC is 10:00 PM IST
+    - cron: '30 16 * * *'
+  workflow_dispatch: # This lets you run it manually anytime for testing
 
 jobs:
-  build:
+  sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Download Doc as Markdown
+      - name: Download Google Doc
         run: |
-          # Replace FILE_ID with your actual Google Doc ID
-          # This uses a public export link
-          curl -L "https://docs.google.com/document/d/194RElGx-t_nw8GmW_P4xxOGYlvSFbUJGHGa4Lg3OQ4Y/export?format=txt" -o docs/updates.md
+          # Downloads your specific doc as a text file
+          curl -L "https://docs.google.com/document/d/1fln6B6AI0iZFZD5Uyw1dnT8g5jsJXZLwRXDXI3ccBMc/export?format=txt" -o updates.md
 
-      - name: Commit changes
+      - name: Commit and Push changes
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          git add .
-          git commit -m "Auto-sync from Google Doc" || echo "No changes to commit"
+          git add updates.md
+          # The '|| exit 0' prevents the action from failing if there are no changes in the doc
+          git commit -m "Daily sync from Google Doc (10PM IST)" || exit 0
           git push
