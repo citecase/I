@@ -1,8 +1,7 @@
 # My Legal Research List
 
 Here are the latest updates from CaseCiter:
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->- [Vinod Gandhi v.   District Collector, Madurai - Limitation Act - Delay Condonation - State Interest](https://www.caseciter.com/vinod-gandhi-v-district-collector-madurai-limitation-act-delay-condonation-state-interest/)- [Abhijit Pandey v. State of Madhya Pradesh - S.80 BNS - Bail - Dowry Death](https://www.caseciter.com/abhijit-pandey-v-state-of-madhya-pradesh-s-80-bns-bail-dowry-death/)- [Asif Ali v. Rajesab - S.20 SRA -Discretion - Specific Performance](https://www.caseciter.com/asif-ali-v-rajesab-s-20-sra-discretion-specific-performance/)- [Rakesh Jain v. State - S.409 IPC - Company Director - Presumption On Culpability](https://www.caseciter.com/rakesh-jain-v-state-s-409-ipc-company-director-presumption-on-culpability/)- [A. Shankar @ Savukku Shankar v. Secretary to Government -Writ Jurisdiction - Direction To File ChargeSheet](https://www.caseciter.com/a-shankar-savukku-shankar-v-secretary-to-government-writ-jurisdiction-direction-to-file-chargesheet/)<!-- BLOG-POST-LIST:END -->
 4. [Rakesh Jain v. State \- S.409 IPC \- Company Director \- Presumption On Culpability](https://www.caseciter.com/rakesh-jain-v-state-s-409-ipc-company-director-presumption-on-culpability/)  
 5. [A. Shankar @ Savukku Shankar v. Secretary to Government \- Writ Jurisdiction \- Direction To File ChargeSheet](https://www.caseciter.com/a-shankar-savukku-shankar-v-secretary-to-government-writ-jurisdiction-direction-to-file-chargesheet/)  
 6. [Hemalatha (D) v. Tukaram (D) 2026 INSC 82 \- Registered Sale Deed \- Declaration As Sham Document \- Presumption About Validity & Genuineness](https://www.caseciter.com/2026insc82/)  
