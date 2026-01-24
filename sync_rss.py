@@ -1,52 +1,39 @@
 import feedparser
 import os
 
+# Configuration
 FEED_URL = "https://caseciter.com/rss/"
 TARGET_FILE = "daily.md"
 
 def run():
-    # Parsing with namespaces enabled to catch 'content:encoded'
+    # Parse the RSS feed
     feed = feedparser.parse(FEED_URL)
     
+    # Check if the file exists; if so, read it to prevent duplicates
     if os.path.exists(TARGET_FILE):
         with open(TARGET_FILE, "r", encoding="utf-8") as f:
             existing_content = f.read()
     else:
         existing_content = ""
 
-    new_entries_text = ""
+    new_links_batch = ""
 
-    # Sort entries by date (oldest to newest) so we prepend correctly
+    # Process entries from oldest to newest to maintain correct "newest at top" order
     for entry in reversed(feed.entries):
+        # We use the unique URL to check if we've already logged this post
         if entry.link not in existing_content:
-            print(f"Syncing full notes: {entry.title}")
-            
-            # GHOST SPECIFIC: Get the full blog body
-            # We check 'content' list first (common in Atom/Ghost), 
-            # then 'content_encoded', then finally 'description'
-            full_body = ""
-            if 'content' in entry:
-                full_body = entry.content[0].value
-            elif 'content_encoded' in entry:
-                full_body = entry.content_encoded
-            else:
-                full_body = entry.get('description', 'No content available.')
+            print(f"New link found: {entry.title}")
+            # Format as a clean Markdown bullet point
+            line = f"* [{entry.title}]({entry.link})\n"
+            new_links_batch = line + new_links_batch
 
-            # Build the Markdown entry
-            entry_md = f"## {entry.title}\n"
-            entry_md += f"*Source: {entry.link}*\n\n"
-            entry_md += f"{full_body}\n"
-            entry_md += "\n---\n\n"
-            
-            new_entries_text = entry_md + new_entries_text
-
-    if new_entries_text:
+    if new_links_batch:
+        # Prepend the new batch of links to the existing file content
         with open(TARGET_FILE, "w", encoding="utf-8") as f:
-            # Newest posts stay at the top
-            f.write(new_entries_text + existing_content)
+            f.write(new_links_batch + existing_content)
         print(f"Successfully updated {TARGET_FILE}")
     else:
-        print("No new notes found on CaseCiter.")
+        print("No new updates found since the last check.")
 
 if __name__ == "__main__":
     run()
