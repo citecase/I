@@ -15,7 +15,7 @@ jobs:
         run: |
           # Replace FILE_ID with your actual Google Doc ID
           # This uses a public export link
-          curl -L "https://docs.google.com/document/d/YOUR_FILE_ID/export?format=txt" -o docs/updates.md
+          curl -L "https://docs.google.com/document/d/194RElGx-t_nw8GmW_P4xxOGYlvSFbUJGHGa4Lg3OQ4Y/export?format=txt"-o docs/updates.md
 
       - name: Commit changes
         run: |
