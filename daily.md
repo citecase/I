@@ -1,3 +1,5 @@
+* [Habib Alladin v. Mohammed Ahmed 2026 INSC 90 - Wakf Act - Tribunal Jurisdiction](https://www.caseciter.com/2026insc90/)
+* [Annie Thomas v. Rani Thomas - Will - Signature Not Disputed - Proof](https://www.caseciter.com/annie-thomas-v-rani-thomas-will-signature-not-disputed-proof/)
 * [Beri Manoj v. State of Andhra Pradesh - S.506 IPC - Criminal Intimidation](https://www.caseciter.com/beri-manoj-v-state-of-andhra-pradesh-s-506-ipc-criminal-intimidation/)
 * [Woodland (Aero Club) Private Limited Director Vs Assistant Commissioner Of Income Tax - Income Tax Act - Due Date - PF - ESI Deduction](https://www.caseciter.com/woodland-aero-club-private-limited-director-vs-assistant-commissioner-of-income-tax-income-tax-act-due-date-pf-esi-deduction/)
 * [Niraj Jain v. Competent Authority‑ cum‑ Additional Collector, Jagdalpur  2026 INSC 86 - Land Acquisition](https://www.caseciter.com/2026insc86/)
