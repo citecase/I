@@ -1,3 +1,6 @@
+* [Constable Uma Shankaran v. Union of India - Backwages - Illegal Dismissal](https://www.caseciter.com/constable-uma-shankaran-v-union-of-india-backwages-illegal-dismissal/)
+* [Chintan Rajubhai Panseriya v. State of Maharashtra - Criminal Trial - Multiplying Witnesses](https://www.caseciter.com/chintan-rajubhai-panseriya-v-state-of-maharashtra-criminal-trial-multiplying-witnesses/)
+* [Panchavatige Mutt, Togarsi v. Grama Panchayathi, Togarsi- Revenue Records](https://www.caseciter.com/panchavatige-mutt-togarsi-v-grama-panchayathi-togarsi-revenue-records/)
 * [Habib Alladin v. Mohammed Ahmed 2026 INSC 90 - Wakf Act - Tribunal Jurisdiction](https://www.caseciter.com/2026insc90/)
 * [Annie Thomas v. Rani Thomas - Will - Signature Not Disputed - Proof](https://www.caseciter.com/annie-thomas-v-rani-thomas-will-signature-not-disputed-proof/)
 * [Beri Manoj v. State of Andhra Pradesh - S.506 IPC - Criminal Intimidation](https://www.caseciter.com/beri-manoj-v-state-of-andhra-pradesh-s-506-ipc-criminal-intimidation/)
