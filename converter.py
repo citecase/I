@@ -21,10 +21,16 @@ def convert_md_to_table(input_text):
     link_pattern = re.compile(r'\[(.*?)\]\((.*?)\)')
     # Matches Year + Upper Case Letters + Number (e.g., 2026 INSC 101)
     citation_pattern = re.compile(r'\d{4}\s+[A-Z]+\s+\d+')
+    # Matches lines that are just symbols/punctuation/whitespace
+    symbol_only_pattern = re.compile(r'^[ \t\W_]+$')
 
     for line in lines:
         stripped = line.strip()
         
+        # Skip truly empty lines
+        if not stripped:
+            continue
+            
         # Identify headers (Cases)
         if stripped.startswith('#'):
             # Extract Case Name with Link
@@ -36,20 +42,27 @@ def convert_md_to_table(input_text):
                 clean_header = re.sub(r'^#+\s*', '', stripped)
                 current_case_link = clean_header.split(' - ')[0]
 
-            # Extract Citation
+            # Extract Citation (specifically looking for INSC or similar patterns)
             cit_match = citation_pattern.search(stripped)
             if cit_match:
                 current_citation = cit_match.group(0)
             else:
-                # Fallback: check if there's a dash separator
-                parts = stripped.split(' - ')
-                current_citation = parts[1] if len(parts) > 1 else ""
+                # If no neutral citation pattern is found, keep it blank
+                current_citation = ""
         
-        # Identify Notes (any non-empty line that isn't a header)
-        elif stripped and current_case_link:
+        # Identify Notes
+        elif current_case_link:
+            # RULE: Ignore lines that are just symbols (e.g., "---", "***", "...")
+            if symbol_only_pattern.match(stripped):
+                continue
+                
             # Clean list markers if they exist
             note_content = re.sub(r'^([-*+]|\d+\.)\s+', '', stripped)
             
+            # Final check: if after cleaning list markers it's empty or just symbols, skip
+            if not note_content or symbol_only_pattern.match(note_content):
+                continue
+
             # Escape any pipe characters in the note to avoid breaking the table
             note_content = note_content.replace('|', '\\|')
             
@@ -64,7 +77,6 @@ def convert_md_to_table(input_text):
 
 def main():
     # Check for command line arguments (useful for GitHub Actions)
-    # Usage: python converter.py input.md output.md
     if len(sys.argv) > 2:
         input_file = sys.argv[1]
         output_file = sys.argv[2]
@@ -83,9 +95,8 @@ def main():
                 f.write(result)
             print(f"Successfully converted {input_file} to {output_file}")
         else:
-            print("No case data found to convert.")
+            print("No valid case data found to convert.")
     else:
-        # Default behavior for local testing
         print("Usage: python converter.py <input_file.md> <output_file.md>")
 
 if __name__ == "__main__":
