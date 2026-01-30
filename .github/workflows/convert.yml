@@ -1,0 +1,30 @@
+name: Convert Markdown to Table
+
+on:
+  push:
+    paths:
+      - 'gdoc.md' # Runs only when gdoc.md is updated
+  workflow_dispatch: # Allows you to run it manually
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run Converter
+        run: python converter.py gdoc.md cases_table.md
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add cases_table.md
+          git commit -m "Update cases table" || exit 0
+          git push
