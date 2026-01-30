@@ -4,7 +4,7 @@ import os
 def filter_arbitration_rows(input_file, output_file):
     """
     Reads a Markdown table and creates a new file containing only the header 
-    and rows that include the keyword 'arbitration'.
+    and rows that include the keyword 'civil procedure'.
     """
     if not os.path.exists(input_file):
         print(f"Error: {input_file} not found.")
@@ -24,12 +24,12 @@ def filter_arbitration_rows(input_file, output_file):
         separator = lines[1]
         
         filtered_rows = []
-        keyword = "arbitration"
+        keyword = "civil procedure"
 
         # Process each row starting from line 3
         for line in lines[2:]:
             # Case-insensitive check for the keyword
-            # We check the whole line so it catches 'arbitration' in name, citation, or note
+            # We check the whole line so it catches 'civil procedure' in name, citation, or note
             if keyword.lower() in line.lower():
                 # Ensure the line ends with a single newline
                 clean_line = line.strip() + "\n"
