@@ -1,0 +1,37 @@
+name: Filter Arbitration Cases
+
+on:
+  push:
+    paths:
+      - 'cases_table.md' # Runs after the main table is updated
+  workflow_run:
+    workflows: ["Convert Markdown to Table"]
+    types:
+      - completed
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  filter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run Filter
+        run: python filter_table.py cases_table.md arbitration_cases.md
+
+      - name: Commit and Push filtered table
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          # Only commit if the file was actually created/changed
+          if [ -f arbitration_cases.md ]; then
+            git add arbitration_cases.md
+            git commit -m "Update filtered arbitration cases" || exit 0
+            git push
+          fi
