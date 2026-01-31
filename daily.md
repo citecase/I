@@ -1,3 +1,5 @@
+* [Hemlata Sahu v. Amit Mahawar - Motor Accident Compensation - Pillion Rider - Driver's Contributory Negligence](https://www.caseciter.com/hemlata-sahu-v-amit-mahawar-motor-accident-compensation-pillion-rider-drivers-contributory-negligence/)
+* [R. Srinivasan v.  Southern and Rajamani TPT Pvt. Ltd. - Art. 227 Constitution - CPC - Rejection Of Plaint](https://www.caseciter.com/r-srinivasan-v-southern-and-rajamani-tpt-pvt-ltd-art-227-constitution-cpc-rejection-of-plaint/)
 * [Rai Singh Markam etc. v. State of Chhattisgarh - S.6 POCSO Act - Sentencing ; Evidence - Cross Examination - Suggestions](https://www.caseciter.com/rai-singh-markam-etc-v-state-of-chhattisgarh/)
 * [State of U.P. v. Manish Dwivedi - Compassionate Appointment](https://www.caseciter.com/state-of-u-p-v-manish-dwivedi-compassionate-appointment/)
 * [Usman Ali v. State of Uttar Pradesh 2026 INSC 98 - Cancellation of Bail](https://www.caseciter.com/usman-ali-v-state-of-uttar-pradesh-2026-insc-98-cancellation-of-bail/)
