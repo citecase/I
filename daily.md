@@ -1,3 +1,5 @@
+* [Rai Singh Markam etc. v. State of Chhattisgarh - S.6 POCSO Act - Sentencing ; Evidence - Cross Examination - Suggestions](https://www.caseciter.com/rai-singh-markam-etc-v-state-of-chhattisgarh/)
+* [State of U.P. v. Manish Dwivedi - Compassionate Appointment](https://www.caseciter.com/state-of-u-p-v-manish-dwivedi-compassionate-appointment/)
 * [Usman Ali v. State of Uttar Pradesh 2026 INSC 98 - Cancellation of Bail](https://www.caseciter.com/usman-ali-v-state-of-uttar-pradesh-2026-insc-98-cancellation-of-bail/)
 * [Saisudhir Energy Ltd. v. NTPC Vidyut Vyapar Nigam Ltd., 2026 INSC 103 -Arbitration - Contract - Public Utility Projects](https://www.caseciter.com/saisudhir-energy-ltd-v-ntpc-vidyut-vyapar-nigam-ltd-2026-insc-103-arbitration-contract-public-utility-projects/)
 * [Bhola Nath v.  State of Jharkhand  2026 INSC 99 - State - Contractual Stipulations - Fundamental Rights Waiver](https://www.caseciter.com/bhola-nath-v-state-of-jharkhand-2026-insc-99-state-contractual-stipulations-fundamental-rights-waiver/)
