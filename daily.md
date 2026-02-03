@@ -1,3 +1,8 @@
+* [State of Tamil Nadu v. The State of Karnataka  2026 INSC 113 - InterState River Water Disputes](https://www.caseciter.com/2026insc113/)
+* [C. Velusamy v. K. Indhera 2026 INSC 112 - S.29A Arbitration Act - Expiry Of Time](https://www.caseciter.com/2026insc112/)
+* [State of Chhattisgarh v. Rekha Soni - Art.226 - Writ Of Mandamus](https://www.caseciter.com/state-of-chhattisgarh-v-rekha-soni-art-226-writ-of-mandamus/)
+* [Yatendra Singh v. State of U.P. 2026 INSC 109 - S.138 NI Act - Restoration Of Complaint](https://www.caseciter.com/2026insc109/)
+* [V. Anima Malar v. S. Aadhavan  2026 INSC 108 - Writ Petition - Pendency Civil Suit](https://www.caseciter.com/2026insc108/)
 * [K.M. Shaji v. M. V. Nikesh Kumar  2026 INSC 111 - Election - Representation Of People Act - Disqualification Order](https://www.caseciter.com/2026insc111/)
 * [Ram Singh v. Rajendra Pratap Singh @ Moti Singh   2026 INSC 110 - Election](https://www.caseciter.com/20026insc110/)
 * [Syed Mohammed Shabbuddin v. The Union of India 2026 INSC 107 - Writ Appeal - Contradictory Orders](https://www.caseciter.com/2026insc107/)
