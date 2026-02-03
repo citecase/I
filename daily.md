@@ -1,3 +1,8 @@
+* [K.M. Shaji v. M. V. Nikesh Kumar  2026 INSC 111 - Election - Representation Of People Act - Disqualification Order](https://www.caseciter.com/2026insc111/)
+* [Ram Singh v. Rajendra Pratap Singh @ Moti Singh   2026 INSC 110 - Election](https://www.caseciter.com/20026insc110/)
+* [Syed Mohammed Shabbuddin v. The Union of India 2026 INSC 107 - Writ Appeal - Contradictory Orders](https://www.caseciter.com/2026insc107/)
+* [Indravadan N. Adhvaryu Pipala Fali Modhvada v. Laxminarayan Dev Trust - Industrial Disputes Act](https://www.caseciter.com/indravadan-n-adhvaryu-pipala-fali-modhvada-v-laxminarayan-dev-trust-industrial-disputes-act/)
+* [Airavat Industries v. Bank of Maharashtra- S.14 SARFAESI Act](https://www.caseciter.com/airavat-industries-v-bank-of-maharashtra-s-14-sarfaesi-act/)
 * [42605-B Cdr Yogesh Mahla vs Union of India - POSH Act - AFT - Navy Regulations](https://www.caseciter.com/42605-b-cdr-yogesh-mahla-vs-union-of-india-posh-act-aft-navy-regulations/)
 * [Rajia Begum v. Barnali Mukherjee, 2026 INSC 106 - Arbitration Agreement - Fraud - Art. 227 Petition](https://www.caseciter.com/2026insc106/)
 * [Sandeep Singh Bora v. Narendra Singh Deopa  2026 INSC 105 Art.243O Constitution - Writ Jurisdiction - Election Matters](https://www.caseciter.com/2026insc105/)
