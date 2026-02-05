@@ -1,3 +1,4 @@
+* [State of Telangana v. Nalla Balu @ Durgam Shashidhar Goud FIR On Social Media Posts - Telangana HC Guidelines](https://www.caseciter.com/state-of-telangana-v-nalla-balu-durgam-shashidhar-goud-fir-on-social-media-posts-telangana-hc-guidelines/)
 * [U.P. Junior High School Council Instructor Welfare Association v. State of Uttar Pradesh - Art.23 Constitution - Begar - Contractual Teachers](https://www.caseciter.com/u-p-junior-high-school-council-instructor-welfare-association-v-state-of-uttar-pradesh-art-23-constitution-begar-contractual-teachers/)
 * [Vinit Bahri vs MGF Developers Ltd.  2026 INSC 114- Consumer Protection Act - Commercial Purpose - Flat Purchasers](https://www.caseciter.com/2026onsc114/)
 * [Satender Kumar Antil v. Central Bureau of Investigation  2026 INSC 115 - S.35 BNSS - Notice - Power To Arrest](https://www.caseciter.com/2026insc115/)
