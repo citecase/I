@@ -1,3 +1,7 @@
+* [Reginamary Chellamani v. State   2026 INSC 127 - Accused - Informing Right To Legal Representation](https://www.caseciter.com/reginamary-chellamani-v-state-2026-insc-127-accused-informing-right-to-legal-representation/)
+* [Dorairaj v. Doraisamy (D) 2026 INSC 126 - Hindu Law - Joint Family - Partition - Will](https://www.caseciter.com/2026insc126/)
+* [Pramod Kumar Navratna vs State of Chhattisgarh 2026 INSC 124 - Rape - Promise To Marry -  Marital Status Of Victim](https://www.caseciter.com/2026insc124/)
+* [State of West Bengal vs Confederation of State Government Employees 2026 INSC 123 - Dearness Allowance - Art.309 Constitution](https://www.caseciter.com/state-of-west-bengal-vs-confederation-of-state-government-employees-2026-insc-123-dearness-allowance-art-309-constitution/)
 * [State of Telangana v. Nalla Balu @ Durgam Shashidhar Goud FIR On Social Media Posts - Telangana HC Guidelines](https://www.caseciter.com/state-of-telangana-v-nalla-balu-durgam-shashidhar-goud-fir-on-social-media-posts-telangana-hc-guidelines/)
 * [U.P. Junior High School Council Instructor Welfare Association v. State of Uttar Pradesh - Art.23 Constitution - Begar - Contractual Teachers](https://www.caseciter.com/u-p-junior-high-school-council-instructor-welfare-association-v-state-of-uttar-pradesh-art-23-constitution-begar-contractual-teachers/)
 * [Vinit Bahri vs MGF Developers Ltd.  2026 INSC 114- Consumer Protection Act - Commercial Purpose - Flat Purchasers](https://www.caseciter.com/2026onsc114/)
