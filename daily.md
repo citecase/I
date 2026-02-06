@@ -1,3 +1,5 @@
+* [V. Pathmavathi  v. Bharathi AXA General Insurance Co. Ltd.   2026 INSC 131 -Motor Accident Compensation-  Loss Of Love & Affection - Consortium](https://www.caseciter.com/v-pathmavathi-v-bharathi-axa-general-insurance-co-ltd-2026-insc-131-motor-accident-compensation-loss-of-love-affection-consortium/)
+* [State of West Bengal v. Jai Hind Pvt. Ltd.  2026 INSC 132 - Review Jurisdiction - Executive Authorities](https://www.caseciter.com/2026insc132/)
 * [Rupesh Kumar Meena v. Union of India 2026 INSC 119](https://www.caseciter.com/2026insc119/)
 * [Shashin Patel v. Uday Dalal vs Capital Mind Advisory Services Pvt. Ltd. 2026 INSC 125](https://www.caseciter.com/2026insc125/)
 * [Bhakti Vinaykumar Khatu & Anr. v. Jayanti Bhaskar Shirsat - Lok Adalat Award](https://www.caseciter.com/bhakti-vinaykumar-khatu-anr-v-jayanti-bhaskar-shirsat-lok-adalat-award/)
