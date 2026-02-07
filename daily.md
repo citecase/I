@@ -1,3 +1,8 @@
+* [Amit Kumar  v. Union of India  2026 INSC 128](https://www.caseciter.com/2026insc128/)
+* [Jane Kaushik v. Union of India  2026 INSC 129](https://www.caseciter.com/2026insc129/)
+* [Kanta v. Soma Devi (D) 2026 INSC 133 - Suit For Perpetual Injunction](https://www.caseciter.com/2026insc133/)
+* [ITC Limited v. Aashna Roy, 2026 INSC 135 - Consumer Protection Act - Evidence](https://www.caseciter.com/2026insc135/)
+* [Tharammel Peethambaran  v. T. Ushakrishnan  2026 INSC 134 - Secondary Evidence - Photostat - CPC - Second Appeal - Finding Of Facts](https://www.caseciter.com/2026insc134/)
 * [Nav Nirman Builders & Developers Pvt. Ltd.  v. Union of India 2026 INSC 130 - S.8 PMLA](https://www.caseciter.com/2026insc130/)
 * [V. Pathmavathi  v. Bharathi AXA General Insurance Co. Ltd.   2026 INSC 131 -Motor Accident Compensation-  Loss Of Love & Affection - Consortium](https://www.caseciter.com/v-pathmavathi-v-bharathi-axa-general-insurance-co-ltd-2026-insc-131-motor-accident-compensation-loss-of-love-affection-consortium/)
 * [State of West Bengal v. Jai Hind Pvt. Ltd.  2026 INSC 132 - Review Jurisdiction - Executive Authorities](https://www.caseciter.com/2026insc132/)
