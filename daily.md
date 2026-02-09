@@ -1,3 +1,6 @@
+* [Deputy Commissioner and Special Land Acquisition Officer v. S.V. Global Mill Limited 2026 INSC 138 - S.24 RFCTLARR - Land Acquisition](https://www.caseciter.com/2026insc138/)
+* [Munni Devi v. State of Uttar Pradesh  2026 INSC 136 IPC - Dowry Death](https://www.caseciter.com/2026insc136/)
+* [Ankhim Holdings Pvt. Ltd. & Anr. v. Zaveri Construction Pvt. Ltd. 2026 INSC 137 - S.15 Arbitration Act](https://www.caseciter.com/ankhim-holdings-pvt-ltd-anr-v-zaveri-construction-pvt-ltd-s-15-arbitration-act/)
 * [Premium Transmission Private Limited v. Kishan Subhash Rathod  2026 INSC 122 - S.10 Industrial Disputes Act - CLRA](https://www.caseciter.com/2026insc122/)
 * [Prantik Kumar vs State of Jharkhand - Bail - Deposit Of Amount](https://www.caseciter.com/prantik-kumar-vs-state-of-jharkhand-bail-deposit-of-amount/)
 * [N. Rajaram v. R. Murali - Order IX Rule 13 CPC - Third Party Application](https://www.caseciter.com/n-rajaram-v-r-murali-order-ix-rule-13-cpc-third-party-application/)
