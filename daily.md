@@ -1,3 +1,7 @@
+* [N. Manoharan v.   Administrative Officer 2026 INSC 143 - Gratuity Act - HWP Employees](https://www.caseciter.com/2026insc145/)
+* [Zeba Khan v. State of U.P. 2026 INSC 144 - Bail - Disclosure Of All Material Particulars - Guidelines](https://www.caseciter.com/2026insc144/)
+* [Shally Mahant @ Sandeep v. State of Punjab - Anticipatory Bail - Not Answering IO - Non-Cooperation](https://www.caseciter.com/shally-mahant-sandeep-v-state-of-punjab-ant/)
+* [K. Rajaiah v.  High Court for the State of Telangana  2026 INSC 142 - Disciplinary Proceedings](https://www.caseciter.com/2026insc142/)
 * [Jitender Kumar Pandey  v. Suman Gautam - Uttar Pradesh Kshettra Panchayats and Zilla Panchayats Adhiniyam](https://www.caseciter.com/jitender-kumar-pandey-v-suman-gautam-uttar-pradesh-kshettra-panchayats-and-zilla-panchayats-adhiniyam/)
 * [Kabra and Associates v. Rekha Rajkumar Hemdev - RERA - Consumer Protection Act - Doctrine of Election](https://www.caseciter.com/kabra-and-associates-v-rekha-rajkumar-hemdev-rera-consumer-protection-act-doctrine-of-election/)
 * [Dr. Anand Rai v. State of Madhya Pradesh  2026 INSC 141 - S.14A SC-ST Act - BNSS/CrPC - Discharge](https://www.caseciter.com/2026insc141/)
