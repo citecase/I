@@ -1,3 +1,8 @@
+* [Jitender Kumar Pandey  v. Suman Gautam - Uttar Pradesh Kshettra Panchayats and Zilla Panchayats Adhiniyam](https://www.caseciter.com/jitender-kumar-pandey-v-suman-gautam-uttar-pradesh-kshettra-panchayats-and-zilla-panchayats-adhiniyam/)
+* [Kabra and Associates v. Rekha Rajkumar Hemdev - RERA - Consumer Protection Act - Doctrine of Election](https://www.caseciter.com/kabra-and-associates-v-rekha-rajkumar-hemdev-rera-consumer-protection-act-doctrine-of-election/)
+* [Dr. Anand Rai v. State of Madhya Pradesh  2026 INSC 141 - S.14A SC-ST Act - BNSS/CrPC - Discharge](https://www.caseciter.com/2026insc141/)
+* [Atharv Chaturvedi v. State of Madhya Pradesh - EWS Reservation - MBBS Admission](https://www.caseciter.com/atharv-chaturvedi-v-state-of-madhya-pradesh-ews-reservation-mbbs-admission/)
+* [Sunny Chauhan v. State of Haryana - Bail Applications -Long  Pendency](https://www.caseciter.com/sunny-chauhan-v-state-of-haryana-bail-applications-long-pendency/)
 * [I.S.D.S. Private Limited vs  Khemka Food Products Pvt. Ltd - S.134 Trade Marks Act - Court inferior to a District Court](https://www.caseciter.com/i-s-d-s-private-limited-vs-khemka-food-products-pvt-ltd-s-134-trade-marks-act-court-inferior-to-a-district-court/)
 * [Bhupal Singh Bhandari v. Union of India - Writ Jurisdiction - Delay](https://www.caseciter.com/bhupal-singh-bhandari-v-union-of-india-writ-jurisdiction-delay/)
 * [Abdul Khalek vs State of Assam  2026 INSC 140 -Environmental Protection - Rule Of Law](https://www.caseciter.com/abdul-khalek-vs-state-of-assam-2026-insc-140-environmental-protection-rule-of-law/)
