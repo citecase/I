@@ -1,3 +1,5 @@
+* [Deepak Ananth v. State of Maharashtra - S.482 CrPC - Quashing Petition - Pendency Of Discharge Petition](https://www.caseciter.com/deepak-ananth-v-state-of-maharashtra-s-482-crpc-quashing-petition-pendency-of-discharge-petition/)
+* [Pawan Kumar v. State NCT of Delhi - Murder Conviction Set Aside](https://www.caseciter.com/pawan-kumar-v-state-nct-of-delhi-murder-conviction-set-aside/)
 * [N. Manoharan v.   Administrative Officer 2026 INSC 143 - Gratuity Act - HWP Employees](https://www.caseciter.com/2026insc145/)
 * [Zeba Khan v. State of U.P. 2026 INSC 144 - Bail - Disclosure Of All Material Particulars - Guidelines](https://www.caseciter.com/2026insc144/)
 * [Shally Mahant @ Sandeep v. State of Punjab - Anticipatory Bail - Not Answering IO - Non-Cooperation](https://www.caseciter.com/shally-mahant-sandeep-v-state-of-punjab-ant/)
