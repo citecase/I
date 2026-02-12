@@ -1,3 +1,8 @@
+* [State of Odisha  v. Managing Committee of Namatara Girls High School, 2026 INSC 148 - Limitation Act - Delay Condonation](https://www.caseciter.com/2026insc148/)
+* [Hemlata Eknath Pise v. Shubham Bahu-uddeshiya Sanstha, Waddhamna  2026 INSC 147 - Judgment - Issues Answering](https://www.caseciter.com/2026insc147/)
+* [Union of India v. Sgt Girish Kumar  2026 INSC 149 - Disability Pension - Ex-Servicemen](https://www.caseciter.com/20026insc149/)
+* [National Insurance Co. Ltd. v. Rathlavath Chandulal 2026 INSC 146 - Handwritten Orders - Computerization Of Courts](https://www.caseciter.com/2026insc146/)
+* [Himanshu Kumar Verma v. State of Bihar - CrPC - Summons In Complaint Case - Apprehension Of Arrest](https://www.caseciter.com/himanshu-kumar-verma-v-state-of-bihar-crpc-summons-in-complaint-case-apprehension-of-arrest/)
 * [Deepak Ananth v. State of Maharashtra - S.482 CrPC - Quashing Petition - Pendency Of Discharge Petition](https://www.caseciter.com/deepak-ananth-v-state-of-maharashtra-s-482-crpc-quashing-petition-pendency-of-discharge-petition/)
 * [Pawan Kumar v. State NCT of Delhi - Murder Conviction Set Aside](https://www.caseciter.com/pawan-kumar-v-state-nct-of-delhi-murder-conviction-set-aside/)
 * [N. Manoharan v.   Administrative Officer 2026 INSC 143 - Gratuity Act - HWP Employees](https://www.caseciter.com/2026insc145/)
