@@ -3,299 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CiteCase - Judgments, Library & News</title>
+    <title>CiteCase - Supreme Court Research Suite</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
         
+        :root {
+            --brand-primary: #000000;
+            --brand-accent: #3b82f6;
+            --bg-main: #ffffff;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
+            background-color: var(--bg-main);
             color: #111827;
-            overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
-        .splash-overlay, .lock-overlay {
-            position: fixed;
-            inset: 0;
-            background: white;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.5s ease-out;
-        }
-
-        .lock-overlay {
-            z-index: 9998;
-            display: none;
-        }
-
-        .loader-bar {
-            width: 240px;
-            height: 6px;
-            background: #f3f4f6;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-top: 20px;
-        }
-
-        .loader-progress {
-            width: 0%;
-            height: 100%;
-            background: #000000;
-            transition: width 0.4s cubic-bezier(0.1, 0.7, 1.0, 0.1);
-        }
-
-        mark {
-            background-color: #fef08a;
-            color: #111827;
-            padding: 0 1px;
-            border-radius: 2px;
-            font-weight: inherit;
-        }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
 
         .search-result-card {
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            border-left: 4px solid transparent;
-            user-select: text !important;
-            -webkit-user-select: text !important;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #f3f4f6;
+        }
+        .search-result-card:hover {
+            border-color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px -10px rgba(0,0,0,0.05);
         }
 
-        .search-result-card:hover {
-            transform: translateX(4px);
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d1d5db; }
+
+        .loader-progress {
+            transition: width 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        .para-wrap {
+            position: relative;
+            padding-left: 1rem;
+            border-left: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        .para-wrap:hover {
             border-left-color: #000;
             background: #fafafa;
         }
+        .copy-btn {
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .para-wrap:hover .copy-btn, .search-result-card:hover .copy-btn {
+            opacity: 1;
+        }
 
-        #hero-container {
-            min-height: 60vh;
-            display: flex;
+        #toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #000;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            z-index: 1000;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        #toast.show { transform: translateX(-50%) translateY(0); }
+
+        mark {
+            background-color: #fef08a;
+            color: #000;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        #gate-screen {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: white;
+            z-index: 9998;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 2rem;
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        #hero-container.has-results {
-            min-height: 25vh;
-            padding-bottom: 2rem;
-        }
-
-        .search-wrapper {
-            width: 100%;
-            max-width: 850px;
-            position: relative;
-        }
-
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #ffffff; }
-        ::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #d1d5db; }
-
-        .paragraph-content b, .paragraph-content strong { font-weight: 700; color: #000; }
-        .paragraph-content i, .paragraph-content em { font-style: italic; }
-
-        #copyToast {
-            position: fixed;
-            bottom: 60px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #000;
-            color: #fff;
-            padding: 8px 16px;
-            border-radius: 99px;
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            opacity: 0;
-            transition: opacity 0.3s;
-            pointer-events: none;
-            z-index: 100;
-        }
-
-        .passcode-input {
-            letter-spacing: 0.5em;
-            text-align: center;
-            font-weight: 900;
-            border-bottom: 2px solid #f3f4f6;
-            transition: border-color 0.3s;
-        }
-        .passcode-input:focus {
-            border-color: #000;
-            outline: none;
-        }
-
-        .nav-tab {
-            position: relative;
-            padding: 0.5rem 1.5rem;
-            font-weight: 700;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #9ca3af;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-        .nav-tab.active {
-            color: #000;
-        }
-        .nav-tab.active::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 12px;
-            height: 2px;
-            background: #000;
         }
     </style>
 </head>
-<body>
+<body class="bg-white">
 
-    <!-- Sync Splash -->
-    <div id="splash" class="splash-overlay">
-        <div id="splash-content" class="flex flex-col items-center">
-            <div class="flex items-center gap-1 mb-4 select-none">
-                <span class="text-4xl font-black text-black tracking-tighter">Cite</span>
-                <span class="text-4xl font-black bg-black text-white px-2 py-0.5 rounded-lg tracking-tighter">Case</span>
+    <!-- Splash Screen -->
+    <div id="splash" class="fixed inset-0 bg-white z-[9999] flex flex-col items-center justify-center p-6 transition-opacity duration-500">
+        <div class="flex items-center gap-2 mb-8 animate-pulse">
+            <span class="text-5xl font-black tracking-tighter">Cite</span>
+            <span class="text-5xl font-black bg-black text-white px-3 py-1 rounded-2xl tracking-tighter">Case</span>
+        </div>
+        <div class="w-full max-w-xs h-1.5 bg-gray-100 rounded-full overflow-hidden mb-4">
+            <div id="splash-bar" class="loader-progress h-full bg-black w-0"></div>
+        </div>
+        <div id="splash-status" class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em]">Initializing Archives</div>
+    </div>
+
+    <!-- Tally Form Gate -->
+    <div id="gate-screen">
+        <div class="w-full max-w-lg text-center mb-8">
+            <div class="flex items-center justify-center gap-1 mb-6 opacity-20">
+                <span class="text-2xl font-black tracking-tighter">Cite</span>
+                <span class="text-2xl font-black bg-black text-white px-2 py-0.5 rounded-lg tracking-tighter">Case</span>
             </div>
-            <div id="status-text" class="text-gray-400 font-medium text-[10px] tracking-[0.2em] uppercase animate-pulse">Syncing All Archives...</div>
-            <div id="loader-container" class="loader-bar">
-                <div id="progress" class="loader-progress"></div>
-            </div>
-            
-            <div id="error-ui" class="hidden">
-                <i class="fas fa-exclamation-triangle text-red-500 text-3xl mb-4"></i>
-                <h2 class="text-lg font-bold mb-2 text-black text-center">Sync Failed</h2>
-                <p id="error-message" class="text-sm text-gray-500 mb-6 text-center"></p>
-                <button onclick="location.reload()" class="bg-black text-white px-8 py-2.5 rounded-xl font-bold shadow-sm hover:bg-gray-800 transition-all">
-                    Retry Sync
-                </button>
-            </div>
+            <h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400 mb-2">Verification Required</h2>
+            <p class="text-xs text-gray-400">Please complete the form below to access the database</p>
+        </div>
+        
+        <div class="w-full max-w-2xl bg-gray-50 rounded-3xl p-2 md:p-6 border border-gray-100">
+            <iframe data-tally-src="https://tally.so/embed/kd6QZJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0" title="CiteCase Lock"></iframe>
         </div>
     </div>
 
-    <!-- Passcode Screen -->
-    <div id="lock-screen" class="lock-overlay">
-        <div class="flex flex-col items-center w-full max-w-xs">
-            <div class="flex items-center gap-1 mb-12 select-none opacity-20">
-                <span class="text-2xl font-black text-black tracking-tighter">Cite</span>
-                <span class="text-2xl font-black bg-black text-white px-1.5 py-0.5 rounded-md tracking-tighter">Case</span>
-            </div>
-            <input type="password" id="passcodeField" maxlength="8" class="passcode-input w-full py-4 text-2xl" autocomplete="off" autofocus placeholder="••••••••">
-            <div id="lockError" class="mt-4 text-red-500 text-[10px] font-bold uppercase tracking-widest opacity-0 transition-opacity">Access Denied</div>
-        </div>
-    </div>
-
-    <div id="copyToast">Copied to Clipboard</div>
-
-    <div id="app-content" class="min-h-screen flex flex-col bg-white opacity-0 pointer-events-none transition-opacity duration-700">
-        <!-- Navigation -->
-        <nav class="flex justify-center gap-4 md:gap-8 py-6 border-b border-gray-50 bg-white/80 backdrop-blur-md sticky top-0 z-40">
-            <button onclick="setView('ebooks')" id="tab-ebooks" class="nav-tab">Law Library</button>
-            <button onclick="setView('judgments')" id="tab-judgments" class="nav-tab active">Supreme Court Judgments</button>
-            <button onclick="setView('news')" id="tab-news" class="nav-tab">Legal News Hub</button>
-        </nav>
-
-        <div id="hero-container">
-            <div class="flex flex-col items-center mb-12">
-                <div class="flex items-center gap-1 cursor-pointer select-none" onclick="location.reload()">
-                    <span class="text-5xl md:text-6xl font-black text-black tracking-tighter">Cite</span>
-                    <span class="text-5xl md:text-6xl font-black bg-black text-white px-3 py-1 rounded-2xl tracking-tighter">Case</span>
-                </div>
+    <!-- Main App UI -->
+    <div id="app" class="min-h-screen flex flex-col opacity-0 transition-opacity duration-700 pointer-events-none">
+        <header id="hero" class="pt-32 pb-12 px-6 flex flex-col items-center transition-all duration-500">
+            <div class="flex items-center gap-1 mb-16 cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+                <span class="text-6xl md:text-7xl font-black tracking-tighter">Cite</span>
+                <span class="text-6xl md:text-7xl font-black bg-black text-white px-4 py-1 rounded-[2rem] tracking-tighter">Case</span>
             </div>
 
-            <div class="search-wrapper mx-auto">
+            <div class="w-full max-w-3xl relative">
                 <div class="relative group">
-                    <input type="text" id="searchInput" 
-                        placeholder="Search Case Names, Neutral Citation Or Keywords" 
-                        class="w-full pl-14 pr-6 py-5 bg-white border-2 border-gray-100 rounded-2xl focus:ring-8 focus:ring-gray-50 focus:border-black outline-none transition-all text-lg shadow-sm hover:border-gray-200">
-                    <i class="fas fa-search absolute left-5 top-6 text-gray-300 text-xl group-focus-within:text-black transition-colors"></i>
+                    <input type="text" id="mainSearch" placeholder="Search case names, neutral citations or keywords..."
+                           class="w-full pl-14 pr-6 py-6 bg-white border-2 border-gray-100 rounded-[2rem] text-xl outline-none focus:border-black focus:ring-8 focus:ring-gray-50 transition-all shadow-sm">
+                    <i class="fas fa-search absolute left-6 top-1/2 -translate-y-1/2 text-gray-300 group-focus-within:text-black text-xl transition-colors"></i>
                 </div>
 
-                <div id="searchControls" class="mt-8 flex flex-wrap gap-4 items-center justify-center text-sm">
-                    <div class="flex items-center gap-8 mr-4">
-                        <span class="font-bold uppercase tracking-widest text-[10px] text-gray-300">Search Logic</span>
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black transition-colors">
-                            <input type="radio" name="logic" value="and" checked class="w-4 h-4 accent-black">
-                            <span class="font-semibold text-gray-500">All Words</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black transition-colors">
-                            <input type="radio" name="logic" value="exact" class="w-4 h-4 accent-black">
-                            <span class="font-semibold text-gray-500">Exact Match</span>
-                        </label>
-                        <label class="flex items-center gap-2 cursor-pointer hover:text-black transition-colors">
-                            <input type="radio" name="logic" value="or" class="w-4 h-4 accent-black">
-                            <span class="font-semibold text-gray-500">Any Word</span>
-                        </label>
-                    </div>
-                    
-                    <div id="quickCiteGroup" class="flex flex-wrap items-center justify-center gap-2 border-l pl-4 border-gray-100">
-                        <button onclick="quickSearch('2026 INSC ')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">Read Latest SC Judgments</button>
-                        <button onclick="topicSearch('Constitution')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">Constitution</button>
-                        <button onclick="topicSearch('civil procedure')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">CPC</button>
-                        <button onclick="topicSearch('Arbitration')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">Arbitration</button>
-                        <button onclick="topicSearch('IBC')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">IBC</button>
-                        <button onclick="topicSearch('criminal procedure')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">CrPC</button>
-                        <button onclick="topicSearch('Family')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">Family</button>
-                    </div>
-
-                    <div id="libraryQuickGroup" class="hidden flex-wrap items-center justify-center gap-2 border-l pl-4 border-gray-100">
-                        <button onclick="topicSearch('Constitution')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">Constitution</button>
-                        <button onclick="topicSearch('civil procedure')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">CPC</button>
-                        <button onclick="topicSearch('Arbitration')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">Arbitration</button>
-                        <button onclick="topicSearch('IBC')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">IBC</button>
-                        <button onclick="topicSearch('criminal procedure')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">CrPC</button>
-                        <button onclick="topicSearch('Family')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold">Family</button>
-                        <button onclick="topicSearch('Criminal')" class="quick-cite-badge px-3 py-1 rounded-full text-[10px] font-bold bg-blue-50 text-blue-600 border-blue-100">Criminal Law</button>
-                    </div>
+                <div class="flex flex-wrap justify-center items-center gap-6 mt-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-black transition-colors">
+                        <input type="radio" name="searchLogic" value="and" checked class="accent-black w-4 h-4"> All Keywords
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-black transition-colors">
+                        <input type="radio" name="searchLogic" value="exact" class="accent-black w-4 h-4"> Exact Match
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-black transition-colors">
+                        <input type="radio" name="searchLogic" value="or" class="accent-black w-4 h-4"> Any Keyword
+                    </label>
                 </div>
             </div>
 
-            <div id="statsWrapper" class="flex flex-col items-center mt-10">
-                <div id="initialStats" class="text-gray-400 text-[11px] font-bold uppercase tracking-[0.25em]">
-                    Initializing archives...
-                </div>
-                <div id="heroNotebookLink" class="mt-6 hidden opacity-0 transition-opacity duration-500">
-                    <a href="https://notebooklm.google.com/notebook/b451a149-6b7c-44da-96f0-bd946ea69b31" target="_blank" class="flex items-center gap-2 bg-gray-50 hover:bg-black hover:text-white text-gray-400 px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all border border-gray-100">
-                        <i class="fas fa-robot"></i> Chat with NotebookLM AI
-                    </a>
-                </div>
+            <div id="stats-banner" class="mt-12 text-[10px] font-black text-gray-300 uppercase tracking-[0.3em]">
+                Initializing database...
             </div>
-        </div>
+        </header>
 
-        <div id="results-wrapper" class="hidden">
-            <div class="max-w-4xl mx-auto px-6 mb-8 flex justify-between items-center text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em] border-b border-gray-50 pb-4">
-                <div class="flex flex-wrap items-center gap-4">
-                    <div id="statsCount">Found 0 items</div>
-                    <button id="copyAllBtn" onclick="copyAllResults()" class="flex items-center gap-2 hover:text-black transition-colors border-l pl-4 border-gray-100">
-                        <i class="fas fa-copy"></i> Copy Full Results
-                    </button>
+        <main id="results-view" class="hidden flex-1 pb-32">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="flex justify-between items-center mb-10 pb-4 border-b border-gray-50">
+                    <div id="result-count" class="text-[10px] font-black text-gray-400 uppercase tracking-widest">0 results</div>
+                    <div class="flex items-center gap-4">
+                        <button onclick="copyCurrentResults()" class="text-[9px] font-black text-gray-400 hover:text-black uppercase tracking-widest flex items-center gap-2 transition-colors">
+                            <i class="fas fa-copy"></i> Copy List
+                        </button>
+                    </div>
                 </div>
-                <div id="searchSpeed" class="text-gray-300 font-mono hidden sm:block"></div>
-            </div>
 
-            <main id="resultsList" class="max-w-4xl mx-auto px-6 space-y-6 pb-24">
-                <!-- Data injected here -->
-            </main>
-        </div>
+                <div id="results-list" class="space-y-8"></div>
+            </div>
+        </main>
+
+        <footer class="fixed bottom-0 w-full bg-white/90 backdrop-blur-md border-t border-gray-100 py-4 px-8 flex justify-between items-center z-50">
+            <div class="flex items-center gap-8 text-[9px] font-bold text-gray-400 uppercase tracking-widest">
+                <span>© 2026 CiteCase Premium</span>
+                <a href="https://notebooklm.google.com/notebook/b451a149-6b7c-44da-96f0-bd946ea69b31" target="_blank" class="hover:text-black transition-colors flex items-center gap-1">
+                    <i class="fas fa-robot"></i> NotebookLM AI
+                </a>
+            </div>
+            <div id="search-speed" class="font-mono text-[9px] text-gray-300"></div>
+        </footer>
+
+        <div id="toast">Copied to Clipboard</div>
     </div>
 
-    <footer class="fixed bottom-0 w-full bg-white/95 backdrop-blur-md border-t border-gray-50 py-3 px-6 flex justify-between items-center text-[9px] text-gray-300 font-bold uppercase tracking-[0.2em] z-50">
-        <div class="flex items-center gap-6">
-            <span>CiteCase Archives &copy; 2026</span>
-            <a href="https://notebooklm.google.com/notebook/b451a149-6b7c-44da-96f0-bd946ea69b31" target="_blank" class="hover:text-black transition-colors flex items-center gap-1">
-                <i class="fas fa-external-link-alt"></i> NotebookLM AI
-            </a>
-        </div>
-    </footer>
+    <!-- Tally Embed Script -->
+    <script>
+        var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
+    </script>
 
     <script>
         const SOURCES = [
@@ -303,420 +201,248 @@
             "https://raw.githubusercontent.com/citecase/I/refs/heads/main/jan2026.md",
             "https://raw.githubusercontent.com/citecase/I/refs/heads/main/2024.md"
         ];
-        const EBOOK_SOURCE = "https://raw.githubusercontent.com/citecase/library/refs/heads/main/ebooks.md";
-        const NEWS_SOURCE = "https://raw.githubusercontent.com/citecase/I/refs/heads/main/news.md";
-        const FEEDBACK_URL = "https://tally.so/r/rjaxB5";
-        
-        let judgmentData = [];
-        let ebookData = [];
-        let newsData = [];
-        let currentView = 'judgments'; 
-        let currentResults = [];
 
-        const getEl = (id) => document.getElementById(id);
+        let db = []; 
+        let activeResults = [];
 
-        function getPasscode() {
-            const now = new Date();
-            const d = String(now.getDate()).padStart(2, '0');
-            const m = String(now.getMonth() + 1).padStart(2, '0');
-            const y = String(now.getFullYear());
-            return `${d}${m}${y}`;
-        }
+        const $ = (id) => document.getElementById(id);
+        const notify = (msg) => {
+            const t = $('toast');
+            t.innerText = msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 2000);
+        };
 
-        function setupPasscode() {
-            const field = getEl('passcodeField');
-            const error = getEl('lockError');
-            const target = getPasscode();
-
-            field.addEventListener('input', (e) => {
-                error.style.opacity = '0';
-                if (e.target.value.length === 8) {
-                    if (e.target.value === target) {
-                        unlockApp();
-                    } else {
-                        error.style.opacity = '1';
-                        field.value = '';
-                    }
-                }
-            });
-        }
-
-        function unlockApp() {
-            const lock = getEl('lock-screen');
-            const content = getEl('app-content');
-            lock.style.opacity = '0';
-            setTimeout(() => {
-                lock.style.display = 'none';
-                content.classList.remove('pointer-events-none');
-                content.style.opacity = '1';
-                getEl('searchInput').focus();
-            }, 500);
-        }
-
-        function setView(view) {
-            currentView = view;
-            const input = getEl('searchInput');
-            const citeGroup = getEl('quickCiteGroup');
-            const libGroup = getEl('libraryQuickGroup');
-            const copyBtn = getEl('copyAllBtn');
-
-            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-            getEl(`tab-${view}`).classList.add('active');
-            
-            input.value = '';
-            
-            if (view === 'judgments') {
-                input.placeholder = "Search Case Names, Neutral Citation Or Keywords";
-                citeGroup.style.display = 'flex';
-                libGroup.style.display = 'none';
-                copyBtn.style.display = 'block';
-                getEl('hero-container').classList.remove('has-results');
-                getEl('results-wrapper').classList.add('hidden');
-                getEl('statsWrapper').classList.remove('hidden');
-            } else if (view === 'ebooks') {
-                input.placeholder = "Search Law Library Titles Or Keywords...";
-                citeGroup.style.display = 'none';
-                libGroup.style.display = 'flex';
-                copyBtn.style.display = 'none';
-                getEl('hero-container').classList.remove('has-results');
-                getEl('results-wrapper').classList.add('hidden');
-                getEl('statsWrapper').classList.remove('hidden');
-            } else {
-                input.placeholder = "Search Legal News Hub...";
-                citeGroup.style.display = 'none';
-                libGroup.style.display = 'none';
-                copyBtn.style.display = 'none';
-                
-                if (newsData.length > 0) {
-                    renderResults(newsData.slice(0, 50), "");
-                    getEl('hero-container').classList.add('has-results');
-                    getEl('results-wrapper').classList.remove('hidden');
-                    getEl('statsWrapper').classList.add('hidden');
-                    getEl('statsCount').innerText = `Displaying ${newsData.length} Recent Stories`;
-                }
-            }
-            
-            updateStatsCount();
-        }
-
-        function updateStatsCount() {
-            const stats = getEl('initialStats');
-            if (currentView === 'judgments') {
-                stats.innerText = `${judgmentData.length} Supreme Court Judgments Indexed`;
-            } else if (currentView === 'ebooks') {
-                stats.innerText = `${ebookData.length} Law Library Items Indexed`;
-            } else {
-                stats.innerText = `${newsData.length} News Articles Tracked`;
-            }
-        }
-
-        function copyToClipboard(text) {
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            textarea.style.position = 'fixed';
-            document.body.appendChild(textarea);
-            textarea.select();
+        const copyText = (text) => {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
             document.execCommand('copy');
-            showToast("Copied to Clipboard");
-            document.body.removeChild(textarea);
-        }
+            document.body.removeChild(el);
+            notify("Copied to Clipboard");
+        };
 
-        function copyAllResults() {
-            if (currentView !== 'judgments' || currentResults.length === 0) return;
-            const compiledText = currentResults.map(doc => {
-                const header = `${doc.title} ${doc.citation}`.trim();
-                const notes = doc.paragraphs.join('\n\n');
-                return `${header}\n${notes}`;
-            }).join('\n\n' + '='.repeat(20) + '\n\n');
-            copyToClipboard(compiledText);
-        }
+        // Helper for element clicks
+        window.handleCopy = (el) => {
+            copyText(el.dataset.copyText);
+        };
 
-        function showToast(msg) {
-            const toast = getEl('copyToast');
-            toast.innerText = msg;
-            toast.style.opacity = '1';
-            setTimeout(() => { toast.style.opacity = '0'; }, 2000);
-        }
-
-        function quickSearch(val) {
-            const input = getEl('searchInput');
-            if (input) {
-                const exactRadio = document.querySelector('input[name="logic"][value="exact"]');
-                if (exactRadio) exactRadio.checked = true;
-                input.value = val;
-                input.focus();
-                performSearch();
+        window.addEventListener('message', (e) => {
+            if (e.data && (typeof e.data === 'string' && e.data.includes('Tally.FormSubmitted')) || e.data.type === 'Tally.FormSubmitted') {
+                revealApp();
             }
-        }
+        });
 
-        function topicSearch(val) {
-            const input = getEl('searchInput');
-            if (input) {
-                const andRadio = document.querySelector('input[name="logic"][value="and"]');
-                if (andRadio) andRadio.checked = true;
-                input.value = val;
-                input.focus();
-                performSearch();
-            }
-        }
-
-        function parseWikiMarkdown(markdown) {
-            const lines = markdown.split('\n');
+        function parseWikiMarkdown(md) {
+            const lines = md.split('\n');
             const entries = [];
-            let currentEntry = null;
+            let current = null;
             const linkRegex = /\[(.*?)\]\((https?:\/\/.*?)\)/;
 
             lines.forEach(line => {
-                const trimmedLine = line.trim();
-                if (!trimmedLine) return;
-                const match = trimmedLine.match(linkRegex);
+                const trimmed = line.trim();
+                if (!trimmed) return;
+                
+                const match = trimmed.match(linkRegex);
                 if (match) {
-                    if (currentEntry) entries.push(currentEntry);
-                    const label = match[1].replace(/\*\*/g, '').replace(/#/g, '').trim();
-                    const url = match[2];
-                    const citeRegex = /(202[4-6]\s+INSC\s+\d+)/i;
-                    const citeMatch = label.match(citeRegex);
+                    if (current) entries.push(current);
+                    let label = match[1].replace(/\*\*/g, '').replace(/#/g, '').trim();
+                    let url = match[2];
                     
-                    let citation = "Citation N/A", title = label;
-                    if (citeMatch) {
-                        citation = citeMatch[1];
+                    const inscRegex = /(202[4-6]\s+INSC\s+\d+)/i;
+                    const inscMatch = label.match(inscRegex);
+                    
+                    let citation = "N/A", title = label;
+                    if (inscMatch) {
+                        citation = inscMatch[1];
                         title = label.replace(citation, '').replace(/^\s*-\s*/, '').replace(/\s*-\s*$/, '').trim();
                     } else {
                         const parts = label.split(' - ');
-                        if (parts.length > 1) { title = parts[0].trim(); citation = parts.slice(1).join(' - ').trim(); }
+                        if (parts.length > 1) { 
+                            title = parts[0].trim(); 
+                            citation = parts.slice(1).join(' - ').trim(); 
+                        }
                     }
 
-                    currentEntry = { id: Math.random(), title, citation, link: url, paragraphs: [] };
-                } else if (currentEntry) {
-                    if (!/^[-*_=]{3,}$/.test(trimmedLine)) currentEntry.paragraphs.push(trimmedLine);
+                    current = { 
+                        id: Math.random().toString(36).substr(2, 9), 
+                        title, 
+                        citation, 
+                        link: url, 
+                        paragraphs: [] 
+                    };
+                } else if (current) {
+                    if (!/^[-*_=]{3,}$/.test(trimmed)) current.paragraphs.push(trimmed);
                 }
             });
-            if (currentEntry) entries.push(currentEntry);
+            if (current) entries.push(current);
             return entries;
         }
 
-        function parseSimpleMarkdown(markdown) {
-            const entries = [];
-            const linkRegex = /\[(.*?)\]\((https?:\/\/.*?)\)/g;
-            let match;
-            while ((match = linkRegex.exec(markdown)) !== null) {
-                const title = match[1].replace(/\*\*/g, '').trim();
-                const link = match[2].trim();
-                if (title && link) entries.push({ title, link });
-            }
-            return entries;
-        }
+        async function bootstrap() {
+            const splashBar = $('splash-bar');
+            const splashText = $('splash-status');
 
-        async function initializeApp() {
             try {
-                const cacheBuster = `?t=${Date.now()}`;
-                updateProgress(10, `Downloading judgments...`);
-                let totalJudgments = [];
-                for (let i = 0; i < SOURCES.length; i++) {
+                const cb = `?v=${Date.now()}`;
+                splashText.innerText = "Indexing Judgments...";
+                splashBar.style.width = "50%";
+                
+                let combinedData = [];
+                for (const url of SOURCES) {
                     try {
-                        const response = await fetch(`${SOURCES[i]}${cacheBuster}`, { cache: "no-store" });
-                        if (response.ok) totalJudgments = totalJudgments.concat(parseWikiMarkdown(await response.text()));
-                    } catch (e) { console.error(e); }
+                        const r = await fetch(url + cb);
+                        if(r.ok) combinedData.push(...parseWikiMarkdown(await r.text()));
+                    } catch(e) {}
                 }
-                judgmentData = totalJudgments;
+                db = combinedData;
 
-                updateProgress(50, `Syncing library...`);
-                try {
-                    const ebookResponse = await fetch(`${EBOOK_SOURCE}${cacheBuster}`, { cache: "no-store" });
-                    if (ebookResponse.ok) ebookData = parseSimpleMarkdown(await ebookResponse.text());
-                } catch (e) { console.error(e); }
-
-                updateProgress(70, `Connecting News Hub...`);
-                try {
-                    const newsResponse = await fetch(`${NEWS_SOURCE}${cacheBuster}`, { cache: "no-store" });
-                    if (newsResponse.ok) newsData = parseWikiMarkdown(await newsResponse.text());
-                } catch (e) { console.error(e); }
-
-                updateProgress(100, "Ready");
-                setTimeout(() => {
-                    getEl('splash').style.opacity = '0';
-                    setTimeout(() => {
-                        getEl('splash').style.display = 'none';
-                        updateStatsCount();
-                        getEl('heroNotebookLink').classList.remove('hidden');
-                        getEl('heroNotebookLink').style.opacity = '1';
-                        getEl('lock-screen').style.display = 'flex';
-                        setupPasscode();
-                    }, 500);
-                }, 400);
-            } catch (error) { showError(error.message); }
+                splashBar.style.width = "100%";
+                setTimeout(showGate, 600);
+            } catch (err) {
+                splashText.innerText = "Sync Failed. Retrying...";
+                setTimeout(() => location.reload(), 3000);
+            }
         }
 
-        function updateProgress(val, text) {
-            const progress = getEl('progress');
-            const status = getEl('status-text');
-            if (progress) progress.style.width = val + '%';
-            if (status) status.innerText = text;
+        function showGate() {
+            $('splash').classList.add('opacity-0');
+            setTimeout(() => {
+                $('splash').style.display = 'none';
+                $('gate-screen').style.display = 'flex';
+            }, 500);
         }
 
-        function showError(msg) {
-            getEl('status-text').style.display = 'none';
-            getEl('loader-container').style.display = 'none';
-            getEl('error-ui').classList.remove('hidden');
-            getEl('error-message').innerText = msg;
+        function revealApp() {
+            $('gate-screen').style.opacity = '0';
+            setTimeout(() => {
+                $('gate-screen').style.display = 'none';
+                $('app').classList.remove('pointer-events-none');
+                $('app').style.opacity = '1';
+                updateBanner();
+                $('mainSearch').focus();
+            }, 500);
         }
 
         function performSearch() {
-            const input = getEl('searchInput');
-            const queryRaw = input.value.toLowerCase();
-            const queryTrimmed = queryRaw.trim();
-            const logic = document.querySelector('input[name="logic"]:checked').value;
+            const query = $('mainSearch').value.toLowerCase().trim();
+            const logic = document.querySelector('input[name="searchLogic"]:checked').value;
             const startTime = performance.now();
 
-            if (queryTrimmed.length < (currentView === 'ebooks' ? 2 : 4)) {
-                if (currentView === 'news') {
-                    renderResults(newsData.slice(0, 50), "");
-                    getEl('statsCount').innerText = `Displaying ${newsData.length} Recent Stories`;
-                } else {
-                    getEl('hero-container').classList.remove('has-results');
-                    getEl('results-wrapper').classList.add('hidden');
-                    getEl('statsWrapper').classList.remove('hidden');
-                }
+            if (query.length < 3) {
+                $('hero').style.paddingTop = "8rem";
+                $('results-view').classList.add('hidden');
                 return;
             }
 
-            getEl('hero-container').classList.add('has-results');
-            getEl('results-wrapper').classList.remove('hidden');
-            getEl('statsWrapper').classList.add('hidden');
+            $('hero').style.paddingTop = "2rem";
+            $('results-view').classList.remove('hidden');
 
-            let pool = [];
-            if (currentView === 'judgments') pool = judgmentData;
-            else if (currentView === 'ebooks') pool = ebookData;
-            else pool = newsData;
+            const terms = query.split(/\s+/).filter(t => t.length > 0);
 
-            const terms = queryTrimmed.split(/\s+/).filter(t => t.length > 0);
+            let results = db.map(item => {
+                const text = `${item.title} ${item.citation || ''} ${(item.paragraphs || []).join(' ')}`.toLowerCase();
+                let score = 0;
 
-            const scoredPool = pool.map(doc => {
-                const searchString = currentView === 'ebooks' 
-                    ? `${doc.title}`.toLowerCase()
-                    : `${doc.title} ${doc.citation || ''} ${(doc.paragraphs || []).join(' ')}`.toLowerCase();
-                
-                let matchCount = 0;
                 if (logic === 'exact') {
-                    const escapedQuery = queryTrimmed.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                    if (new RegExp(`\\b${escapedQuery}\\b`, 'i').test(searchString)) {
-                        matchCount = 100;
-                    }
+                    if (text.includes(query)) score = 100;
                 } else if (logic === 'or') {
-                    terms.forEach(t => { if (searchString.includes(t)) matchCount++; });
-                } else {
-                    const allFound = terms.every(t => searchString.includes(t));
-                    if (allFound) matchCount = terms.length;
+                    terms.forEach(t => { if(text.includes(t)) score++; });
+                } else { 
+                    const allFound = terms.every(t => text.includes(t));
+                    if (allFound) score = terms.length;
                 }
 
-                return { ...doc, matchCount };
+                return { ...item, score };
+            }).filter(i => i.score > 0);
+
+            results.sort((a, b) => {
+                if (b.score !== a.score) return b.score - a.score;
+                const getYear = (c) => parseInt(c.match(/\b202[4-6]\b/)?.[0] || 0);
+                return getYear(b.citation) - getYear(a.citation);
             });
 
-            currentResults = scoredPool.filter(doc => doc.matchCount > 0);
-
-            currentResults.sort((a, b) => {
-                if (b.matchCount !== a.matchCount) return b.matchCount - a.matchCount;
-
-                if (currentView === 'judgments') {
-                    const extractYear = (c) => parseInt(c.match(/\b202[4-6]\b/)?.[0] || 0);
-                    const extractNum = (c) => parseInt(c.match(/INSC\s+(\d+)/i)?.[1] || 0);
-                    const yearA = extractYear(a.citation), yearB = extractYear(b.citation);
-                    if (yearA !== yearB) return yearB - yearA;
-                    return extractNum(b.citation) - extractNum(a.citation);
-                } else {
-                    return a.title.localeCompare(b.title);
-                }
-            });
-
-            renderResults(currentResults, queryTrimmed);
-            getEl('statsCount').innerText = `Found ${currentResults.length} matches`;
-            getEl('searchSpeed').innerText = `${(performance.now() - startTime).toFixed(1)}ms`;
-        }
-
-        function highlightAndFormat(text, query) {
-            if (!text) return "";
-            let processed = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-            const logic = document.querySelector('input[name="logic"]:checked').value;
+            activeResults = results;
+            renderResults(results, query);
             
-            if (query) {
-                if (logic === 'exact') {
-                    const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                    processed = processed.replace(new RegExp(`(\\b${escapedQuery}\\b)`, 'gi'), '<mark>$1</mark>');
-                } else {
-                    const terms = query.split(/\s+/).filter(t => t.length > 2).sort((a,b)=>b.length-a.length);
-                    if (terms.length > 0) {
-                        const escapedTerms = terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
-                        processed = processed.replace(new RegExp(`(${escapedTerms})`, 'gi'), '<mark>$1</mark>');
-                    }
-                }
-            }
-            return processed;
-        }
-
-        function getNewsBtnLabel(url) {
-            if (!url) return 'READ FULL STORY';
-            const lowerUrl = url.toLowerCase();
-            if (lowerUrl.includes('verdictum.in')) return 'Read Verdictum Story';
-            if (lowerUrl.includes('livelaw.in')) return 'Read LiveLaw Story';
-            if (lowerUrl.includes('barandbench.com')) return 'Read Bar & Bench Story';
-            return 'READ FULL STORY';
+            $('result-count').innerText = `${results.length} Judgments Found`;
+            $('search-speed').innerText = `${(performance.now() - startTime).toFixed(1)}ms execution`;
         }
 
         function renderResults(data, query = "") {
-            const list = getEl('resultsList');
-            if (!list) return;
-            if (data.length === 0) { list.innerHTML = `<div class="py-24 text-center text-gray-400"><p class="text-[10px] font-bold uppercase tracking-[0.2em]">No results found</p></div>`; return; }
+            const container = $('results-list');
+            if (!data.length) {
+                container.innerHTML = `<div class="py-20 text-center text-gray-300 font-bold uppercase tracking-widest text-[10px]">No records found</div>`;
+                return;
+            }
 
-            if (currentView === 'judgments' || currentView === 'news') {
-                list.innerHTML = data.map(doc => `
-                    <div class="search-result-card bg-white p-7 rounded-2xl border border-gray-100 shadow-sm relative overflow-hidden mb-6">
-                        <div class="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-4">
-                            <div class="flex-1">
-                                ${currentView === 'judgments' ? `<div class="text-[8px] font-bold text-blue-500 uppercase tracking-[0.2em] mb-2">SC Judgment</div>` : ''}
-                                <h3 class="text-xl font-bold text-black leading-tight mb-2 tracking-tight">${highlightAndFormat(doc.title, query)}</h3>
-                                ${doc.citation && doc.citation !== 'Citation N/A' ? `<div class="text-xs font-mono text-gray-400 font-bold tracking-tight">${highlightAndFormat(doc.citation, query)}</div>` : ''}
-                            </div>
-                            <div class="flex flex-wrap items-center gap-2 shrink-0 select-none">
-                                <button onclick="copyToClipboard('${doc.title.replace(/'/g, "\\'")}')" class="flex items-center justify-center bg-gray-50 hover:bg-gray-100 text-gray-400 hover:text-black w-10 h-10 rounded-xl transition-all border border-gray-100" title="Copy Heading"><i class="fas fa-copy"></i></button>
-                                
-                                <a href="${doc.link}" target="_blank" class="flex items-center justify-center gap-2 bg-black hover:bg-gray-800 text-white px-5 py-2.5 rounded-xl text-[10px] font-bold tracking-wider transition-all">
-                                    <i class="fas ${currentView === 'news' ? 'fa-external-link-alt' : 'fa-file-pdf'}"></i> ${currentView === 'news' ? getNewsBtnLabel(doc.link) : 'VIEW PDF'}
-                                </a>
-
-                                ${currentView === 'news' ? `
-                                <a href="${FEEDBACK_URL}" target="_blank" class="flex items-center justify-center gap-2 bg-red-50 hover:bg-red-100 text-red-500 px-4 py-2.5 rounded-xl text-[9px] font-bold tracking-tight transition-all border border-red-100" title="Report issue if link is restricted">
-                                    <i class="fas fa-exclamation-circle"></i> REPORT ISSUE
-                                </a>` : ''}
-                            </div>
+            container.innerHTML = data.map(item => {
+                // Safely handle content for dataset
+                const safeTitle = item.title.replace(/"/g, '&quot;');
+                
+                return `
+                <div class="search-result-card bg-white p-8 rounded-2xl border border-gray-100">
+                    <div class="flex flex-col md:flex-row justify-between gap-6 mb-6">
+                        <div class="flex-1">
+                            <div class="text-[8px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">Supreme Court Judgment</div>
+                            <h3 class="text-2xl font-black text-black leading-tight mb-2 tracking-tighter">${highlight(item.title, query)}</h3>
+                            ${item.citation && item.citation !== 'N/A' ? `<div class="font-mono text-[10px] text-gray-400 font-bold">${highlight(item.citation, query)}</div>` : ''}
                         </div>
-                        <div class="space-y-4 pt-5 border-t border-gray-50">${(doc.paragraphs || []).map(p => `<p class="paragraph-content text-[15px] text-gray-600 leading-relaxed font-[450]">${highlightAndFormat(p, query)}</p>`).join('')}</div>
-                    </div>`).join('');
-            } else {
-                list.innerHTML = data.map(book => `
-                    <div class="search-result-card bg-white p-6 rounded-2xl border border-gray-100 shadow-sm relative mb-4">
-                        <div class="flex items-center justify-between gap-6">
-                            <div class="flex-1">
-                                <div class="text-[9px] font-bold text-blue-500 uppercase tracking-[0.2em] mb-1">Law Library</div>
-                                <h3 class="text-lg font-bold text-black leading-tight tracking-tight">${highlightAndFormat(book.title, query)}</h3>
-                            </div>
-                            <a href="${book.link}" target="_blank" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-xl text-[10px] font-bold tracking-wider transition-all shadow-sm">
-                                <i class="fas fa-book-open"></i> OPEN BOOK
+                        <div class="flex flex-wrap items-center gap-2 shrink-0">
+                            <button onclick="handleCopy(this)" data-copy-text="${safeTitle}" class="copy-btn w-10 h-10 flex items-center justify-center bg-gray-50 hover:bg-black hover:text-white text-gray-300 rounded-xl transition-all" title="Copy Heading">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <a href="${item.link}" target="_blank" class="bg-black text-white px-6 py-2.5 rounded-xl text-[10px] font-black tracking-widest hover:bg-gray-800 transition-all">
+                                VIEW FULL PDF
                             </a>
                         </div>
-                    </div>`).join('');
-            }
+                    </div>
+                    <div class="space-y-4 pt-6 border-t border-gray-50">
+                        ${(item.paragraphs || []).map(p => {
+                            const safePara = p.replace(/"/g, '&quot;');
+                            return `
+                            <div class="para-wrap group">
+                                <p class="text-[15px] text-gray-600 leading-relaxed">${highlight(p, query)}</p>
+                                <button onclick="handleCopy(this)" data-copy-text="${safePara}" class="copy-btn absolute top-0 -right-2 p-2 text-[9px] text-gray-300 hover:text-black">
+                                    <i class="fas fa-quote-left"></i>
+                                </button>
+                            </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+                `;
+            }).join('');
         }
 
-        window.setView = setView;
-        window.quickSearch = quickSearch;
-        window.topicSearch = topicSearch;
-        window.copyAllResults = copyAllResults;
-        window.performSearch = performSearch;
-        window.copyToClipboard = copyToClipboard;
+        function highlight(text, query) {
+            if (!query || query.length < 3) return text;
+            const terms = query.split(/\s+/).filter(t => t.length > 2);
+            let result = text;
+            terms.forEach(t => {
+                // Escape special regex chars
+                const pattern = t.replace(/[.*+?^${}()|[\]\\]/g, '$&');
+                const regex = new RegExp(`(${pattern})`, 'gi');
+                result = result.replace(regex, '<mark>$1</mark>');
+            });
+            return result;
+        }
 
-        getEl('searchInput').addEventListener('input', performSearch);
-        document.querySelectorAll('input[name="logic"]').forEach(el => el.addEventListener('change', performSearch));
-        initializeApp();
+        function updateBanner() {
+            $('stats-banner').innerText = `${db.length.toLocaleString()} JUDGMENTS INDEXED`;
+        }
+
+        function copyCurrentResults() {
+            if (!activeResults.length) return;
+            const text = activeResults.map(r => `${r.title} | ${r.citation || ''}\n${(r.paragraphs || []).join('\n')}`).join('\n\n---\n\n');
+            copyText(text);
+        }
+
+        $('mainSearch').addEventListener('input', performSearch);
+        document.querySelectorAll('input[name="searchLogic"]').forEach(el => el.addEventListener('change', performSearch));
+
+        window.onload = bootstrap;
     </script>
 </body>
 </html>
