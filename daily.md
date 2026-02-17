@@ -1,3 +1,7 @@
+* [State  v. M. Muneer Ahamed CrPC - PC Act - Deemed Sanction - Referred To Larger Bench](https://www.caseciter.com/state-v-m-muneer-ahamed-crpc-pc-act-deemed-sanction-referred-to-larger-bench/)
+* [Seeni Haja Mohammed v. State - NDPS Act - Interim Custody Or Release Of Seized Conveyance](https://www.caseciter.com/seeni-haja-mohammed-v-state-ndps-act-interim-custody-or-release-of-seized-conveyance/)
+* [Vinay Kumar Gupta v. State of Madhya Pradesh - NDPS Act - Anticipatory Bail - Mobile Phone Not Handed Over - Cooperation With Investigation](https://www.caseciter.com/vinay-kumar-gupta-v-state-of-madhya-pradesh-ndps-act-anticipatory-bail-mobile-phone-not-handed-over-cooperation-with-investigation/)
+* [Rama Kant Singh v. State of Bihar - Anticipatory Bail - Murder Case - Title Suit Pendency](https://www.caseciter.com/rama-kant-singh-v-state-of-bihar-anticipatory-bail-murder-case-title-suit-pendency/)
 * [Harbinder Singh Sekhon  v. State of Punjab 2026 INSC 159 - Environment - Sustainable Development - Precautionary Principle - Judicial Review](https://www.caseciter.com/2026insc159/)
 * [Maryamaa Josh v. Union of India  - Writ Petition - Judicial Orders](https://www.caseciter.com/maryamaa-josh-v-union-of-india-writ-petition-judicial-orders/)
 * [Shyam Beej Bhandar v. Suresh   2026 INSC 158 Consumer Protection Act - Groundnut Seeds Purchase](https://www.caseciter.com/2026insc158/)
