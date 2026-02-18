@@ -1,3 +1,6 @@
+* [Babu Singh (D) vs Jalandhar Improvement Trust Limitation Act - Mandatory Injunction Decree](https://www.caseciter.com/babu-singh-d-vs-jalandhar-improvement-trust-limitation-act-mandatory-injunction-decree/)
+* [Kamini ben vs Oriental Insurance Company Limited -Motor Accident Compensation - Gratuitous Passenger](https://www.caseciter.com/kamini-ben-vs-oriental-insurance-company-limited-motor-accident-compensation-gratuitous-passenger/)
+* [Kerala Water Authority v. T.I. Raju - Interest Act vs CPC](https://www.caseciter.com/kerala-water-authority-v-t-i-raju-interest-act-vs-cpc/)
 * [In Re: Order dated 17.03.2025 Passed by the High Court of Judicature at Allahabad in Criminal Revision No. 1449/2024 and Ancillary Issues   2026 INSC 165 -IPC- POCSO Attempt To Rape](https://www.caseciter.com/n-re-order-dated-17-03-2025-passed-by-the-high-court-of-judicature-at-allahabad-in-criminal-revision-no-1449-2024-and-ancillary-issues-2026-insc-165-ipc-pocso-attempt-to-rape/)
 * [Dinesh Kumar v. State of Haryana 2026 INSC 163- Article 12 - Society - Govt. Land](https://www.caseciter.com/2026insc163/)
 * [Rakesh Mittal v. Ajay Pal Gupta @ Sonu Chaudhary  2026 INSC 161 - Bail -Cancellation Past Criminal Record](https://www.caseciter.com/2026insc161/)
