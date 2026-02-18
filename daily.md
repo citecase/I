@@ -1,3 +1,5 @@
+* [Power Trust v. Bhuvan Madan 2026 INSC 166  -IBC - Financial Creditor - CIRP](https://www.caseciter.com/2026insc166/)
+* [Priyanka Kumari vs State of Bihar  2026 INSC 167 -Chhattisgarh Niji Kshetra Vishwavidyalaya Act](https://www.caseciter.com/2026insc167/)
 * [Babu Singh (D) vs Jalandhar Improvement Trust Limitation Act - Mandatory Injunction Decree](https://www.caseciter.com/babu-singh-d-vs-jalandhar-improvement-trust-limitation-act-mandatory-injunction-decree/)
 * [Kamini ben vs Oriental Insurance Company Limited -Motor Accident Compensation - Gratuitous Passenger](https://www.caseciter.com/kamini-ben-vs-oriental-insurance-company-limited-motor-accident-compensation-gratuitous-passenger/)
 * [Kerala Water Authority v. T.I. Raju - Interest Act vs CPC](https://www.caseciter.com/kerala-water-authority-v-t-i-raju-interest-act-vs-cpc/)
