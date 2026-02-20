@@ -1,3 +1,4 @@
+* [Ramesh Kumar Bhagchandaka v. State of Uttar Pradesh - Cryptic Order - Brevity vs Completeness](https://www.caseciter.com/ramesh-kumar-bhagchandaka-v-state-of-uttar-pradesh-cryptic-order-brevity-vs-completeness/)
 * [Sunder @ Surendra v. State of Uttar Pradesh -Plea Of Juvenility -1983 Murder Case](https://www.caseciter.com/sunder-surendra-v-state-of-uttar-pradesh-plea-of-juvenility-1983-murder-case/)
 * [Hero Cycles Limited & Another v. Hero Ecotech Limited 2026 INSC 169 - Order XXXIX Rule 2A CPC](https://www.caseciter.com/2026insc169/)
 * [Sushil Kamalnayan Bharuka  v. State of Maharashtra  2026 INSC 168 Public Auction - Highest Bid](https://www.caseciter.com/sushil-kamalnayan-bharuka-v-state-of-maharashtra-2026-insc-168-public-auction-highest-bid/)
