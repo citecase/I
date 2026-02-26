@@ -1,3 +1,4 @@
+* [Hamdard (Wakf) Laboratories v. Commissioner, Commercial Tax, U.P. Commercial 2026 INSC 195 - UPVAT Act - Sharbat Rooh Afza - Fruit Drink](https://www.caseciter.com/2026insc195/)
 * [Ghanshyam Mandal v.  State of Bihar (now Jharkhand) 2026 INSC 194 - Murder - Non Recovery Of Weapons Of Assault - S.313 CrPC](https://www.caseciter.com/2026insc194/)
 * [Vandana Jain v. State of Uttar Pradesh  2026 INSC 192 - S.482 CrPC - IPC - Forgery- Non Traceable Document](https://www.caseciter.com/2026insc192/)
 * [Omkara Assets Reconstruction Private Limited v. Amit Chaturvedi  2026 INSC 189 - IBC - Companies Act - Tardy Litigators](https://www.caseciter.com/2026insc189/)
