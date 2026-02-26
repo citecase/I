@@ -1,3 +1,8 @@
+* [Suhas Chakma v. Union of India 2026 INSC 198 - Prisons - Open Correctional Institutions - Exclusion Of Women- Directions Issued](https://www.caseciter.com/2026insc198/)
+* [General Secretary, Vivekananda Kendra v. Pradeep Kumar Agarwalla 2026 INSC 199 - Lease and License - Interpretation Of Contracts](https://www.caseciter.com/2026insc199/)
+* [In Re: Social Science Textbook for Grade – 8 (Part‑2) Published by NCERT and Ancillary Issues](https://www.caseciter.com/in-re-social-science-textbook-for-grade-8-part-2-published-by-ncert-and-ancillary-issues/)
+* [ICICI Bank Limited v. Era Infrastructure (India) Limited  2026 INSC 201 - IBC - Simultaneous Proceedings Against Corporate Debtor & Principal Guarantor](https://www.caseciter.com/2026insc201/)
+* [State of Kerala vs Panacea Biotec Ltd 2026 INSC 200 - S.202 CrPC -Public Servants](https://www.caseciter.com/2026insc200/)
 * [Hamdard (Wakf) Laboratories v. Commissioner, Commercial Tax, U.P. Commercial 2026 INSC 195 - UPVAT Act - Sharbat Rooh Afza - Fruit Drink](https://www.caseciter.com/2026insc195/)
 * [Ghanshyam Mandal v.  State of Bihar (now Jharkhand) 2026 INSC 194 - Murder - Non Recovery Of Weapons Of Assault - S.313 CrPC](https://www.caseciter.com/2026insc194/)
 * [Vandana Jain v. State of Uttar Pradesh  2026 INSC 192 - S.482 CrPC - IPC - Forgery- Non Traceable Document](https://www.caseciter.com/2026insc192/)
