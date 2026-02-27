@@ -1,3 +1,7 @@
+* [Bhagyalaxmi Co‑operative Bank Ltd. v. Babaldas Amtharam Patel (D) 2026 INSC 205 -Ss.133,139 Contract Act - Surety](https://www.caseciter.com/2026insc205/)
+* [West Bengal State Electricity Distribution Co. Ltd. v. Adhunik Power & Natural Resource Ltd.  2026 INSC 202 - Contract Law](https://www.caseciter.com/2026insc202/)
+* [Union of India & Ors. v. Larsen & Toubro Limited (L&T) 2026 INSC 203 - S.31 Arbitration Act - Post/Pre Award Interest](https://www.caseciter.com/2026insc203/)
+* [Torrent Power Ltd. v. Ashish Arjunkumar Rathi  2026 INSC 206 - IBC -  Commercial Wisdom - CoC](https://www.caseciter.com/2026insc206/)
 * [Suhas Chakma v. Union of India 2026 INSC 198 - Prisons - Open Correctional Institutions - Exclusion Of Women- Directions Issued](https://www.caseciter.com/2026insc198/)
 * [General Secretary, Vivekananda Kendra v. Pradeep Kumar Agarwalla 2026 INSC 199 - Lease and License - Interpretation Of Contracts](https://www.caseciter.com/2026insc199/)
 * [In Re: Social Science Textbook for Grade – 8 (Part‑2) Published by NCERT and Ancillary Issues](https://www.caseciter.com/in-re-social-science-textbook-for-grade-8-part-2-published-by-ncert-and-ancillary-issues/)
