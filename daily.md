@@ -1,3 +1,4 @@
+* [New India Assurance Co. Ltd. v. Rekha Chaudhary 2026 INSC 177 - Employees’ Compensation Act](https://www.caseciter.com/2026insc177/)
 * [Bhagyalaxmi Co‑operative Bank Ltd. v. Babaldas Amtharam Patel (D) 2026 INSC 205 -Ss.133,139 Contract Act - Surety](https://www.caseciter.com/2026insc205/)
 * [West Bengal State Electricity Distribution Co. Ltd. v. Adhunik Power & Natural Resource Ltd.  2026 INSC 202 - Contract Law](https://www.caseciter.com/2026insc202/)
 * [Union of India & Ors. v. Larsen & Toubro Limited (L&T) 2026 INSC 203 - S.31 Arbitration Act - Post/Pre Award Interest](https://www.caseciter.com/2026insc203/)
