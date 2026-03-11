@@ -1,3 +1,6 @@
+* [Municipal Corporation of Greater Mumbai v. R.V. Anderson Associates Limited 2026 INSC 228 - S.16 Arbitration - Statutory Waiver - Conduct Of Parties](https://www.caseciter.com/municipal-corporation-of-greater-mumbai-v-r-v-anderson-associates-limited-2026-insc-228-s-16-arbitration-statutory-waiver-conduct-of-parties/)
+* [Sanjay Kumar Sharma v. State of Bihar 2026 INSC 223 - Evidence Act - Dying Declaration - S.313 CrPC](https://www.caseciter.com/2026insc223/)
+* [Harish Rana v. Union of India 2026 INSC 222 - Passive Euthanasia](https://www.caseciter.com/2026insc222/)
 * [Registrar Cane Cooperative Societies & Ors. v. Gurdeep Singh Narval (D) through LRs. & Ors., 2026 INSC 216 - UP Reorganization Act- Multi-State Cooperative Societies Act](https://www.caseciter.com/2026insc216/)
 * [Sushil Kumar Purbey  v.   State of Bihar  2026 INSC 212 - S.498A IPC - Dowry Prohibition Act -Parents-In-Law](https://www.caseciter.com/2026insc212/)
 * [Manoj Kumar Mutta v. State of Andhra Pradesh  2026 INSC 215 - Anticipatory Bail - Andhra Pradesh Excise Act](https://www.caseciter.com/2026insc215/)
