@@ -1,3 +1,5 @@
+* [State of Himachal Pradesh vs Surat Singh  2026 INSC 240 - S.50 NDPS Act - Third Option Of IO Search - Bag Search](https://www.caseciter.com/2026insc240/)
+* [Ravi Khokhar  v. Union of India  2026 INSC 233 - Article 12 Constitution - AGFIS - State](https://www.caseciter.com/2026insc233/)
 * [Raj Bahadur Singh v. State of Uttarakhand  2026 INSC 239 - Corruption Case](https://www.caseciter.com/2026insc239/)
 * [Om Sakthi Sekar v. V. Sukumar 2026 INSC 237 - Auction Sales - Recovery Proceedings](https://www.caseciter.com/2026insc237/)
 * [Rajendra  v. State of Uttarakhand  2026 INSC 238 - Concurrent Rape Conviction Set Aside](https://www.caseciter.com/2026insc238/)
