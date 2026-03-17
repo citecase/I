@@ -1,3 +1,7 @@
+* [Charan Preet Singh v. Municipal Corporation Chandigarh 2026 INSC 248 - Law Officer Exam](https://www.caseciter.com/2026insc248/)
+* [Hamsaanandini Nanduri v. Union of India  2026 INSC 246 - Code on Social Security, 2020 - Maternity Benefit - Adoption](https://www.caseciter.com/2026insc246/)
+* [Shiny C.J. v. Shalini Sreenivasan 2026 INSC 242 - Anganwadi Workers - Graduates - SSLC](https://www.caseciter.com/2026insc242/)
+* [Securities and Exchange Board of India v. Terrascope Ventures Limited Etc  2026 INSC 245 - SEBI Act & Regulations - Ratification](https://www.caseciter.com/2026insc245/)
 * [State of Himachal Pradesh vs Surat Singh  2026 INSC 240 - S.50 NDPS Act - Third Option Of IO Search - Bag Search](https://www.caseciter.com/2026insc240/)
 * [Ravi Khokhar  v. Union of India  2026 INSC 233 - Article 12 Constitution - AGFIS - State](https://www.caseciter.com/2026insc233/)
 * [Raj Bahadur Singh v. State of Uttarakhand  2026 INSC 239 - Corruption Case](https://www.caseciter.com/2026insc239/)
