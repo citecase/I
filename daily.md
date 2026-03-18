@@ -1,3 +1,5 @@
+* [Bhola Mahto v. State of Jharkhand 2026 INSC 257 - Appeal Against Conviction - Appointment Of Amicus](https://www.caseciter.com/2026insc257/)
+* [R. Halle v. Reliance General Insurance Company Limited 2026 INSC 260 - Motor Accident Compensation - Functional Disability](https://www.caseciter.com/2026insc260/)
 * [Subramani v. State of Karnataka 2026 INSC 249 - Dying Declaration](https://www.caseciter.com/2026insc249/)
 * [Sharla Bazliel v. Baldev Thakur  2026 INSC 252 - S.482 CrPC](https://www.caseciter.com/2026insc252/)
 * [Mohammad Kaleem v. State of Uttar Pradesh  2026 INSC 251 - S.319 CrPC](https://www.caseciter.com/2026insc251/)
