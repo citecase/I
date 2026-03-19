@@ -1,3 +1,6 @@
+* [Management of Steel Authority of India v. Shambhu Prasad Singh 2026 INSC 263 - SAIL Gratuity Rules](https://www.caseciter.com/2026insc263/)
+* [Ankit Tomar v. State of Haryana  2026 INSC 262 - Rape - Promise To Marry - Quashing](https://www.caseciter.com/2026insc262/)
+* [State of Uttar Pradesh v. Ram Swaroop @ Barkat  2026 INSC 256 - S.222 CrPC - Ss. 302,364 IPC](https://www.caseciter.com/2026insc256/)
 * [Bhola Mahto v. State of Jharkhand 2026 INSC 257 - Appeal Against Conviction - Appointment Of Amicus](https://www.caseciter.com/2026insc257/)
 * [R. Halle v. Reliance General Insurance Company Limited 2026 INSC 260 - Motor Accident Compensation - Functional Disability](https://www.caseciter.com/2026insc260/)
 * [Subramani v. State of Karnataka 2026 INSC 249 - Dying Declaration](https://www.caseciter.com/2026insc249/)
