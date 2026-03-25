@@ -1,3 +1,5 @@
+* [National Highways Authority of India v. Tarsem Singh  2026 INSC 291 - National Highways Act - Solatium & Interest - Land Acquisition Compensation](https://www.caseciter.com/2026insc291/)
+* [Sharada Sanghi v. Asha Agarwal   2026 INSC 292 - Dismissal For Default - Res Judicata](https://www.caseciter.com/2026insc292/)
 * [Central Transmission Utility of India Limited v. Sumit Binani 2026 INSC 284 - IBC - Set Off -](https://www.caseciter.com/2026insc284/)
 * [Chinthada Anand vs State of Andhra Pradesh 2026 INSC 283 - SC- ST Act - Caste Status - Conversion to Christianity](https://www.caseciter.com/2026insc283/)
 * [Sujoy Ghosh v.   State of Jharkhand 2026 INSC 267 - CrPC/BNSS - Summoning Of Accused - Quashing - Attending Circumstances](https://www.caseciter.com/2026insc267/)
