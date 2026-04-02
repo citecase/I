@@ -1,3 +1,4 @@
+* [Satinder Singh Bhasin v. Government of NCT of Delhi  2026 INSC 310 - Companies Act - IBC](https://www.caseciter.com/satinder-singh-bhasin-v-government-of-nct-of-delhi-2026-insc-310-companies-act-ibc/)
 * [National Highways Authority of India v. Tarsem Singh  2026 INSC 291 - National Highways Act - Solatium & Interest - Land Acquisition Compensation](https://www.caseciter.com/2026insc291/)
 * [Sharada Sanghi v. Asha Agarwal   2026 INSC 292 - Dismissal For Default - Res Judicata](https://www.caseciter.com/2026insc292/)
 * [Central Transmission Utility of India Limited v. Sumit Binani 2026 INSC 284 - IBC - Set Off -](https://www.caseciter.com/2026insc284/)
