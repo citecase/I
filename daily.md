@@ -1,3 +1,5 @@
+* [Dr. Naresh Kumar Garg v. State of Haryana 2026 INSC 176 - PCPNDT Rules - Female Foeticide - Sex Determination](https://www.caseciter.com/2026insc176/)
+* [Shankar v. State of Rajasthan  2026 INSC 315 - Gender Justice - Dying Declaration - Medical Evidence](https://www.caseciter.com/shankar-v-state-of-rajasthan-2026-insc-315-gender-justice-dying-declaration-medical-evidence/)
 * [Satinder Singh Bhasin v. Government of NCT of Delhi  2026 INSC 310 - Companies Act - IBC](https://www.caseciter.com/satinder-singh-bhasin-v-government-of-nct-of-delhi-2026-insc-310-companies-act-ibc/)
 * [National Highways Authority of India v. Tarsem Singh  2026 INSC 291 - National Highways Act - Solatium & Interest - Land Acquisition Compensation](https://www.caseciter.com/2026insc291/)
 * [Sharada Sanghi v. Asha Agarwal   2026 INSC 292 - Dismissal For Default - Res Judicata](https://www.caseciter.com/2026insc292/)
