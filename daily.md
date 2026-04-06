@@ -1,3 +1,6 @@
+* [Sivakumar v. State 2026 INSC 318 - S.294 IPC - Obscene Word - Bastard](https://www.caseciter.com/2026insc318/)
+* [Sajal Bose v. State of West Bengal  2026 INSC 322 - S 482 CrPC](https://www.caseciter.com/2026insc322/)
+* [Dr. S. Balagopal v. State of Tamil Nadu & Anr., 2026 INSC 319 - S.482 CrPC - Questions of Fact](https://www.caseciter.com/dr-s-balagopal-v-state-of-tamil-nadu-anr-2026-insc-319-s-482-crpc-questions-of-fact/)
 * [Sitaram Kuchhbedia v. Vimal Rana 2026 INSC 178 - Unlawful Assembly - Murder](https://www.caseciter.com/2026insc178/)
 * [Dr. Naresh Kumar Garg v. State of Haryana 2026 INSC 176 - PCPNDT Rules - Female Foeticide - Sex Determination](https://www.caseciter.com/2026insc176/)
 * [Shankar v. State of Rajasthan  2026 INSC 315 - Gender Justice - Dying Declaration - Medical Evidence](https://www.caseciter.com/shankar-v-state-of-rajasthan-2026-insc-315-gender-justice-dying-declaration-medical-evidence/)
