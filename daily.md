@@ -1,3 +1,8 @@
+* [K.G. Seshadri v. Trustees of State Bank of India  2026 INSC 333 -Pension Fund Rules](https://www.caseciter.com/2026insc333/)
+* [Nirmal Ujjwal Credit Co‑operative Society Ltd. v. Ravi Sethia 2026 INSC 338 - Multi‑State Cooperative Societies Act](https://www.caseciter.com/2026insc338/)
+* [Maharashtra State Electricity Distribution Company Limited (MSEDCL)  v. R Z Malpani, 2026 INSC 342 - Arbitration Agreement - Letter of Intent](https://www.caseciter.com/2026insc342/)
+* [GLS Films Industries Private Limited v. Chemical Suppliers India Private Limited, 2026 INSC 344 - S.9 IBC](https://www.caseciter.com/2026insc344/)
+* [State of Uttarakhand v. Sarita Singh  2026 INSC 337 - UP Civil Services - Extraordinary Pension](https://www.caseciter.com/2026insc337/)
 * [Channappa (D) v. Parvatewwa (D) 2026 INSC 343 - Order II Rule 2 CPC - Omitted Relief - Second Suit](https://www.caseciter.com/2026insc343/)
 * [Maurice W. Innis v. Lily Kazrooni @ Lily Arif Shaikh 2026 INSC 340. - S.47 CPC - Execution Court Jurisdiction](https://www.caseciter.com/2026insc340/)
 * [Russi Fisheries P. Ltd. v. Bhavna Seth  2026 INSC 339 - Non-Appearance Of Plaintiff In Witness Box](https://www.caseciter.com/2026insc339/)
