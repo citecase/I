@@ -1,3 +1,6 @@
+* [Canara Bank v. Kavita Chowdhary  2026 INSC 363 - Consumer Protection Act - Cheque - Banks](https://www.caseciter.com/2026insc363/)
+* [Bhartiya Mazdoor Sangh, U.P.  v. State of U.P.  2026 INSC 364 - Legitimate Expectation](https://www.caseciter.com/2026insc364/)
+* [State of Kerala v. K.A. Abdul Rasheed  2026 INSC 365 - Prevention of Corruption Act](https://www.caseciter.com/2026insc365/)
 * [Accamma Sam Jacob v.  State of Karnataka  2026 INSC 362 - S.482 CrPC - Civil Nature](https://www.caseciter.com/2026insc362/)
 * [Dhananjay Rathi v. Ruchika Rathi, 2026 INSC 360 - Matrimonial - Settlement - Resiling](https://www.caseciter.com/2026insc360/)
 * [Milind  Ashruba Dhanve v. State of Maharashtra 2026 INSC 355 - Probation of Offenders Act - Fine](https://www.caseciter.com/2026insc355/)
