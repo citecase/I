@@ -1,3 +1,7 @@
+* [VPS Healthcare Private Limited  v. Prabhat Kumar Srivastava  2026 INSC 361 - Consent Decree - Indemnity Contract](https://www.caseciter.com/2026insc361/)
+* [Shuvendu Saha v. State of West Bengal 2026 INSC 367 -Cancellation Bail - Hypertechnical Grounds - Adverse Remarks On Judicial Officers](https://www.caseciter.com/2026insc367/)
+* [Ex. Sqn. Ldr. R. Sood v. Union of India  2026 INSC 366 -Disciplinary Proceedings - Criminal Trial - Discharge](https://www.caseciter.com/2026insc366/)
+* [J&K Economic Reconstruction Agency v. Rash Builders India Private Limited 2026 INSC 368 Arbitration - Seat and Venue](https://www.caseciter.com/2026insc368/)
 * [Canara Bank v. Kavita Chowdhary  2026 INSC 363 - Consumer Protection Act - Cheque - Banks](https://www.caseciter.com/2026insc363/)
 * [Bhartiya Mazdoor Sangh, U.P.  v. State of U.P.  2026 INSC 364 - Legitimate Expectation](https://www.caseciter.com/2026insc364/)
 * [State of Kerala v. K.A. Abdul Rasheed  2026 INSC 365 - Prevention of Corruption Act](https://www.caseciter.com/2026insc365/)
