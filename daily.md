@@ -1,3 +1,4 @@
+* [Nagreeka Indcon Products Pvt. Ltd. v. Cargocare Logistics (India) Pvt. Ltd., 2026 INSC 384 - Arbitration Agreement - Can](https://www.caseciter.com/2026insc384/)
 * [S. Valliammai v. S. Ramanathan  2026 INSC 372 - CPC - Rejection Of Plaint - Omission To Seek Relief](https://www.caseciter.com/2026insc372/)
 * [VPS Healthcare Private Limited  v. Prabhat Kumar Srivastava  2026 INSC 361 - Consent Decree - Indemnity Contract](https://www.caseciter.com/2026insc361/)
 * [Shuvendu Saha v. State of West Bengal 2026 INSC 367 -Cancellation Bail - Hypertechnical Grounds - Adverse Remarks On Judicial Officers](https://www.caseciter.com/2026insc367/)
