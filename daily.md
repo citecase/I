@@ -1,3 +1,5 @@
+* [Pramod Shroff v. Mohan Singh Chopra, 2026 INSC 378 - CPC - Points For Determination - Ex Parte Suits](https://www.caseciter.com/2026insc378/)
+* [In Re: Phalodi Accident v. National Highways Authority of India 2026 INSC 388 - Safety Of Commuter](https://www.caseciter.com/2026insc388/)
 * [Nagreeka Indcon Products Pvt. Ltd. v. Cargocare Logistics (India) Pvt. Ltd., 2026 INSC 384 - Arbitration Agreement - Can](https://www.caseciter.com/2026insc384/)
 * [S. Valliammai v. S. Ramanathan  2026 INSC 372 - CPC - Rejection Of Plaint - Omission To Seek Relief](https://www.caseciter.com/2026insc372/)
 * [VPS Healthcare Private Limited  v. Prabhat Kumar Srivastava  2026 INSC 361 - Consent Decree - Indemnity Contract](https://www.caseciter.com/2026insc361/)
