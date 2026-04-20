@@ -1,3 +1,5 @@
+* [Nilesh C. Ojha v. High Court of Judicature at Bombay  2026 INSC 390 - Contempt - Unfounded Allegations Against Judges](https://www.caseciter.com/2026insc390/)
+* [V.K. John v. S. Mukanchand Bothra and HUF (D) 2026 INSC 393. S.34 Arbitration Act - LRs Of Deceased Party](https://www.caseciter.com/2026insc393/)
 * [Maria Martins v. Noel Zuzarte 2026 INSC 376 - Tenancy - Bonafide Need - Subsequent Events](https://www.caseciter.com/2026insc376/)
 * [Ravi Kala  v. Casablanca Estate 2026 INSC 377](https://www.caseciter.com/2026insc377/)
 * [Madan Singh  v. State of Haryana  2026 INSC 379 - Regularisation](https://www.caseciter.com/2026insc379/)
