@@ -1,3 +1,4 @@
+* [Anjani Technoplast Ltd. v. Shubh Gautam 2026 INSC 410 - IBC - Money Recovery](https://www.caseciter.com/2026insc410/)
 * [Balaji Madhukar Konkanwar v. Maharashtra State Road Transport Corporation, 2026 INSC 392 - Doctrine of Estoppel - Unequal Bargaining Power](https://www.caseciter.com/2026insc392/)
 * [State of Uttar Pradesh and Others v. Ajay Kumar Malik, 2026 INSC 394 - Public Employment  - Parity](https://www.caseciter.com/2026insc394/)
 * [Thiruvalanchuzhi Vaithilingam Pillai Charities v. Registrar & 2026 INSC 398 - Land Ceiling](https://www.caseciter.com/2026insc398/)
