@@ -1,3 +1,7 @@
+* [Balaji Madhukar Konkanwar v. Maharashtra State Road Transport Corporation, 2026 INSC 392 - Doctrine of Estoppel - Unequal Bargaining Power](https://www.caseciter.com/2026insc392/)
+* [State of Uttar Pradesh and Others v. Ajay Kumar Malik, 2026 INSC 394 - Public Employment  - Parity](https://www.caseciter.com/2026insc394/)
+* [Thiruvalanchuzhi Vaithilingam Pillai Charities v. Registrar & 2026 INSC 398 - Land Ceiling](https://www.caseciter.com/2026insc398/)
+* [Dharma Devi v. Sandeep Kumar - S.14A SC-ST Act - S.319 CrPC Order](https://www.caseciter.com/dharma-devi-v-sandeep-kumar-s-14a-sc-st-act-s-319-crpc-order/)
 * [Chaitanya Bahuuddeshiya Shikshan Prasarak Mandal  v. Auxilo Finserve Pvt. Ltd. 2026 INSC 408](https://www.caseciter.com/2026insc408/)
 * [Sib Nath Chatterjee v. Tulsidas Chatterjee   2026 INSC 409 -West Bengal Land Reforms Act - Doctrine Of Reading Down](https://www.caseciter.com/2026insc409/)
 * [Unchgaon Village Panchayat v. Kolhapur Municipal Corporation   2026 INSC 405 - Civil Suit - Validity Of Statutory Or Legislative Actions](https://www.caseciter.com/2026insc405/)
