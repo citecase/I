@@ -1,3 +1,5 @@
+* [Himakshi v. Rahul Verma   2026 INSC 391 - Public Employment - Recruitment - Qualifications](https://www.caseciter.com/2026insc391/)
+* [Om Prakash Chhawnika @ Om Prakash Chabnika @ Om Prakash Chawnika v.  State of Jharkhand - CrPC - Complaint Case-  Police Power To Arrest](https://www.caseciter.com/om-prakash-chhawnika-om-prakash-chabnika-om-prakash-chawnika-v-state-of-jharkhand-crpc-complaint-case-police-power-to-arrest/)
 * [Anjani Technoplast Ltd. v. Shubh Gautam 2026 INSC 410 - IBC - Money Recovery](https://www.caseciter.com/2026insc410/)
 * [Balaji Madhukar Konkanwar v. Maharashtra State Road Transport Corporation, 2026 INSC 392 - Doctrine of Estoppel - Unequal Bargaining Power](https://www.caseciter.com/2026insc392/)
 * [State of Uttar Pradesh and Others v. Ajay Kumar Malik, 2026 INSC 394 - Public Employment  - Parity](https://www.caseciter.com/2026insc394/)
