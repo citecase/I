@@ -1,3 +1,4 @@
+* [Feroze Basha  v. State of Tamil Nadu - Bail Condition - Sale Of Immovable Property](https://www.caseciter.com/feroze-basha-v-state-of-tamil-nadu-bail-condition-sale-of-immovable-property/)
 * [Surendra @ Sunda v. State of Uttar Pradesh  2026 INSC 414 -E‑Prisons Early Release Processing Module](https://www.caseciter.com/202insc414/)
 * [A.P. State Wakf Board through Chairperson v. Janaki Busappa 2026 INSC 413 - Wakf - Suit For Declaration](https://www.caseciter.com/202insc413/)
 * [Sivaram Nair  v. State of Kerala 2026 INSC 412 - Ss.494,498A IPC](https://www.caseciter.com/2026insc412/)
