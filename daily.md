@@ -1,3 +1,6 @@
+* [S. Anand v. State of Tamil Nadu  2026 INSC 418 - Purchaser Of Property - FIR Quashed](https://www.caseciter.com/2026insc418/)
+* [Narayan v. State of Madhya Pradesh - S.480(3) BNSS - Bail Conditions](https://www.caseciter.com/narayan-v-state-of-madhya-pradesh-s-480-3-bnss-bail-conditions/)
+* [Anand Jakkappa Pujari @ Gaddadar v. State of Karnataka;   2026 INSC 417 - S.27 Evidence Act - Joint Statements](https://www.caseciter.com/2026insc417/)
 * [Feroze Basha  v. State of Tamil Nadu - Bail Condition - Sale Of Immovable Property](https://www.caseciter.com/feroze-basha-v-state-of-tamil-nadu-bail-condition-sale-of-immovable-property/)
 * [Surendra @ Sunda v. State of Uttar Pradesh  2026 INSC 414 -E‑Prisons Early Release Processing Module](https://www.caseciter.com/202insc414/)
 * [A.P. State Wakf Board through Chairperson v. Janaki Busappa 2026 INSC 413 - Wakf - Suit For Declaration](https://www.caseciter.com/202insc413/)
