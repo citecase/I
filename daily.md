@@ -1,3 +1,4 @@
+* [Ashwini Kumar Upadhyay v. Union of India 2026 INSC 432 - Hate Speech - Fraternity](https://www.caseciter.com/2026insc432/)
 * [Aspinwall and Co. Ltd. v. Inspecting Assistant Commissioner, 2026 INSC 359 Kerala Agricultural Income Tax Act](https://www.caseciter.com/2026insc359/)
 * [Akkiraju Panduranga Rao  v. Gundlapally Ranga Rao  2026 INSC 428 CPC - Amendment Of Pleadings -Liberal Approach](https://www.caseciter.com/2026insc428/)
 * [Sadachari Singh Tomar v. Union of India - 2026 INSC 427 - Article 311 Constitution -Administrative Law - Stigmatic Order](https://www.caseciter.com/2026insc427/)
