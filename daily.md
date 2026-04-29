@@ -1,3 +1,8 @@
+* [Aspinwall and Co. Ltd. v. Inspecting Assistant Commissioner, 2026 INSC 359 Kerala Agricultural Income Tax Act](https://www.caseciter.com/2026insc359/)
+* [Akkiraju Panduranga Rao  v. Gundlapally Ranga Rao  2026 INSC 428 CPC - Amendment Of Pleadings -Liberal Approach](https://www.caseciter.com/2026insc428/)
+* [Sadachari Singh Tomar v. Union of India - 2026 INSC 427 - Article 311 Constitution -Administrative Law - Stigmatic Order](https://www.caseciter.com/2026insc427/)
+* [Challani Ginning and Pressing Factory v. Kamal  2026 INSC 426 - CPC - Objector - Ignorance Of Suit](https://www.caseciter.com/2026insc426/)
+* [Deshraj Singh Parmar  v. Ram Babu Agarwal - CPC - First Appeal](https://www.caseciter.com/deshraj-singh-parmar-v-ram-babu-agarwal-cpc-first-appeal/)
 * [MCM Worldwide Private Limited v.  Construction Industry Development Council 2026 INSC 425 - Arbitration Act](https://www.caseciter.com/2026insc425/)
 * [Aman Singh  vs. State of Bihar 2026 INSC 424 - Death Sentence Matters - Calling Of Report -Aggravating & Mitigating Circumstances](https://www.caseciter.com/2026insc424/)
 * [Parmila v. Rajender 2026 INSC 420 - Motor Accident Compensation -Contributory Negligence](https://www.caseciter.com/2026insc420/)
