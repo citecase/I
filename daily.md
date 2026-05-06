@@ -1,3 +1,7 @@
+* [Anilkumar Manohar Devadhar v. Praveen Adivayya Hiremath, 2026 INSC 452 - S.138 NI Act](https://www.caseciter.com/2026insc452/)
+* [Dr. Nigam Prakash Narain v. National Medical Commission & Ors., 2026 INSC 453 - Disciplinary Proceedings](https://www.caseciter.com/2026insc453/)
+* [Habban Shah v. Sheruddin 2026 INSC 451 - S.28 Specific Relief Act](https://www.caseciter.com/2026insc451/)
+* [Vadiyala Prabhakar Rao vs Government of Andhra Pradesh 2026 INSC 450 Revenue Records - Title Proof](https://www.caseciter.com/2026insc450/)
 * [Malkit Singh v. State of U.T. Chandigarh   2026 INSC 341 Street Vendors](https://www.caseciter.com/2026insc341/)
 * [IPCA Laboratories Limited v. Laghu Udyog Mazdoor Union (CITU)2026 INSC 345 - Industrial Disputes Act](https://www.caseciter.com/2026insc345/)
 * [Mamta Devi v. Sanjay Kumar  2026 INSC 346 - Matrimonial - Wife Cruelty](https://www.caseciter.com/2026insc346/)
