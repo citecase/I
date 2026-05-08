@@ -1,3 +1,4 @@
+* [Dhruv Varma  vs. J K Varma - CrPC/BNSS - Revisional Jurisdiction - Sentence Enhancement Suo Motu](https://www.caseciter.com/dhruv-varma-vs-j-k-varma-crpc-bnss-revisional-jurisdiction-sentence-enhancement-suo-motu/)
 * [Seethamma  v.  State of Karnataka  2026 INSC 457 - Karnataka SC/ST (Prohibition of Transfer of Certain Lands) Act](https://www.caseciter.com/2026insc457/)
 * [Sunil Kumar Yadav and Others v. State of Jharkhand  2026 INSC 462 - Para - Teachers](https://www.caseciter.com/2026insc462/)
 * [Delhi Electricity Regulatory Commission v. Tata Power Delhi Distribution Limited  2026 INSC 461 - Electricity Act - DERC Tariff Regulations](https://www.caseciter.com/2026insc461/)
