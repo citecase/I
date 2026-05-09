@@ -1,3 +1,4 @@
+* [Sri Sagar Mura v. State of Assam - Evidence - Last Seen Theory](https://www.caseciter.com/sri-sagar-mura-v-state-of-assam-evidence-last-seen-theory/)
 * [Sanjay Singh v. State of Madhya Pradesh  2026 INSC 467 - S.34 IPC - Common Intention](https://www.caseciter.com/2026insc467/)
 * [State of Jharkhand  v. Ranjan Kumar 2026 INSC 466 - Disciplinary Proceedings - Public Employment- Police](https://www.caseciter.com/2026insc466/)
 * [State of Telangana v. Somanath Khara @ Mohesh @ Hedu - S.37 NDPS Act-  Long Custody Duration](https://www.caseciter.com/state-of-telangana-v-somanath-khara-mohesh-hedu-s-37-ndps-act-long-custody-duration/)
