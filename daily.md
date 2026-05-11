@@ -1,3 +1,8 @@
+* [Urmila Devi v. State of Uttar Pradesh 2026 INSC 471 - UP Panchayat Raj Act - Election Law](https://www.caseciter.com/2026insc471/)
+* [Mitesh @ T.V. Vaghela v. State of Gujarat  2026 INSC 469 - Murder Case - Witness - Dying Declaration](https://www.caseciter.com/2026insc469/)
+* [Gunjan @ Girija Kumari   v. State (NCT of Delhi)  2026 INSC 468 - SC-ST Act - Within Public View](https://www.caseciter.com/2026insc468/)
+* [Yatin Narendra Oza v. Suo Motu, High Court of Gujarat  2026 INSC 470 - Contempt](https://www.caseciter.com/2026insc470/)
+* [Canara Bank  v. Tapan Kumar Mallick Disciplinary Proceedings - Judicial Review](https://www.caseciter.com/canara-bank-v-tapan-kumar-mallick-disciplinary-proceedings-judicial-review/)
 * [Sri Sagar Mura v. State of Assam - Evidence - Last Seen Theory](https://www.caseciter.com/sri-sagar-mura-v-state-of-assam-evidence-last-seen-theory/)
 * [Sanjay Singh v. State of Madhya Pradesh  2026 INSC 467 - S.34 IPC - Common Intention](https://www.caseciter.com/2026insc467/)
 * [State of Jharkhand  v. Ranjan Kumar 2026 INSC 466 - Disciplinary Proceedings - Public Employment- Police](https://www.caseciter.com/2026insc466/)
