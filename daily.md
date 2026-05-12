@@ -1,3 +1,6 @@
+* [Sanand Properties Pvt. Ltd. v. Joint Commissioner of Income Tax, Range 6 2026 INSC 472 - IT Act - Reopening Of Assessment](https://www.caseciter.com/2026insc472/)
+* [In Re: Creation of Special Exclusive Courts  - National Investigation Agency Act](https://www.caseciter.com/in-re-creation-of-special-exclusive-courts-national-investigation-agency-act/)
+* [Brij Kishore v. Gouri Shanker (Mrat) Dwara Smt Jaijuvar - MP HC Rules - Prior Surrender Requirement - Criminal Appeal & Revision](https://www.caseciter.com/brij-kishore-v-gouri-shanker-mrat-dwara-smt-jaijuvar-mp-hc-rules-prior-surrender-requirement-criminal-appeal-revision/)
 * [Urmila Devi v. State of Uttar Pradesh 2026 INSC 471 - UP Panchayat Raj Act - Election Law](https://www.caseciter.com/2026insc471/)
 * [Mitesh @ T.V. Vaghela v. State of Gujarat  2026 INSC 469 - Murder Case - Witness - Dying Declaration](https://www.caseciter.com/2026insc469/)
 * [Gunjan @ Girija Kumari   v. State (NCT of Delhi)  2026 INSC 468 - SC-ST Act - Within Public View](https://www.caseciter.com/2026insc468/)
