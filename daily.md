@@ -1,3 +1,5 @@
+* [Harish Rana v. Union of India - Passive Euthanasia- Death](https://www.caseciter.com/harish-rana-v-union-of-india-passive-euthanasia-death/)
+* [Bar Council of India v. High Court of Andhra Pradesh -Judiciary - Bar and Bench](https://www.caseciter.com/bar-council-of-india-v-high-court-of-andhra-pradesh-judiciary-bar-and-bench/)
 * [Lokendra Kumar Tiwari v. Union of India  2026 INSC 487 - Public Employment](https://www.caseciter.com/2026insc487/)
 * [Talari Naresh v.   State of Telangana  2026 INSC 486 - Postmortem Report -Hostile Witness Evidence](https://www.caseciter.com/2026insc486/)
 * [Dinesh Kumar v. Surta Nath @ Surat Nath - UP Panchayat Raj - Election Disputes - Right To Cross Examination](https://www.caseciter.com/dinesh-kumar-v-surta-nath-surat-nath-up-panchayat-raj-election-disputes-right-to-cross-examination/)
