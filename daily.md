@@ -1,3 +1,4 @@
+* [Soumya Ranjan Panda vs. Subhalaxmi Dash 2026 INSC 488- Medical College Admissions](https://www.caseciter.com/2026insc488/)
 * [Harish Rana v. Union of India - Passive Euthanasia- Death](https://www.caseciter.com/harish-rana-v-union-of-india-passive-euthanasia-death/)
 * [Bar Council of India v. High Court of Andhra Pradesh -Judiciary - Bar and Bench](https://www.caseciter.com/bar-council-of-india-v-high-court-of-andhra-pradesh-judiciary-bar-and-bench/)
 * [Lokendra Kumar Tiwari v. Union of India  2026 INSC 487 - Public Employment](https://www.caseciter.com/2026insc487/)
