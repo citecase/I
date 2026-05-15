@@ -1,3 +1,8 @@
+* [B.S. Lalitha  v. Bhuvanesh  2026 INSC 499 - S.6(5) Hindu Succession Act - Partition Suit - CPC- Res Judicata - Rejection Of Plaint](https://www.caseciter.com/2026insc499/)
+* [New India Assurance Company Limited v. Dolly Satish Gandhi  2026 INSC 498 Motor Accident Compensation - Deduction Of Mediclaim - Medical Insurance](https://www.caseciter.com/2026insc498/)
+* [Marietta D’Silva v. Rudolf Clothan Lacerda 2026 INSC 496 - Bombay Rent Act - Pleadings & Proof](https://www.caseciter.com/2026insc496/)
+* [Rohit Chaturvedi v. State of Uttarakhand  2026 INSC 490 - Remission Denial - Heinousness Of Crime](https://www.caseciter.com/2026insc490/)
+* [Alka Agrawal  v. State of Maharashtra 2026 INSC 489 - MPID Act - Loan Transaction - Deposit](https://www.caseciter.com/2026insc489/)
 * [Vidyawant v.   State of Maharashtra - Preventive Detention](https://www.caseciter.com/vidyawant-v-state-of-maharashtra-preventive-detention/)
 * [S. Rajaseekaran v. Union of India - Central Motor Vehicles Rules - Vehicle Location Tracking Device](https://www.caseciter.com/s-rajaseekaran-v-union-of-india-central-motor-vehicles-rules-vehicle-location-tracking-device/)
 * [Soumya Ranjan Panda vs. Subhalaxmi Dash 2026 INSC 488- Medical College Admissions](https://www.caseciter.com/2026insc488/)
