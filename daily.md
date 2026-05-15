@@ -1,3 +1,5 @@
+* [Vidyawant v.   State of Maharashtra - Preventive Detention](https://www.caseciter.com/vidyawant-v-state-of-maharashtra-preventive-detention/)
+* [S. Rajaseekaran v. Union of India - Central Motor Vehicles Rules - Vehicle Location Tracking Device](https://www.caseciter.com/s-rajaseekaran-v-union-of-india-central-motor-vehicles-rules-vehicle-location-tracking-device/)
 * [Soumya Ranjan Panda vs. Subhalaxmi Dash 2026 INSC 488- Medical College Admissions](https://www.caseciter.com/2026insc488/)
 * [Harish Rana v. Union of India - Passive Euthanasia- Death](https://www.caseciter.com/harish-rana-v-union-of-india-passive-euthanasia-death/)
 * [Bar Council of India v. High Court of Andhra Pradesh -Judiciary - Bar and Bench](https://www.caseciter.com/bar-council-of-india-v-high-court-of-andhra-pradesh-judiciary-bar-and-bench/)
