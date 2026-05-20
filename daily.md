@@ -1,3 +1,8 @@
+* [Faridaben Mahebub Hajiya v. National Insurance Company Limited - Motor Accident Compensation - Skilled Driver Income](https://www.caseciter.com/faridaben-mahebub-hajiya-v-national-insurance-company-limited-motor-accident-compensation-skilled-driver-income/)
+* [Sonia Sharma   v. New India Assurance Company Ltd. - Motor Accident Compensation - Minimum Wages - Consortium](https://www.caseciter.com/sonia-sharma-v-new-india-assurance-company-ltd-motor-accident-compensation-minimum-wages-consortium/)
+* [Parvinder Singh v. Directorate of Enforcement 2026 INSC 519 - S.223 BNSS - First Proviso - Opportunity Of Hearing To Before Taking Cognizance - PMLA](https://www.caseciter.com/2026insc519/)
+* [Brihanmumbai Municipal Corporation  v. Vijay Nagar Apartments  2026 INSC 517 -Land Acquisition -MRTP Act](https://www.caseciter.com/2026insc517/)
+* [Sri v. State 2026 INSC 516 - Mistaken Identity -  UAPA Case - Acquittal](https://www.caseciter.com/2026insc516/)
 * [Bhaskar International Private Limited  v. State Bank of India &  - Loan Facilities - Approach Of Banks](https://www.caseciter.com/bhaskar-international-private-limited-v-state-bank-of-india-loan-facilities-approach-of-banks/)
 * [RR Constructions and Infrastructure India Pvt. Ltd. v. Gayatri Ventures  2026 INSC 514](https://www.caseciter.com/2026insc514/)
 * [Punjab State Power Corporation Limited v. Talwandi Sabo Power Limited   2026 INSC 515 -Electricity Act - Punjab State Grid Code](https://www.caseciter.com/2026insc515/)
