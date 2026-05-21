@@ -1,3 +1,5 @@
+* [Rekhaben Abhalbhai Bambhaniya v. State of Gujarat - Gujarat Panchayats Act - Disqualification Clause](https://www.caseciter.com/rekhaben-abhalbhai-bambhaniya-v-state-of-gujarat-gujarat-panchayats-act-disqualification-clause/)
+* [Vipul Chhanganlal Solanki v. Nikita Vipul Solanki - Matrimonial - Transfer Petition - Husband's Inconvenience](https://www.caseciter.com/vipul-chhanganlal-solanki-v-nikita-vipul-solanki-matrimonial-transfer-petition-husbands-inconvenience/)
 * [Faridaben Mahebub Hajiya v. National Insurance Company Limited - Motor Accident Compensation - Skilled Driver Income](https://www.caseciter.com/faridaben-mahebub-hajiya-v-national-insurance-company-limited-motor-accident-compensation-skilled-driver-income/)
 * [Sonia Sharma   v. New India Assurance Company Ltd. - Motor Accident Compensation - Minimum Wages - Consortium](https://www.caseciter.com/sonia-sharma-v-new-india-assurance-company-ltd-motor-accident-compensation-minimum-wages-consortium/)
 * [Parvinder Singh v. Directorate of Enforcement 2026 INSC 519 - S.223 BNSS - First Proviso - Opportunity Of Hearing To Before Taking Cognizance - PMLA](https://www.caseciter.com/2026insc519/)
