@@ -1,3 +1,7 @@
+* [Sukhendu Bhattacharjee v. State of Assam  2026 INSC 523 - Regularizations - Undertaking Before Courts - Executive Decisions](https://www.caseciter.com/2026insc523/)
+* [Chetan Dashrath Gade v. State of Maharashtra  2026 INSC 522 - Motive In Cases Of Circumstantial Evidence](https://www.caseciter.com/2026insc522/)
+* [Vice Chancellor, Rajiv Gandhi National Aviation University v. Jitendra Singh 2026 INSC 520 - Legislation- Transitional Provision](https://www.caseciter.com/2026insc520/)
+* [Parvathi Nairthi (D) v. Laxmi Nairthy (D) 2026 INSC 521 - Unregistered Will - Exclusion Of Natural Heirs - Affidavit - Evidence](https://www.caseciter.com/2026insc521/)
 * [Rekhaben Abhalbhai Bambhaniya v. State of Gujarat - Gujarat Panchayats Act - Disqualification Clause](https://www.caseciter.com/rekhaben-abhalbhai-bambhaniya-v-state-of-gujarat-gujarat-panchayats-act-disqualification-clause/)
 * [Vipul Chhanganlal Solanki v. Nikita Vipul Solanki - Matrimonial - Transfer Petition - Husband's Inconvenience](https://www.caseciter.com/vipul-chhanganlal-solanki-v-nikita-vipul-solanki-matrimonial-transfer-petition-husbands-inconvenience/)
 * [Faridaben Mahebub Hajiya v. National Insurance Company Limited - Motor Accident Compensation - Skilled Driver Income](https://www.caseciter.com/faridaben-mahebub-hajiya-v-national-insurance-company-limited-motor-accident-compensation-skilled-driver-income/)
