@@ -1,3 +1,4 @@
+* [High Court of Uttarakhand at Nainital v. Deepali Sharma  -Registrar General Of High Court - Disciplinary Action Against Judicial Officer](https://www.caseciter.com/high-court-of-uttarakhand-at-nainital-v-deepali-sharma-registrar-general-of-high-court-disciplinary-action-against-judicial-officer/)
 * [Sukhendu Bhattacharjee v. State of Assam  2026 INSC 523 - Regularizations - Undertaking Before Courts - Executive Decisions](https://www.caseciter.com/2026insc523/)
 * [Chetan Dashrath Gade v. State of Maharashtra  2026 INSC 522 - Motive In Cases Of Circumstantial Evidence](https://www.caseciter.com/2026insc522/)
 * [Vice Chancellor, Rajiv Gandhi National Aviation University v. Jitendra Singh 2026 INSC 520 - Legislation- Transitional Provision](https://www.caseciter.com/2026insc520/)
