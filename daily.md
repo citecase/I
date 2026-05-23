@@ -1,3 +1,5 @@
+* [Bhikhubhai Govindbhai Patel v. State of Gujarat 2026 INSC 532 - S.482 CrPC - Quashing - FIR Long Delay - IPC - False Document - Cheating -](https://www.caseciter.com/2026insc532/)
+* [Nandkishore Mishra v.   State of Madhya Pradesh  2026 INSC 531 Criminal Appeal- Legal Aid - Notice To Accused](https://www.caseciter.com/2026insc531/)
 * [Anil Kumar Rai v. Union of India - Dismissal Without Going Into Merits - Advocate Readiness](https://www.caseciter.com/anil-kumar-rai-v-union-of-india-dismissal-without-going-into-merits-advocate-readiness/)
 * [Tasleem Ahmed v. State Govt. of NCT of Delhi - S.43D(5) UAPA - Larger Bench Reference](https://www.caseciter.com/tasleem-ahmed-v-state-govt-of-nct-of-delhi-s-43d-5-uapa-larger-bench-reference/)
 * [Sarala Devi T.C. v. State of Kerala -S.409 IPC - Entrustment - Handwriting Evidence](https://www.caseciter.com/sarala-devi-t-c-v-state-of-kerala-s-409-ipc-entrustment-handwriting-evidence/)
