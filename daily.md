@@ -1,3 +1,8 @@
+* [Dineshchand Surana v. UCO Bank 2026 INSC 579 - S.138 NI Act - IBC - Moratorium Provisions Applicability](https://www.caseciter.com/2026insc579/)
+* [Mohammad Hanif Jainum Khalifa vs. State Of Karnataka, 2026 INSC 565 IPC - Negligence Death - Recklessness - Dictum Of Common Sense](https://www.caseciter.com/2026insc565/)
+* [Tikka Shatrujit Singh v. Sukjit Singh  2026 INSC 571 - Succession - Rulers -Rule Of Primogeniture](https://www.caseciter.com/2026insc571/)
+* [Hindustan Medical Institution v. Birla Corporation Limited & Ors., 2026 INSC 554 - S.48 Trusts Act - Exception - Governing Instrument](https://www.caseciter.com/2026insc554/)
+* [K Ranganayakulu v. State of Telangana   2026 INSC 555 S.138 NI Act - Sole Responsible Front Face- Drawer](https://www.caseciter.com/2026insc555/)
 * [Shivhare Roadlines Pvt. Ltd. v. Madhya Pradesh Electricity Board 2026 INSC 556](https://www.caseciter.com/2026insc556/)
 * [Shahjad Ali @ Ali Ur Rehman V. State Of Uttarakhand, 2026 Insc 557 - Double Murder -Death Sentence Commuted](https://www.caseciter.com/2026insc557/)
 * [Amit Katyal   v. State of Haryana 2026 INSC 563- Clarification Of Earlier Jt - Clubbing Of FIR](https://www.caseciter.com/2026insc563/)
