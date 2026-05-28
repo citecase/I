@@ -1,3 +1,8 @@
+* [Tarini Prasad Mohanty v.  Sunflag Iron and Steel Company Limited  2026 INSC 566 - Writ Jurisdiction - Arbitration Act](https://www.caseciter.com/2026insc566/)
+* [Satya Narayan Shukla v. State of Uttar Pradesh  2026 INSC 583 - Land Acquisition  - Sanyasi - Chronic Litigant](https://www.caseciter.com/2026insc583/)
+* [State of Tripura v. Panna Ahmed, 2026 INSC 584 - CrPC - Recall Of Witness](https://www.caseciter.com/2026insc584/)
+* [Mehtab v. State of Uttarakhand  2026 INSC 578 - Gang Rape Case - Accused Acquitted - Death Sentence Set Aside](https://www.caseciter.com/2026insc578/)
+* [Small Scale Entrepreneurs Association  v. State of Maharashtra  2026 INSC 570 - MMC Act - Tax and Fee](https://www.caseciter.com/2026insc570/)
 * [Dineshchand Surana v. UCO Bank 2026 INSC 579 - S.138 NI Act - IBC - Moratorium Provisions Applicability](https://www.caseciter.com/2026insc579/)
 * [Mohammad Hanif Jainum Khalifa vs. State Of Karnataka, 2026 INSC 565 IPC - Negligence Death - Recklessness - Dictum Of Common Sense](https://www.caseciter.com/2026insc565/)
 * [Tikka Shatrujit Singh v. Sukjit Singh  2026 INSC 571 - Succession - Rulers -Rule Of Primogeniture](https://www.caseciter.com/2026insc571/)
