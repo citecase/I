@@ -1,3 +1,6 @@
+* [Reliance Industries Limited vs Securities and Exchange Board of India  2026 INSC 585 - SEBI Regulations - Fraud](https://www.caseciter.com/2026insc585/)
+* [A. Shahul Hameed v. N. Malligarjuna  2026 INSC 573 - CPC - Second Appeal - Specific Performance - Readiness & Willingness](https://www.caseciter.com/2026insc573/)
+* [Sarla Devi  v. Reliance General Insurance Co. Ltd.  , 2026 INSC 575 Motor Accident Compensation - Haryana Compassionate Assistance Rules - Mother's Dependency](https://www.caseciter.com/2026insc575/)
 * [Tarini Prasad Mohanty v.  Sunflag Iron and Steel Company Limited  2026 INSC 566 - Writ Jurisdiction - Arbitration Act](https://www.caseciter.com/2026insc566/)
 * [Satya Narayan Shukla v. State of Uttar Pradesh  2026 INSC 583 - Land Acquisition  - Sanyasi - Chronic Litigant](https://www.caseciter.com/2026insc583/)
 * [State of Tripura v. Panna Ahmed, 2026 INSC 584 - CrPC - Recall Of Witness](https://www.caseciter.com/2026insc584/)
