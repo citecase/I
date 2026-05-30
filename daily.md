@@ -1,3 +1,7 @@
+* [Directorate General Of Goods And Services Tax Intelligence (HQS)  V. Gameskraft Technologies Private Limited   2026 INSC 595   GST On Actionable Claims - Betting And Gambling Transactions](https://www.caseciter.com/2026insc595/)
+* [State of Tamil Nadu   v. Junglee Games India Pvt. Ltd.  2026 INSC 594  - Online Rummy & Poker - TN & Karnataka Laws](https://www.caseciter.com/2026insc594/)
+* [Arjun Dass v. State of Andhra Pradesh  2026 INSC 592 - AP HR&CE Act - Removal Of Mathadhipati](https://www.caseciter.com/2026insc592/)
+* [Pushpa  v. Dayawati 2026 INSC 603 - CPC - Judgment On Admission](https://www.caseciter.com/2026insc603/)
 * [Pila Pahan @ Peela Pahan vs
 State of Jharkhand 2026 INSC 604 - Delay In Judgment Pronouncement -Guidelines](https://www.caseciter.com/2026insc604/)
 * [Dheeraj Mor v. Hon’ble High Court of Delhi - Prospective Nature - Rejanish KV CB Judgment](https://www.caseciter.com/dheeraj-mor-v-honble-high-court-of-delhi-prospective-nature-rejanish-kv-cb-judgment/)
