@@ -1,3 +1,5 @@
+* [Pila Pahan @ Peela Pahan vs
+State of Jharkhand 2026 INSC 604 - Delay In Judgment Pronouncement -Guidelines](https://www.caseciter.com/2026insc604/)
 * [Dheeraj Mor v. Hon’ble High Court of Delhi - Prospective Nature - Rejanish KV CB Judgment](https://www.caseciter.com/dheeraj-mor-v-honble-high-court-of-delhi-prospective-nature-rejanish-kv-cb-judgment/)
 * [Dhiraj Dutta v. Anirban Sen 2026 INSC 602 - Limitation- Revocation of Probate- Constructive Notice](https://www.caseciter.com/2026insc602/)
 * [Ashok and Ors. v. Padam Chand   2026 INSC 591 - Order 41 Rule 22 CPC -Arbitration Act 1940](https://www.caseciter.com/2026insc591/)
