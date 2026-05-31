@@ -1,3 +1,4 @@
+* [Prajwala v. Union of India 2026 INSC 609 Immoral Traffic (Prevention) Act  - Rehabilitation Of Victims Of Trafficking - Commercial Sexual Exploitation](https://www.caseciter.com/2026insc609/)
 * [Directorate General Of Goods And Services Tax Intelligence (HQS)  V. Gameskraft Technologies Private Limited   2026 INSC 595   GST On Actionable Claims - Betting And Gambling Transactions](https://www.caseciter.com/2026insc595/)
 * [State of Tamil Nadu   v. Junglee Games India Pvt. Ltd.  2026 INSC 594  - Online Rummy & Poker - TN & Karnataka Laws](https://www.caseciter.com/2026insc594/)
 * [Arjun Dass v. State of Andhra Pradesh  2026 INSC 592 - AP HR&CE Act - Removal Of Mathadhipati](https://www.caseciter.com/2026insc592/)
