@@ -1,3 +1,8 @@
+* [Jayesh Kanna v. Assistant Commissioner Law and Order (West) 2026 INSC 615 – Cruelty -S.498A IPC;  Non-Communication - Petty Quarrels](https://www.caseciter.com/2026insc615/)
+* [Dr. Jaya Thakur v. Government of India - Menstrual Hygiene -Fundamental Right](https://www.caseciter.com/dr-jaya-thakur-v-government-of-india-menstrual-hygiene-fundamental-right/)
+* [G. Ganesh v. State of Tamil Nadu   – Human Trafficking, Missing Persons, Immediate FIRs, Aadhaar Identification, Anti Human Trafficking Units](https://www.caseciter.com/g-ganesh-v-state-of-tamil-nadu-human-trafficking-missing-persons-aadhaar-identification-anti-human-trafficking-units/)
+* [Mahadevaiah v. State of Karnataka  – Compounding of Offences, Article 142](https://www.caseciter.com/mahadevaiah-v-state-of-karnataka-compounding-of-offences-article-142/)
+* [Yusuf S V. State Of Karnataka  – Quashing Of Criminal Proceedings / Requirement Of Reasons In Judicial Orders](https://www.caseciter.com/yusuf-s-v-state-of-karnataka-quashing-of-criminal-proceedings-requirement-of-reasons-in-judicial-orders/)
 * [V.K. Singh V. Central Bureau Of Investigation 2026 INSC 614 – CrPC- Official Secrets Act - Supply Of Documents](https://www.caseciter.com/2026insc614/)
 * [Madhya Pradesh Road Development Corporation Ltd v. Jabalpur Corridor Pvt Ltd 2026 INSC 590 – Ss.34,37 Arbitration Act](https://www.caseciter.com/2026insc590/)
 * [Bhikhani Devi v. Union of India 2026 INSC 612 – Temporary Status Casual Labourers -Pensionary Entitlement](https://www.caseciter.com/2026insc612/)
