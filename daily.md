@@ -1,3 +1,7 @@
+* [Supreme Court Bar Association v. B.D. Kaushik 2026 INSC   – Bar Association Elections -SCBA Reforms](https://www.caseciter.com/supreme-court-bar-association-v-b-d-kaushik-2026-insc-bar-association-elections-scba-reforms/)
+* [Shephali Chakraborty v. State of West Bengal 2026 INSC 621 - S.8 Hindu Minority and Guardianship Act - Principles Summarized](https://www.caseciter.com/2026insc621/)
+* [Sonal Talpada v. Veerbhan Singh 2026 INSC 620 – Cruelty; Prolonged Duration - Living Separately](https://www.caseciter.com/2026insc620/)
+* [Gopalakrishna Surapaneni v. Anuradha Surpaneni Maiden - Matrimonial Relationships](https://www.caseciter.com/gopalakrishna-surapaneni-v-anuradha-surpaneni-maiden-matrimonial-relationships/)
 * [Nazibul Rahim Khan v. State of Uttar Pradesh -S.482 CrPC - Civil Nature - Quashing - Inordinate Time Gap](https://www.caseciter.com/nazibul-rahim-khan-v-state-of-uttar-pradesh-s-482-crpc-civil-nature-quashing-inordinate-time-gap/)
 * [National Highway Authority of India v. T. Younis2026 INSC 616 -Ss.34(3), 33 Arbitration Act - Computation Of Limitation](https://www.caseciter.com/2026insc616/)
 * [Kulsum Nisha v. State of Uttar Pradesh 2026 INSC 617 – Marital Status, Gender Equality, Dependency, Purposive Construction](https://www.caseciter.com/2026insc617/)
