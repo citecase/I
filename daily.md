@@ -1,3 +1,5 @@
+* [Thrani Industries Ltd. v. KNK Ship Management 2026 INSC 624 -S.62 IBC - Refiling Delay Condonation](https://www.caseciter.com/2026insc624/)
+* [Chandar Shekhar Jaysawal v. State of Uttar Pradesh  2026 INSC 622 – S.305 IPC -Abetment of Suicide, Section 319 CrPC Threshold](https://www.caseciter.com/2026insc622/)
 * [Supreme Court Bar Association v. B.D. Kaushik 2026 INSC   – Bar Association Elections -SCBA Reforms](https://www.caseciter.com/supreme-court-bar-association-v-b-d-kaushik-2026-insc-bar-association-elections-scba-reforms/)
 * [Shephali Chakraborty v. State of West Bengal 2026 INSC 621 - S.8 Hindu Minority and Guardianship Act - Principles Summarized](https://www.caseciter.com/2026insc621/)
 * [Sonal Talpada v. Veerbhan Singh 2026 INSC 620 – Cruelty; Prolonged Duration - Living Separately](https://www.caseciter.com/2026insc620/)
