@@ -1,3 +1,6 @@
+* [State by Lokayuktha Police v. K. Rangayya  2026 INSC 574 -Prevention of Corruption Act - Undue Advantage For Another Person](https://www.caseciter.com/2026insc574/)
+* [Amazon.com NV Investment Holdings LLC vs Competition Commission of India  Ors 2026 INSC 576 -  Ss.43A,44,45 Competition Act](https://www.caseciter.com/2026insc576/)
+* [Salil Dhawan vs Priyanshi Ghai 2026 INSC 577 - Irretrievable Breakdown](https://www.caseciter.com/2026insc577/)
 * [Sanjay Dave vs Andhra Bank Ltd. & Ors. 2026 INSC 580 - IBC -CoC‑Approved Resolution Plan](https://www.caseciter.com/2026insc580/)
 * [General Manager (HR) vs K. Poovarasan 2026 INSC 581 Public Employment - Upper Limit Of Qualification](https://www.caseciter.com/2026insc581/)
 * [Alupro Building Systems Pvt. Ltd. vs Commissioner of Central Excise, Bangalore-II 2026 INSC 582 - Central Excise Act](https://www.caseciter.com/2026insc582/)
