@@ -1,3 +1,5 @@
+* [Gajula Thirupathi vs Telangana State Level Police Recruitment Board and Others 2026 INSC 493 - Public Employment - Cheating Case - Pre-Marital Relationships](https://www.caseciter.com/2026insc493/)
+* [Manoj Dangi vs Union of India - NDPS Act - Bail - 6 Years Pre-Trial Incarceration](https://www.caseciter.com/manoj-dangi-vs-union-of-india-nd/)
 * [State by Lokayuktha Police v. K. Rangayya  2026 INSC 574 -Prevention of Corruption Act - Undue Advantage For Another Person](https://www.caseciter.com/2026insc574/)
 * [Amazon.com NV Investment Holdings LLC vs Competition Commission of India  Ors 2026 INSC 576 -  Ss.43A,44,45 Competition Act](https://www.caseciter.com/2026insc576/)
 * [Salil Dhawan vs Priyanshi Ghai 2026 INSC 577 - Irretrievable Breakdown](https://www.caseciter.com/2026insc577/)
