@@ -1,3 +1,4 @@
+* [R N Karaiya  vs   State of Madhya Pradesh S.15 Prevention of Corruption Act](https://www.caseciter.com/r-n-karaiya-vs-state-of-madhya-pradesh-s-15-prevention-of-corruption-act/)
 * [Gajula Thirupathi vs Telangana State Level Police Recruitment Board and Others 2026 INSC 493 - Public Employment - Cheating Case - Pre-Marital Relationships](https://www.caseciter.com/2026insc493/)
 * [Manoj Dangi vs Union of India - NDPS Act - Bail - 6 Years Pre-Trial Incarceration](https://www.caseciter.com/manoj-dangi-vs-union-of-india-nd/)
 * [State by Lokayuktha Police v. K. Rangayya  2026 INSC 574 -Prevention of Corruption Act - Undue Advantage For Another Person](https://www.caseciter.com/2026insc574/)
