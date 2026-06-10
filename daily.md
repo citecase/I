@@ -1,3 +1,4 @@
+* [Dr. Rakesh Kumar Gupta vs State of Uttar Pradesh  2026 INSC 632 S.392 CrPC -Sajjan Singh - Referred to Larger Bench](https://www.caseciter.com/2026insc632/)
 * [M. R. Vasumathi vs   Authorized Officer - 2026 INSC 633 SARFAESI - Security Interest Rules - Auction Sale](https://www.caseciter.com/2026insc633/)
 * [Jayakrishna Menon vs Krishnankutty 2026 INSC 631 - Elephant - Commercial Exploitation - Contempt](https://www.caseciter.com/2026insc631/)
 * [Baksish Ahmad vs Union of India & Anr 2026 INSC 630 - Doctrine Of Forum Non Conveniens - CAPF/BSF Termination - Writ Petition Maintainability](https://www.caseciter.com/2026insc630/)
