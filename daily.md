@@ -1,3 +1,8 @@
+* [State of Himachal Pradesh vs Kansara Mayur - NDPS Act - Recovery National Highway - Lack Of Independent Witness](https://www.caseciter.com/state-of-himachal-pradesh-vs-kansara-mayur-ndps-act-recovery-national-highway-lack-of-independent-witness/)
+* [Commissioner, Bruhat Bangalore Mahanagara Palike vs K.K. Umesh Kumar 2026 INSC 637 - Tree Branch Falling - Motor Accident Compensation](https://www.caseciter.com/2026insc637/)
+* [Makardhwaj Ram vs Jagdish Rai (D) 2026 INSC 636 - CPC - Constructive Res Judicata](https://www.caseciter.com/2026insc636/)
+* [Dr. Ramesh vs State of Maharashtra  2026 INSC 635 - PCPNDT Act](https://www.caseciter.com/2026insc635/)
+* [Shishu Pal @ Shish Ram  vs Surjeet  2026 INSC 634 -Motor Accident Compensation - Death Of Homemaker](https://www.caseciter.com/2026insc634/)
 * [Dr. Rakesh Kumar Gupta vs State of Uttar Pradesh  2026 INSC 632 S.392 CrPC -Sajjan Singh - Referred to Larger Bench](https://www.caseciter.com/2026insc632/)
 * [M. R. Vasumathi vs   Authorized Officer - 2026 INSC 633 SARFAESI - Security Interest Rules - Auction Sale](https://www.caseciter.com/2026insc633/)
 * [Jayakrishna Menon vs Krishnankutty 2026 INSC 631 - Elephant - Commercial Exploitation - Contempt](https://www.caseciter.com/2026insc631/)
