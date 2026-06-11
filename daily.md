@@ -1,3 +1,5 @@
+* [Atul Chauhan v. State of Haryana  2026 INSC 640 -Compassionate Financial Assistance or Appointment Rules - Constitutional Validity](https://www.caseciter.com/2026insc640/)
+* [Sheetal Vasant Thakur vs Chirag Arora 2026 INSC 638 - Child Custody - Welfare Of Child - POCSO Victims- Psychiatric Evaluation](https://www.caseciter.com/2026insc638/)
 * [State of Himachal Pradesh vs Kansara Mayur - NDPS Act - Recovery National Highway - Lack Of Independent Witness](https://www.caseciter.com/state-of-himachal-pradesh-vs-kansara-mayur-ndps-act-recovery-national-highway-lack-of-independent-witness/)
 * [Commissioner, Bruhat Bangalore Mahanagara Palike vs K.K. Umesh Kumar 2026 INSC 637 - Tree Branch Falling - Motor Accident Compensation](https://www.caseciter.com/2026insc637/)
 * [Makardhwaj Ram vs Jagdish Rai (D) 2026 INSC 636 - CPC - Constructive Res Judicata](https://www.caseciter.com/2026insc636/)
