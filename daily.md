@@ -1,3 +1,8 @@
+* [Rahul Agarwal Vs State Of U.P. -IPC - Breach Of Trust - Entrustment](https://www.caseciter.com/rahul-agarwal-vs-state-of-u-p-ipc-breach-of-trust-entrustment/)
+* [T.K. Dharanesh (D) vs H.D. Bhagya - Lok Adalat Award- Binding Nature - Collateral Proceedings](https://www.caseciter.com/t-k-dharanesh-d-vs-h-d-bhagya-lok-adalat-award-binding-nature-collateral-proceedings/)
+* [Rifilis Engineering Pvt. Ltd. vs Arjun Gupta - Labour Law - Termination - Unauthorised Absence](https://www.caseciter.com/rifilis-engineering-pvt-ltd-vs-arjun-gupta-labour-law-termination-unauthorised-absence/)
+* [Kavitha vs Dhanalakshmi - Order 21 Rule 97 CPC - Summary Rejection](https://www.caseciter.com/kavitha-vs-dhanalakshmi-order-21-rule-97-cpc-summary-rejection/)
+* [Sukhdev Singh vs Sukhbir Kaur - S.11 Hindu Marriage Act - Permanent Alimony](https://www.caseciter.com/sukhdev-singh-vs-sukhbir-kaur-s-11-hindu-marriage-act-permanent-alimony/)
 * [Atul Chauhan v. State of Haryana  2026 INSC 640 -Compassionate Financial Assistance or Appointment Rules - Constitutional Validity](https://www.caseciter.com/2026insc640/)
 * [Sheetal Vasant Thakur vs Chirag Arora 2026 INSC 638 - Child Custody - Welfare Of Child - POCSO Victims- Psychiatric Evaluation](https://www.caseciter.com/2026insc638/)
 * [State of Himachal Pradesh vs Kansara Mayur - NDPS Act - Recovery National Highway - Lack Of Independent Witness](https://www.caseciter.com/state-of-himachal-pradesh-vs-kansara-mayur-ndps-act-recovery-national-highway-lack-of-independent-witness/)
