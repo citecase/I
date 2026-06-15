@@ -1,3 +1,5 @@
+* [Reena Kumari  vs Praveer Kumar 2026 INSC 642 - Contempt - Error Of Judgment Principle](https://www.caseciter.com/2026insc642/)
+* [S. Senthil Kumaran Bose v. State of Tamil Nadu  2026 INSC 645 - Public Service Commission - Recruitment](https://www.caseciter.com/2026insc645/)
 * [Kamta Prasad Mishra vs Special Police Establishment 2026 INSC 644 - RTI Act - Exclusion Of SPE - Corruption Cases](https://www.caseciter.com/2026insc644/)
 * [Meenakshi Natarajan vs Election Commission of India 2026 INSC 643 - Election Process - Rejection Of Nomination](https://www.caseciter.com/2026insc643/)
 * [Rahul Agarwal Vs State Of U.P. -IPC - Breach Of Trust - Entrustment](https://www.caseciter.com/rahul-agarwal-vs-state-of-u-p-ipc-breach-of-trust-entrustment/)
