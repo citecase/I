@@ -1,3 +1,7 @@
+* [Surekha Domaji Bele vs Executive Engineer, Testing Division, MSEDCL 2026 INSC 639 - Disciplinary Proceedings - Dismissal Penalty](https://www.caseciter.com/2026insc639/)
+* [Gaurav Mehla vs State of Haryana  2026 INSC 641 - Public Employment](https://www.caseciter.com/2026insc641/)
+* [T.K.A. Padmanabhan vs Abhiyan Cooperative Group Housing Society Ltd. 2026 INSC 649 - Consumer Protection - Arbitration Clause - Delayed Possession](https://www.caseciter.com/2026insc649/)
+* [K. Prakashchand vs Oriental Insurance Co. Ltd. - Insurance Law - Hire-Purchase](https://www.caseciter.com/k-prakashchand-vs-oriental-insurance-co-ltd-insurance-law-hire-purchase/)
 * [Sarika Tyagi   vs Union of India  Women Lawyers- First Generation Advocates Concerns](https://www.caseciter.com/sarika-tyagi-vs-union-of-india-ors-2026-insc-770-women-lawyers-first-generation-advocates-concerns/)
 * [Rajat Kumar vs S D Adarsh Jain Kanya Maha Vidyalaya Sadhaura  2026 INSC 648 CPC - Second Appeal - Substantial Question Of Law - Execution](https://www.caseciter.com/2026insc648/)
 * [Maniyar Iliyaz @ Shaik Riyaz & Anr. vs P. Ayyappan 2026 INSC 647 - Fundamental Right To Walk](https://www.caseciter.com/2026insc647/)
