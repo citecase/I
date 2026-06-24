@@ -1,3 +1,8 @@
+* [Sarafat Ali (D) vs Deputy Director of Consolidation, Haridwar  2026 INSC 652 - Registered Sale Deed - Consolidation Authorities](https://www.caseciter.com/2026insc652/)
+* [M. Paramesh v. VRL Logistics Ltd. and Another 2026 INSC 655 - Motor Accident Compensation - Mason - Functional Disability](https://www.caseciter.com/2026insc655/)
+* [Oriental Insurance Co. Ltd. vs Kalu Ram 2026 INSC 653 -Motor Accident Compensation](https://www.caseciter.com/2026insc653/)
+* [Mohammed Khaleel (D)  vs Jayamma 2026 INSC 651 - Specific Performance](https://www.caseciter.com/2026insc651/)
+* [Israfil @ Pappu @ Naimuddin Khan vs State of Madhya Pradesh 2026 INSC 654 - IPC - CrPC - Sentencing - Forgery](https://www.caseciter.com/2026insc654/)
 * [State of Madhya Pradesh vs Ravi Shankar Singh - CrPC - PC Act - Pre-Charge Examination](https://www.caseciter.com/state-of-madhya-pradesh-vs-ravi-shankar-singh-crpc-pc-act-pre-charge-examination/)
 * [X vs Y - Redaction - Direction To Give Non-Redacted Documents](https://www.caseciter.com/x-vs-y-redaction-direction-to-give-non-redacted-documents/)
 * [Rajiv Gaddh vs Subodh Parkash 2026 INSC 302 - Arbitration Act - Order XXIII Rule 1 CPC](https://www.caseciter.com/2026insc302/)
