@@ -1,3 +1,4 @@
+* [Jittu Yadav vs State of Chhattisgarh 2026 INSC 657 - Limitation - Express Exclusion -](https://www.caseciter.com/2026insc657/)
 * [Shankar Dutt Vs. United India Insurance Co. Ltd. 2026 INSC 656 -Motor Accident Compensation - Carpenter - Prosthetic Limb](https://www.caseciter.com/2026insc656/)
 * [Sarafat Ali (D) vs Deputy Director of Consolidation, Haridwar  2026 INSC 652 - Registered Sale Deed - Consolidation Authorities](https://www.caseciter.com/2026insc652/)
 * [M. Paramesh v. VRL Logistics Ltd. and Another 2026 INSC 655 - Motor Accident Compensation - Mason - Functional Disability](https://www.caseciter.com/2026insc655/)
