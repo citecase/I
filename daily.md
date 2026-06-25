@@ -1,3 +1,5 @@
+* [Mathu @ Jagdish vs State of Uttarakhand 2026 INSC 658 - S.304 IPC](https://www.caseciter.com/2026insc658/)
+* [Karan Chettri vs State of Sikkim 2026 INSC 659 - CrPC -Suo Motu Enhancement Of Sentence](https://www.caseciter.com/2026insc659/)
 * [Jittu Yadav vs State of Chhattisgarh 2026 INSC 657 - Limitation - Express Exclusion -](https://www.caseciter.com/2026insc657/)
 * [Shankar Dutt Vs. United India Insurance Co. Ltd. 2026 INSC 656 -Motor Accident Compensation - Carpenter - Prosthetic Limb](https://www.caseciter.com/2026insc656/)
 * [Sarafat Ali (D) vs Deputy Director of Consolidation, Haridwar  2026 INSC 652 - Registered Sale Deed - Consolidation Authorities](https://www.caseciter.com/2026insc652/)
