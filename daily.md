@@ -1,3 +1,5 @@
+* [We Are Moving To CaseCiter.In !](https://www.caseciter.com/we-are-moving-to-caseciter-in/)
+* [Sardari Lal vs Bishan Dass  2026 INSC 669 - Will - Disinheriting Wife](https://www.caseciter.com/2026insc669/)
 * [Questions Of Law From Latest Supreme Court Judgments [1 July 2026]](https://www.caseciter.com/questions-of-law-from-latest-supreme-court-judgments-1-july-2026/)
 * [Can Accused Get Default Bail Merely Because Charge-Sheet Copy Was Not Served To Him?](https://www.caseciter.com/can-accused-get-default-bail-merely-because-charge-sheet-copy-was-not-served-to-him/)
 * [Supreme Court Explains "Per Incuriam" Yet Again !](https://www.caseciter.com/supreme-court-explains-per-incuriam-yet-again/)
