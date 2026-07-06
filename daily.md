@@ -1,3 +1,6 @@
+* [Questions Of Law From SC Judgments [6 July 2026]](https://www.caseciter.com/questions-of-law-from-sc-judgments-6-july-2026/)
+* [Can a Plaintiff Take Inconsistent Pleas?  [Sardari Lal v. Bishan Dass 2026 INSC 669]](https://www.caseciter.com/can-a-plaintiff-take-inconsistent-pleas-legal-position-explained/)
+* [The “Time Gap” in Wills: Does It Really Matter? [Sardari Lal Vs. Bishan Dass 2026 INSC 669]](https://www.caseciter.com/the-time-gap-in-wills-does-it-really-matter-sardari-lal-vs-bishan-dass-2026-insc-669/)
 * [We Are Moving To CaseCiter.In !](https://www.caseciter.com/we-are-moving-to-caseciter-in/)
 * [Sardari Lal vs Bishan Dass  2026 INSC 669 - Will - Disinheriting Wife](https://www.caseciter.com/2026insc669/)
 * [Questions Of Law From Latest Supreme Court Judgments [1 July 2026]](https://www.caseciter.com/questions-of-law-from-latest-supreme-court-judgments-1-july-2026/)
