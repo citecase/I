@@ -1,3 +1,6 @@
+* [31 Questions Of Law From Latest Supreme Court Judgments On Wills](https://www.caseciter.com/31-questions-of-law-from-latest-supreme-court-judgments-on-wills/)
+* [A Tale of Three Wives Disinherited by Their Husbands’ Wills](https://www.caseciter.com/a-tale-of-two-wives-disinherited-by-their-husbands-wills/)
+* [Registered Will Failed & Unregistered One Survived: Lessons from Two Recent Supreme Court Judgments](https://www.caseciter.com/registered-will-failed-unregistered-one-survived-lessons-from-two-recent-supreme-court-judgments/)
 * [Questions Of Law From SC Judgments [6 July 2026]](https://www.caseciter.com/questions-of-law-from-sc-judgments-6-july-2026/)
 * [Can a Plaintiff Take Inconsistent Pleas?  [Sardari Lal v. Bishan Dass 2026 INSC 669]](https://www.caseciter.com/can-a-plaintiff-take-inconsistent-pleas-legal-position-explained/)
 * [The “Time Gap” in Wills: Does It Really Matter? [Sardari Lal Vs. Bishan Dass 2026 INSC 669]](https://www.caseciter.com/the-time-gap-in-wills-does-it-really-matter-sardari-lal-vs-bishan-dass-2026-insc-669/)
