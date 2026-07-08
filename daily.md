@@ -1,3 +1,5 @@
+* [Matrimonial Settlement Clause Prohibiting One Parent From Talking, Seeing Child Illegal & Unenforceable: Supreme Court ￼](https://www.caseciter.com/matrimonial-settlement-clause-prohibiting-one-parent-from-talking-seeing-child-illegal-unenforceable-supreme-court/)
+* [Supreme Court’s Message to Lawyers: Stay Updated or Fall Behind](https://www.caseciter.com/supreme-courts-message-to-lawyers-stay-updated-or-fall-behind/)
 * [Ajay Vijh v. Indian Banks Association 2026 INSC 670 - Banks - Advocates - Caution List- National Legal Academy](https://www.caseciter.com/2026insc670/)
 * [Advocates Are Not Like Other Professionals: Supreme Court](https://www.caseciter.com/advocates-are-not-like-other-professionals-supreme-court/)
 * [Erroneous Legal Opinion Does Not Amount to Fraud: Supreme Court](https://www.caseciter.com/supreme-court-clarifies-erroneous-legal-opinion-does-not-amount-to-fraud/)
