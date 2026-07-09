@@ -1,3 +1,5 @@
+* [Dismissals To Decree: How A Litigant’s 51-Year Fight Finally Succeeded in Supreme Court](https://www.caseciter.com/dismissals-to-decree-how-a-litigants-51-year-fight-finally-succeeded-in-supreme-court/)
+* [How To Prove A Custom ? Supreme Court Reiterates Principles](https://www.caseciter.com/2026insc672/)
 * [Matrimonial Settlement Clause Prohibiting One Parent From Talking, Seeing Child Illegal & Unenforceable: Supreme Court ￼](https://www.caseciter.com/matrimonial-settlement-clause-prohibiting-one-parent-from-talking-seeing-child-illegal-unenforceable-supreme-court/)
 * [Supreme Court’s Message to Lawyers: Stay Updated or Fall Behind](https://www.caseciter.com/supreme-courts-message-to-lawyers-stay-updated-or-fall-behind/)
 * [Ajay Vijh v. Indian Banks Association 2026 INSC 670 - Banks - Advocates - Caution List- National Legal Academy](https://www.caseciter.com/2026insc670/)
