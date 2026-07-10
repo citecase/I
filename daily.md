@@ -1,3 +1,6 @@
+* [When Supreme Court Refused To Take Action Against Litigant Who Made Unparliamentary Utterances In Court](https://www.caseciter.com/when-supreme-court-refused-to-take-action-against-litigant-who-made-unparliamentary-utterances-in-court/)
+* [Can Courts Add Words To Statutory Provision?](https://www.caseciter.com/can-courts-add-words-to-statutory-provision/)
+* [Suitability for Promotion to Be Determined by Domain Experts: SC](https://www.caseciter.com/suitability-for-promotion-to-be-determined-by-domain-experts-sc/)
 * [Supreme Court Notes Key Timelines Under the Commercial Courts Act, 2015](https://www.caseciter.com/aqolsupreme-court-notes-key-timelines-under-the-commercial-courts-act-2015/)
 * [Cannot Allow Piecemeal Production of Evidence in Commercial Suits: Supreme Court](https://www.caseciter.com/cannot-allow-piecemeal-production-of-evidence-in-commercial-suits-supreme-court/)
 * [Partition Valid Only Among Co‑Sharers: SC](https://www.caseciter.com/partition-valid-only-among-co-sharers-sc/)
