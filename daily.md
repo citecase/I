@@ -1,3 +1,4 @@
+* [States Vehemently Opposing Bail, But Not Bothered To Proceed With Trial?: Supreme Court Points Out "Double Standards"](https://www.caseciter.com/states-vehemently-opposing-bail-but-not-bothered-to-proceed-with-trial-supreme-court-points-out-double-standards/)
 * [When Supreme Court Refused To Take Action Against Litigant Who Made Unparliamentary Utterances In Court](https://www.caseciter.com/when-supreme-court-refused-to-take-action-against-litigant-who-made-unparliamentary-utterances-in-court/)
 * [Can Courts Add Words To Statutory Provision?](https://www.caseciter.com/can-courts-add-words-to-statutory-provision/)
 * [Suitability for Promotion to Be Determined by Domain Experts: SC](https://www.caseciter.com/suitability-for-promotion-to-be-determined-by-domain-experts-sc/)
