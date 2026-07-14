@@ -1,3 +1,6 @@
+* [Parking Heavy Vehicles On Public Road At Night Without Adequate Warning Signal Constitutes Negligence In Itself: SC](https://www.caseciter.com/parking-heavy-vehicles-on-public-road-at-night-without-adequate-warning-signal-constitutes-negligence-in-itself-sc/)
+* [Dying Declaration Need Not Be In Q&A Form: SC](https://www.caseciter.com/dying-declaration-need-not-be-in-q-a-form-sc/)
+* [Magistrate's Options When Police Files Closure Report](https://www.caseciter.com/magistrates-options-when-police-files-closure-report/)
 * [Pass Reasoned Orders: Supreme Court Cautions Children's Courts](https://www.caseciter.com/pass-reasoned-orders-supreme-court-cautions-childrens-courts/)
 * [120 Days Mandatory Time Frame Under Order VIII Rule 1 CPC Also Applies To Filing Of Written Statement To Counter-Claim In Commercial Suits: SC](https://www.caseciter.com/120-days-mandatory-time-frame-under-order-viii-rule-1-cpc-also-applies-to-filing-of-written-statement-to-counter-claim-in-commercial-suits-sc/)
 * [Guiding Factors To Be Considered For Granting Benefit Of Probation: SC Explains](https://www.caseciter.com/guiding-factors-to-be-considered-for-granting-benefit-of-probation-sc-explains/)
