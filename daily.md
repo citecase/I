@@ -1,3 +1,6 @@
+* [Why Supreme Court Criticized Use Of Term "Second Class Passenger" In Railway Manual?](https://www.caseciter.com/why-supreme-court-criticized-use-of-term-second-class-passenger-in-railway-manual/)
+* [Is Using M^***# Or F - Word An Offence U/S 294 IPC?](https://www.caseciter.com/is-using-m-or-f-word-an-offence-u-s-294-ipc/)
+* [Why You Should Never Accept A Materially Altered Cheque: Lessons From A Recent Supreme Court Case](https://www.caseciter.com/why-you-should-never-accept-a-materially-altered-cheque-lessons-from-a-recent-supreme-court-case/)
 * [41 Questions Of Law From Latest SC Judgments [Criminal Laws]](https://www.caseciter.com/41-questions-of-law-from-latest-sc-judgments-criminal-laws/)
 * [7 Questions Of Law From Latest Supreme Court Judgments  [CPC]](https://www.caseciter.com/7-questions-of-law-from-latest-supreme-court-judgments-cpc/)
 * [Questions Of Law From Latest Supreme Court Judgments [17 July 2026]](https://www.caseciter.com/questions-of-law-from-latest-sc-judgments-2/)
