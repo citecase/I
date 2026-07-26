@@ -1,3 +1,4 @@
+* [What We Learnt  By Reading Supreme Court Judgments This Week? [Criminal Law]](https://www.caseciter.com/what-we-learnt-on-criminal-law-by-reading-supreme-court-judgments-this-week/)
 * [Questions Of Law From Supreme Court Daily Digest](https://www.caseciter.com/questions-of-law-from-supreme-court-daily-digest/)
 * [UNION OF INDIA vs. HARBANS LAL VERMA 2026 INSC 739](https://www.caseciter.com/2026insc739/)
 * [Ajit Singh vs State Of Rajasthan 2026 INSC 733](https://www.caseciter.com/2026insc733/)
