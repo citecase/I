@@ -1,3 +1,4 @@
+* [Can FIRs Be Withdrawn?](https://www.caseciter.com/can-firs-be-withdrawn/)
 * [What We Learnt Today By Reading Supreme Court Judgments](https://www.caseciter.com/what-we-learnt-today-by-reading-supreme-court-judgments/)
 * [S.167 CrPC vs S.187 BNSS: Police Custody Window [Explainer]](https://www.caseciter.com/s-167-crpc-vs-s-187-bnss-police-custody-window-explainer/)
 * [What We Learnt  By Reading Supreme Court Judgments This Week? [Criminal Law]](https://www.caseciter.com/what-we-learnt-on-criminal-law-by-reading-supreme-court-judgments-this-week/)
