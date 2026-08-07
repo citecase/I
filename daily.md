@@ -1,3 +1,5 @@
+* [A Myth: Bombay High Court On Perfect Victim Construct](https://www.caseciter.com/a-myth-bombay-high-court-on-perfect-victim-construct/)
+* [State of Goa vs Tarun Tejpal [Judgment Summary]](https://www.caseciter.com/state-of-goa-vs-tarun-tejpal-judgment-summary/)
 * [Supreme Court Daily Digest [AI Summary]](https://www.caseciter.com/supreme/)
 * [No ! Supreme Court Has Not Put All Live-In Relationships Under Section 498A IPC](https://www.caseciter.com/no-supreme-court-has-not-put-all-live-in-relationships-u-s-498a-ipc/)
 * [S.299(1) CrPC/S.335(1) BNSS:   Supreme Court Benches Split On Requirement Of Formal Order](https://www.caseciter.com/learn-law-s-299-crpc-s-335-bnss/)
