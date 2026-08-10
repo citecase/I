@@ -1,3 +1,4 @@
+* [Does Supreme Court's S.498A IPC - Live-In Relationships  Judgment Apply To S.85 BNS Also?](https://www.caseciter.com/does-supreme-courts-s-498a-ipc-live-in-relationships-judgment-apply-to-s-85-bns-also/)
 * [A Myth: Bombay High Court On Perfect Victim Construct](https://www.caseciter.com/a-myth-bombay-high-court-on-perfect-victim-construct/)
 * [State of Goa vs Tarun Tejpal [Judgment Summary]](https://www.caseciter.com/state-of-goa-vs-tarun-tejpal-judgment-summary/)
 * [Supreme Court Daily Digest [AI Summary]](https://www.caseciter.com/supreme/)
