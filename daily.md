@@ -1,3 +1,5 @@
+* [Supreme Court Encounters Another AI Hallucination](https://www.caseciter.com/supreme-court-encounters-another-ai-hallucination/)
+* [Goa Advocates Protection Bill, 2026](https://www.caseciter.com/goa-advocates-protection-bill-2026/)
 * [State Of UP vs Jai Bir Singh : Bangalore Water Supply Reference:[Q&A]](https://www.caseciter.com/state-of-up-vs-jai-bir-singh-bangalore-water-supply-reference-q-a/)
 * [Bangalore Water Supply To Jai Bir Singh [1978-2026]: Timeline Of Reference Doubting "Industry" Definition In Bangalore Water Supply Case](https://www.caseciter.com/bangalore-water-supply-to-jai-bir-singh-1978-2026-timeline-of-reference-doubting-industry-definition-in-bangalore-water-supply-case/)
 * [Does Supreme Court's S.498A IPC - Live-In Relationships  Judgment Apply To S.85 BNS Also?](https://www.caseciter.com/does-supreme-courts-s-498a-ipc-live-in-relationships-judgment-apply-to-s-85-bns-also/)
