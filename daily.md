@@ -1,3 +1,5 @@
+* [When a Proviso Becomes a Provision](https://www.caseciter.com/when-a-proviso-becomes-a-provision/)
+* [Why Family Court Judges Of Maharashtra Cannot Become High Court Judges?](https://www.caseciter.com/why-family-court-judges-of-maharashtra-cannot-become-high-court-judges/)
 * [Supreme Court Encounters Another AI Hallucination](https://www.caseciter.com/supreme-court-encounters-another-ai-hallucination/)
 * [Goa Advocates Protection Bill, 2026](https://www.caseciter.com/goa-advocates-protection-bill-2026/)
 * [State Of UP vs Jai Bir Singh : Bangalore Water Supply Reference:[Q&A]](https://www.caseciter.com/state-of-up-vs-jai-bir-singh-bangalore-water-supply-reference-q-a/)
