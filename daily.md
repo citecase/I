@@ -1,3 +1,4 @@
+* [Supreme Court Directs DGFT to Accord Formal Farewell to Wrongfully Retired Officer](https://www.caseciter.com/supreme-court-directs-dgft-to-accord-formal-farewell-to-wrongfully-retired-officer/)
 * [Sanofi India Ltd. vs CBI: Supreme Court Explains Corporate Mens Rea](https://www.caseciter.com/sanofi-india-ltd-vs-cbi-supreme-court-judgment-on-corporate-mens-rea/)
 * [When a Proviso Becomes a Provision](https://www.caseciter.com/when-a-proviso-becomes-a-provision/)
 * [Why Family Court Judges Of Maharashtra Cannot Become High Court Judges?](https://www.caseciter.com/why-family-court-judges-of-maharashtra-cannot-become-high-court-judges/)
