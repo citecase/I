@@ -1,3 +1,4 @@
+* [Supreme Court Closes 'Re-Arrest' Loophole For Article 22 Violations](https://www.caseciter.com/supreme-court-closes-re-arrest-loophole-for-article-22-violations/)
 * [Admissibility of Electronic Records: The Journey from Anvar P.V.  to Arjun Panditrao Khotkar](https://www.caseciter.com/admissibility-of-electronic-records-the-journey-from-anvar-p-v-to-arjun-panditrao-khotkar/)
 * [Latest (25+) Supreme Court Judgments On Code Of Civil Procedure](https://www.caseciter.com/latest-25-supreme-court-judgments-on-code-of-civil-procedure/)
 * [Supreme Court Directs DGFT to Accord Formal Farewell to Wrongfully Retired Officer](https://www.caseciter.com/supreme-court-directs-dgft-to-accord-formal-farewell-to-wrongfully-retired-officer/)
