@@ -1,3 +1,4 @@
+* [Kerala High Court Orders FIR Against Ex-CM Pinarayi Vijayan and Family in CMRL Payoff Case](https://www.caseciter.com/kerala-high-court-orders-fir-against-ex-cm-pinarayi-vijayan-and-family-in-cmrl-payoff-case/)
 * [Supreme Court Closes 'Re-Arrest' Loophole For Article 22 Violations](https://www.caseciter.com/supreme-court-closes-re-arrest-loophole-for-article-22-violations/)
 * [Admissibility of Electronic Records: The Journey from Anvar P.V.  to Arjun Panditrao Khotkar](https://www.caseciter.com/admissibility-of-electronic-records-the-journey-from-anvar-p-v-to-arjun-panditrao-khotkar/)
 * [Latest (25+) Supreme Court Judgments On Code Of Civil Procedure](https://www.caseciter.com/latest-25-supreme-court-judgments-on-code-of-civil-procedure/)
